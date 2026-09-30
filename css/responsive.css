@@ -1,0 +1,60 @@
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    position: absolute; top: 70px; inset-inline-end: 16px;
+    flex-direction: column; gap: 8px;
+    background: rgba(10, 15, 36, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    padding: 20px; border-radius: 16px; min-width: 200px;
+  }
+  .nav-links.open { display: flex; }
+  .menu-btn { display: block; }
+
+  .hero-inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .hero-content { align-items: center; text-align: center; }
+  html[dir="rtl"] .hero-content { align-items: center; text-align: center; }
+  .hero-sub { margin: 0 auto; }
+  .hero-cta { justify-content: center; }
+
+  .backup-banner { padding: 28px 20px; }
+  .backup-grid { grid-template-columns: 1fr; gap: 24px; }
+
+  .sub-banner { padding: 32px 20px; }
+  .pillars-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 600px) {
+  .container { padding: 0 16px; }
+  .hero { padding: 40px 0 30px; }
+  .hero-img { height: 260px; }
+  .floating-badge { padding: 8px 12px; }
+  .badge-icon { font-size: 1.2rem; }
+  .badge-top { top: -12px; inset-inline-end: -10px; }
+  .badge-bottom { bottom: -12px; inset-inline-start: -10px; }
+  
+  .backup-visual { flex-direction: column; width: 100%; }
+  .visual-card { width: 100%; }
+  .visual-vs { transform: rotate(90deg); margin: 4px 0; }
+  .contact-btns { flex-direction: column; width: 100%; }
+  .contact-btns .btn { width: 100%; }
+
+  .pillars-grid { grid-template-columns: 1fr; }
+
+  .section { padding: 50px 0; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .brand-text { font-size: .95rem; }
+  .brand-text em { display: none; }
+  .lang-switch button { padding: 5px 9px; font-size: .8rem; }
+  .hero-cta { flex-direction: column; width: 100%; }
+  .hero-cta .btn { width: 100%; }
+
+  .about-img { height: 250px; }
+}
+
+@media (max-width: 380px) {
+  .stats { grid-template-columns: 1fr; }
+}
