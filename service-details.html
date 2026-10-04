@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="تفاصيل خدمات iComputer Urban Tech DZ: الدعم التقني، الشبكات، والأمن الرقمي." />
+  <title>تفاصيل الخدمة | iComputer Urban Tech DZ</title>
+  <meta name="canonical" content="https://[your-domain]/service-details.html" />
+  <meta property="og:title" content="تفاصيل الخدمة | iComputer Urban Tech DZ" />
+  <meta property="og:description" content="اكتشف تفاصيل خدمات الدعم التقني، صيانة الحواسيب، والشبكات في iComputer Urban Tech DZ." />
+  <meta property="og:url" content="https://[your-domain]/service-details.html" />
+  <script src="js/theme.js"></script>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/service-details.css" />
+  <link rel="stylesheet" href="css/scroll3d.css" />
+</head>
+<body>
+  <header class="navbar glass">
+    <div class="container nav-inner">
+      <a href="index.html#home" class="brand">
+        <img src="images/logo1.png" alt="iComputer Logo" class="brand-logo" onerror="this.style.display='none'" />
+        <span class="brand-mark">iC</span>
+        <span class="brand-text">iComputer <em>Urban Tech DZ</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#home" data-i18n="nav.home">الرئيسية</a>
+        <a href="booking.html" data-i18n="nav.booking">احجز موعد</a>
+        <a href="services.html" data-i18n="nav.services">الخدمات</a>
+        <a href="index.html#contact" data-i18n="nav.contact">تواصل</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="تبديل الوضع اللوني">☼</button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة" aria-controls="navLinks" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="service-details-page">
+    <section class="section service-details-section">
+      <div class="container">
+        <nav class="service-breadcrumb" aria-label="مسار التنقل">
+          <a href="index.html">الرئيسية</a>
+          <span aria-hidden="true">/</span>
+          <a href="services.html">الخدمات</a>
+          <span aria-hidden="true">/</span>
+          <span id="serviceBreadcrumb" aria-current="page">تفاصيل الخدمة</span>
+        </nav>
+
+        <article class="service-detail-card glass service-detail-layout" id="serviceDetails" aria-live="polite">
+          <div class="service-detail-content">
+            <span class="service-detail-tag">تفاصيل الخدمة</span>
+            <h1 id="serviceTitle">تفاصيل الخدمة</h1>
+            <p class="service-detail-intro" id="serviceSummary"></p>
+            <div id="serviceDescription"></div>
+            <h2>ما الذي تتضمنه الخدمة؟</h2>
+            <ul class="service-detail-list" id="serviceFeatures"></ul>
+            <div class="service-detail-actions">
+              <a class="btn btn-primary" href="index.html#contact">اطلب الخدمة</a>
+              <a class="btn btn-ghost" href="services.html">العودة إلى الخدمات</a>
+            </div>
+          </div>
+          <div class="service-detail-media">
+            <img id="serviceImage" src="images/hero-bg.jpg" alt="خدمات iComputer التقنية" data-scroll3d="zoom" />
+          </div>
+        </article>
+
+        <section class="service-not-found glass" id="serviceNotFound" hidden>
+          <h1>الخدمة غير موجودة</h1>
+          <p>لم نتمكن من العثور على تفاصيل الخدمة المطلوبة. تصفح قائمة الخدمات لاختيار خدمة متاحة.</p>
+          <a class="btn btn-primary" href="services.html">عرض الخدمات</a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> iComputer Urban Tech DZ — جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20iComputer." target="_blank" rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
+    <span aria-hidden="true">💬</span>
+  </a>
+
+  <script src="js/script.js"></script>
+  <script src="js/service-details.js"></script>
+  <script src="js/scroll3d.js" data-auto="main img, section img"></script>
+</body>
+</html>

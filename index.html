@@ -3,18 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iComputer Urban Tech DZ — حلول تقنية متكاملة</title>
-  <meta name="description" content="iComputer Urban Tech DZ — شركة جزائرية متخصصة في صيانة الحواسيب، الشبكات، تطوير البرمجيات والأمن السيبراني." />
-  <meta property="og:title" content="iComputer Urban Tech DZ" />
-  <meta property="og:description" content="حلول تقنية متكاملة: صيانة، شبكات، تطوير وأمن سيبراني." />
+  <title>صيانة حاسوب القصبة الجزائر | iComputer Urban Tech DZ</title>
+  <meta name="description" content="خدمات صيانة الحواسيب والدعم التقني في القصبة، الجزائر العاصمة، مع حلول برمجية، شبكات، وحماية البيانات." />
+  <meta name="canonical" content="https://[your-domain]/index.html" />
+  <meta property="og:title" content="iComputer Urban Tech DZ | صيانة حاسوب القصبة الجزائر" />
+  <meta property="og:description" content="خدمات صيانة الحواسيب والدعم التقني في القصبة، الجزائر العاصمة، مع حلول برمجية وسير عمل موثوق." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://[your-domain]/index.html" />
   <meta name="twitter:card" content="summary_large_image" />
+  <script src="js/theme.js"></script>
   <link rel="icon" href="images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/intro.css" />
   <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/scroll3d.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "iComputer Urban Tech DZ",
+      "description": "صيانة حواسيب ودعم تقني",
+      "areaServed": ["Algiers", "القصبة"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "القصبة",
+        "addressRegion": "Algiers",
+        "addressCountry": "DZ"
+      },
+      "url": "https://[your-domain]/",
+      "sameAs": ["https://wa.me/rai.med.elamine"]
+    }
+  </script>
 </head>
 <body>
   <div class="bg-orb orb-1"></div>
@@ -30,6 +53,7 @@
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="#home" data-i18n="nav.home">الرئيسية</a>
+        <a href="booking.html" data-i18n="nav.booking">احجز موعد</a>
         <a href="services.html" data-i18n="nav.services">الخدمات</a>
         <a href="#pricing" data-i18n="nav.pricing">الأسعار</a>
         <a href="knowledge.html">الشرح والتعريف</a>
@@ -42,7 +66,8 @@
           <button data-lang="fr">FR</button>
           <button data-lang="en">EN</button>
         </div>
-        <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="تبديل الوضع اللوني">☼</button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة" aria-controls="navLinks" aria-expanded="false">☰</button>
       </div>
     </div>
   </header>
@@ -51,20 +76,28 @@
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-content">
-          <span class="chip glass" data-i18n="hero.chip">مقدم خدمات تقنية احترافي</span>
+          <span class="chip glass" data-i18n="hero.chip">الدعم التقني والبرمجي</span>
           <h1 class="hero-title">
-            <span data-i18n="hero.title1">حلول تقنية متكاملة</span>
-            <span class="gradient-text" data-i18n="hero.title2">لعصر رقمي جديد</span>
+            <span data-i18n="hero.title1">دعم تقني وبرمجي</span>
+            <span class="gradient-text" data-i18n="hero.title2">للأفراد والشركات</span>
           </h1>
-          <p class="hero-sub" data-i18n="hero.sub">صيانة، شبكات، تطوير برمجيات وأمن سيبراني — بخبرة محلية وجودة عالمية.</p>
+          <p class="hero-sub" data-i18n="hero.sub">مساعدة في البرامج وأنظمة التشغيل، إعداد الشبكات، حماية البيانات، وتجهيز الملفات الرقمية.</p>
           <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">اطلب استشارة مجانية</a>
+            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-primary" data-whatsapp-link data-i18n="hero.cta1">اطلب عبر واتساب</a>
+            <a href="booking.html" class="btn btn-ghost" data-i18n="nav.booking">احجز موعد</a>
             <a href="services.html" class="btn btn-ghost" data-i18n="hero.cta2">اكتشف خدماتنا</a>
           </div>
         </div>
         <div class="hero-media">
           <div class="hero-image-card glass">
-            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&q=80" alt="iComputer Urban Tech DZ Showcase" class="hero-img" loading="eager" />
+            <video class="hero-img hero-motion-img" data-scroll3d="tilt" autoplay muted loop playsinline preload="auto" poster="images/hero-motion.gif" aria-label="شاشة كمبيوتر متحركة بلون فاخر">
+              <source src="images/hero-motion.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-image-copy">
+              <span data-i18n="hero.imageLabel">دعم البرامج والأنظمة</span>
+              <strong data-i18n="hero.imageTitle">مساعدة تقنية تناسب احتياجك</strong>
+              <p data-i18n="hero.imageText">إعداد البرامج، حل مشكلات النظام، ومساندتك في الاستخدام.</p>
+            </div>
             <div class="floating-badge badge-top glass">
               <span class="badge-icon">⚡</span>
               <div class="badge-text">
@@ -72,14 +105,32 @@
                 <small data-i18n="hero.badge1.desc">دعم فني متواصل</small>
               </div>
             </div>
-            <div class="floating-badge badge-bottom glass">
-              <span class="badge-icon">🛡️</span>
+            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="floating-badge badge-bottom glass whatsapp-order-badge" data-whatsapp-link aria-label="WhatsApp">
+              <span class="badge-icon">💬</span>
               <div class="badge-text">
-                <strong data-i18n="hero.badge2.title">جودة مضمونة</strong>
-                <small data-i18n="hero.badge2.desc">أعلى معايير الأمان</small>
+                <strong data-i18n="hero.badge2.title">الطلب عبر واتساب</strong>
+                <small data-i18n="hero.badge2.desc">لا يوجد محل استقبال</small>
               </div>
-            </div>
+            </a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-intro section" aria-labelledby="supportIntroTitle">
+      <div class="container support-intro-inner">
+        <div class="support-intro-heading">
+          <span class="chip glass" data-i18n="supportIntro.chip">خدمات تقنية للأفراد والشركات</span>
+          <h2 class="section-title" id="supportIntroTitle" data-i18n="supportIntro.title">تقنية تعمل كما تحتاجها</h2>
+        </div>
+        <div class="support-intro-copy">
+          <ul class="support-intro-list">
+            <li data-i18n="supportIntro.p1">حل مشكلات البرامج وأنظمة التشغيل، دون صيانة قطع الحاسوب.</li>
+            <li data-i18n="supportIntro.p2">تثبيت البرامج والأنظمة وتهيئتها للاستخدام.</li>
+            <li data-i18n="supportIntro.p3">إعداد الشبكات والاتصال، وحماية البيانات والنسخ الاحتياطي.</li>
+            <li data-i18n="supportIntro.p4">إنشاء السير الذاتية والعروض والملفات الرقمية.</li>
+            <li data-i18n="supportIntro.p5">أرسل طلبك عبر واتساب. لا يوجد محل استقبال.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -92,19 +143,19 @@
           <article class="card glass service-card">
             <a href="service-details.html?service=pc" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=600&q=80" alt="صيانة الحواسيب" class="card-img" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="مساعدة تقنية في استخدام الحاسوب" class="card-img" data-scroll3d="tilt" loading="lazy" />
                 <div class="card-icon">🖥️</div>
               </div>
               <div class="card-body">
-                <h3 data-i18n="services.s1.title">صيانة الحواسيب</h3>
-                <p data-i18n="services.s1.desc">تشخيص وإصلاح شامل للأجهزة المكتبية والمحمولة (عتاد وبرمجيات).</p>
+                <h3 data-i18n="services.s1.title">دعم الحاسوب والبرامج</h3>
+                <p data-i18n="services.s1.desc">حل مشكلات البرامج وأنظمة التشغيل وإعدادها، دون صيانة المكونات المادية.</p>
               </div>
             </a>
           </article>
           <article class="card glass service-card">
             <a href="service-details.html?service=network" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="تركيب الشبكات" class="card-img" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="تركيب الشبكات" class="card-img" data-scroll3d="tilt" loading="lazy" />
                 <div class="card-icon">🌐</div>
               </div>
               <div class="card-body">
@@ -116,8 +167,8 @@
           <article class="card glass service-card">
             <a href="service-details.html?service=cv" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="إنشاء سيرة ذاتية احترافية" class="card-img" loading="lazy" />
-                <div class="card-icon">�</div>
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="إنشاء سيرة ذاتية احترافية" class="card-img" data-scroll3d="tilt" loading="lazy" />
+                <div class="card-icon">📄</div>
               </div>
               <div class="card-body">
                 <h3>إنشاء سيرة ذاتية احترافية (CV)</h3>
@@ -128,8 +179,8 @@
           <article class="card glass service-card">
             <a href="service-details.html?service=ppt" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=600&q=80" alt="تصميم عروض PowerPoint" class="card-img" loading="lazy" />
-                <div class="card-icon">�</div>
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=600&q=80" alt="تصميم عروض PowerPoint" class="card-img" data-scroll3d="tilt" loading="lazy" />
+                <div class="card-icon">📊</div>
               </div>
               <div class="card-body">
                 <h3>تصميم عروض PowerPoint</h3>
@@ -140,7 +191,7 @@
           <article class="card glass service-card">
             <a href="service-details.html?service=reports" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="كتابة تقارير ومشاريع" class="card-img" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="كتابة تقارير ومشاريع" class="card-img" data-scroll3d="tilt" loading="lazy" />
                 <div class="card-icon">📝</div>
               </div>
               <div class="card-body">
@@ -152,7 +203,7 @@
           <article class="card glass service-card">
             <a href="service-details.html?service=excel" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="إعداد جداول Excel" class="card-img" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="إعداد جداول Excel" class="card-img" data-scroll3d="tilt" loading="lazy" />
                 <div class="card-icon">📈</div>
               </div>
               <div class="card-body">
@@ -164,8 +215,8 @@
           <article class="card glass service-card">
             <a href="service-details.html?service=phones" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="تصليح الهواتف والبرامج" class="card-img" loading="lazy" />
-                <div class="card-icon">�</div>
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="تصليح الهواتف والبرامج" class="card-img" data-scroll3d="tilt" loading="lazy" />
+                <div class="card-icon">📱</div>
               </div>
               <div class="card-body">
                 <h3>تصليح الهواتف — برمجيًا وتسريعها</h3>
@@ -176,8 +227,8 @@
           <article class="card glass service-card">
             <a href="service-details.html?service=games" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="تحميل الألعاب وفلش الأجهزة" class="card-img" loading="lazy" />
-                <div class="card-icon">�</div>
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="تحميل الألعاب وفلش الأجهزة" class="card-img" data-scroll3d="tilt" loading="lazy" />
+                <div class="card-icon">🎮</div>
               </div>
               <div class="card-body">
                 <h3>تحميل الألعاب وفلش الأجهزة</h3>
@@ -188,12 +239,24 @@
           <article class="card glass service-card">
             <a href="service-details.html?service=security" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="الأمن السيبراني وحماية البيانات" class="card-img" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="الأمن السيبراني وحماية البيانات" class="card-img" data-scroll3d="tilt" loading="lazy" />
                 <div class="card-icon">🛡️</div>
               </div>
               <div class="card-body">
                 <h3 data-i18n="services.s4.title">الأمن السيبراني</h3>
                 <p data-i18n="services.s4.desc">حماية البيانات، النسخ الاحتياطي، واسترجاع الملفات بعد الأعطال.</p>
+              </div>
+            </a>
+          </article>
+          <article class="card glass service-card">
+            <a href="service-details.html?service=os" class="service-link">
+              <div class="card-img-wrapper">
+                <img src="images/systems-install.jpg" alt="أنظمة تشغيل مختلفة على أجهزة الحاسوب" class="card-img" data-scroll3d="tilt" loading="lazy" />
+                <div class="card-icon">💿</div>
+              </div>
+              <div class="card-body">
+                <h3>تثبيت أنظمة التشغيل</h3>
+                <p>تثبيت وتهيئة أنظمة التشغيل وإعداد الجهاز للاستخدام.</p>
               </div>
             </a>
           </article>
@@ -224,8 +287,8 @@
             </div>
             <div class="pillar-card glass">
               <div class="pillar-icon">🛠️</div>
-              <h3 data-i18n="sub.p3.title">صيانة الحواسيب.</h3>
-              <p data-i18n="sub.p3.desc">Hardware Tune-ups & Repairs.</p>
+              <h3 data-i18n="sub.p3.title">دعم البرامج والأنظمة.</h3>
+              <p data-i18n="sub.p3.desc">إعداد البرامج وحل مشكلات النظام.</p>
             </div>
             <div class="pillar-card glass">
               <div class="pillar-icon">👁️</div>
@@ -240,7 +303,7 @@
           </div>
 
           <div class="sub-footer text-center">
-            <a href="https://wa.me/213558849211?text=مرحباً،%20أرغب%20في%20الحصول%20على%20عرض%20مجاني%20للاشتراك%20الشهري" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-whatsapp-link>
               <span class="btn-icon">🎁</span>
               <span data-i18n="sub.cta">احصل على عرض مجاني</span>
             </a>
@@ -288,19 +351,31 @@
       </div>
     </section>
 
+    <section id="testimonialsSection" class="section testimonials-section">
+      <div class="container">
+        <div class="section-heading-row">
+          <h2 class="section-title" data-i18n="reviews.title">آراء العملاء</h2>
+          <a href="review.html" class="btn btn-ghost" data-i18n="reviews.write">اترك رأيك</a>
+        </div>
+        <div class="testimonials-grid" id="testimonialsList" aria-live="polite"></div>
+      </div>
+    </section>
+
     <section id="contact" class="section">
       <div class="container contact-grid">
         <div>
           <h2 class="section-title" data-i18n="contact.title">تواصل معنا</h2>
-          <p data-i18n="contact.sub">نحن هنا للإجابة على استفساراتك وتقديم تقييم مجاني.</p>
+          <p data-i18n="contact.sub">أرسل طلبك عبر واتساب. لا يوجد محل لاستقبال الزبائن.</p>
           <ul class="contact-info">
             <li>📍 <a href="https://maps.app.goo.gl/o3BeYZaTyHqvPLf27" target="_blank" rel="noopener" class="maps-link"><span data-i18n="contact.addr">الجزائر الوسطى (عرض الموقع على الخريطة) 🗺️</span></a></li>
            <li>
   💬 <a href="https://wa.me/rai.med.elamine"
         target="_blank"
         rel="noopener"
-        class="whatsapp-contact-link">
-    تواصل معنا عبر واتساب
+        class="whatsapp-contact-link"
+        data-whatsapp-link
+        data-i18n="contact.whatsapp">
+    اطلب الخدمة عبر واتساب
   </a>
 </li>
 
@@ -327,13 +402,15 @@
     Instagram: @icomputer.urban_tech_dz
   </a>
 </li>
-            <li>🏡 <span data-i18n="contact.workType">خدمة تنقل ودعم عن بُعد (مقر عمل شخصي)</span></li>
+            <li>🏡 <span data-i18n="contact.workType">الطلبات عبر واتساب، لا يوجد محل لاستقبال الزبائن</span></li>
 <li>
   💬 <a href="https://wa.me/rai.med.elamine"
         target="_blank"
         rel="noopener"
-        class="whatsapp-contact-link">
-    واتساب: rai.med.elamine
+        class="whatsapp-contact-link"
+        data-whatsapp-link
+        data-i18n="contact.whatsapp">
+    اطلب الخدمة عبر واتساب
   </a>
 </li>          </ul>
           <div class="contact-maps-box">
@@ -353,6 +430,12 @@
     </div>
   </footer>
 
+  <a class="floating-whatsapp" href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20iComputer." target="_blank" rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
+    <span aria-hidden="true">💬</span>
+  </a>
+
+  <script src="js/intro.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/scroll3d.js" data-auto="main img, section img"></script>
 </body>
 </html>

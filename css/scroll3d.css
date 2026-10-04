@@ -1,0 +1,182 @@
+:root {
+  --sy: 0;
+  --bg3d-line: rgba(107, 168, 245, 0.16);
+  --bg3d-glow: rgba(107, 168, 245, 0.16);
+}
+
+/* طبقة العمق خلف محتوى الموقع */
+.bg3d-enabled {
+  background: transparent;
+}
+
+body.bg3d-enabled::before,
+body.bg3d-enabled::after {
+  background: none;
+  animation: none;
+  translate: none;
+}
+
+.bg3d-enabled .bg-orb {
+  display: none;
+}
+
+.bg3d {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg3d-floor {
+  position: absolute;
+  inset-inline: -60%;
+  bottom: -8vh;
+  height: 62vh;
+  transform: perspective(520px) rotateX(63deg);
+  transform-origin: center bottom;
+  background-image:
+    linear-gradient(var(--bg3d-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg3d-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-position: 0 calc(var(--sy) * 0.6px), 0 calc(var(--sy) * 0.6px);
+  -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 90%);
+  mask-image: linear-gradient(to top, #000 0%, transparent 90%);
+}
+
+.bg3d-cubes {
+  position: absolute;
+  inset: 0;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.bg3d-cube {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  width: var(--s);
+  height: var(--s);
+  transform-style: preserve-3d;
+  transform:
+    translate3d(0, calc(var(--sy) * var(--k) * -0.06px), 0)
+    rotateX(calc(var(--sy) * var(--k) * 0.12deg))
+    rotateY(calc(var(--sy) * var(--k) * 0.18deg));
+  transition: transform 0.7s ease-out;
+}
+
+.bg3d-face {
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--bg3d-line);
+  background: transparent;
+  backface-visibility: visible;
+}
+
+.bg3d-front { transform: translateZ(var(--half)); }
+.bg3d-back { transform: rotateY(180deg) translateZ(var(--half)); }
+.bg3d-right { transform: rotateY(90deg) translateZ(var(--half)); }
+.bg3d-left { transform: rotateY(-90deg) translateZ(var(--half)); }
+.bg3d-top { transform: rotateX(90deg) translateZ(var(--half)); }
+.bg3d-bottom { transform: rotateX(-90deg) translateZ(var(--half)); }
+
+.bg3d-glow {
+  position: absolute;
+  width: min(52vw, 680px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--bg3d-glow), transparent 68%);
+  filter: blur(34px);
+  opacity: 0.55;
+  transition: transform 1.2s ease-out;
+}
+
+.bg3d-glow-one {
+  top: -28%;
+  left: -14%;
+  transform: translate3d(0, calc(var(--sy) * -0.025px), 0);
+}
+
+.bg3d-glow-two {
+  right: -18%;
+  bottom: -36%;
+  transform: translate3d(0, calc(var(--sy) * 0.018px), 0);
+}
+
+.bg3d-enabled .section,
+.bg3d-enabled .hero {
+  background-color: transparent;
+}
+
+body.bg3d-enabled .support-intro,
+body.bg3d-enabled .sub-section {
+  background-color: rgba(32, 39, 51, 0.62);
+}
+
+.bg3d-enabled .navbar.glass,
+.bg3d-enabled .footer.glass,
+.bg3d-enabled .card.glass,
+.bg3d-enabled .service-detail-card.glass,
+.bg3d-enabled .sub-banner,
+.bg3d-enabled .backup-banner,
+.bg3d-enabled .lawyer-banner {
+  background-color: rgba(32, 39, 51, 0.72);
+}
+
+html[data-theme="light"] {
+  --bg3d-line: rgba(23, 104, 189, 0.09);
+  --bg3d-glow: rgba(23, 104, 189, 0.1);
+}
+
+html[data-theme="light"] body.bg3d-enabled {
+  background: transparent;
+}
+
+html[data-theme="light"] body.bg3d-enabled .support-intro,
+html[data-theme="light"] body.bg3d-enabled .sub-section {
+  background-color: rgba(233, 237, 243, 0.68);
+}
+
+html[data-theme="light"] .bg3d-enabled .navbar.glass,
+html[data-theme="light"] .bg3d-enabled .footer.glass,
+html[data-theme="light"] .bg3d-enabled .card.glass,
+html[data-theme="light"] .bg3d-enabled .service-detail-card.glass,
+html[data-theme="light"] .bg3d-enabled .sub-banner,
+html[data-theme="light"] .bg3d-enabled .backup-banner,
+html[data-theme="light"] .bg3d-enabled .lawyer-banner {
+  background-color: rgba(248, 250, 252, 0.78);
+}
+
+@media (max-width: 700px) {
+  .bg3d-cube:nth-child(n + 4) {
+    display: none;
+  }
+
+  .bg3d-floor {
+    background-size: 44px 44px;
+  }
+
+  .bg3d-glow {
+    width: min(72vw, 420px);
+    filter: blur(26px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg3d-floor {
+    transform: none !important;
+    background-position: 0 0, 0 0 !important;
+  }
+
+  .bg3d-cube,
+  .bg3d-glow {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  [data-scroll3d] {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+  }
+}

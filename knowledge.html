@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>الشرح والتعريف | iComputer Urban Tech DZ</title>
-  <meta name="description" content="مقالات وتعريفات تقنية متنوعة" />
+  <title>مقالات تقنية وتعريفات | iComputer Urban Tech DZ</title>
+  <meta name="description" content="مقالات وتعريفات تقنية متنوعة في أنظمة الحواسيب، الشبكات، والأمن الرقمي." />
+  <meta name="canonical" content="https://[your-domain]/knowledge.html" />
+  <meta property="og:title" content="مقالات تقنية وتعريفات | iComputer Urban Tech DZ" />
+  <meta property="og:description" content="مقاطع تعليمية ومعلومات تقنية في مجال الحواسيب والشبكات والأمن الرقمي." />
+  <meta property="og:url" content="https://[your-domain]/knowledge.html" />
+  <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/scroll3d.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -24,13 +30,15 @@
         <span class="brand-text">iComputer <em>Urban Tech DZ</em></span>
       </a>
       <nav class="nav-links" id="navLinks">
-        <a href="index.html#home">الرئيسية</a>
-        <a href="services.html">الخدمات</a>
+        <a href="index.html#home" data-i18n="nav.home">الرئيسية</a>
+        <a href="booking.html" data-i18n="nav.booking">احجز موعد</a>
+        <a href="services.html" data-i18n="nav.services">الخدمات</a>
         <a href="index.html#portfolio">أعمالنا</a>
-        <a href="index.html#contact">تواصل</a>
+        <a href="index.html#contact" data-i18n="nav.contact">تواصل</a>
       </nav>
       <div class="nav-actions">
-        <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="تبديل الوضع اللوني">☼</button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة" aria-controls="navLinks" aria-expanded="false">☰</button>
       </div>
     </div>
   </header>
@@ -91,6 +99,17 @@
     </section>
   </main>
 
+  <footer class="footer glass">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> iComputer Urban Tech DZ — <span data-i18n="footer.rights">جميع الحقوق محفوظة</span></p>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20iComputer." target="_blank" rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
+    <span aria-hidden="true">💬</span>
+  </a>
+
   <script src="js/script.js"></script>
+  <script src="js/scroll3d.js" data-auto="main img, section img"></script>
 </body>
 </html>

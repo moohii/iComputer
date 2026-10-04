@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اترك رأيك | iComputer Urban Tech DZ</title>
+  <meta name="description" content="اترك رأيك في خدمات iComputer Urban Tech DZ وقم بمشاركة تجربتك مع دعم الحواسيب والشبكات." />
+  <meta name="canonical" content="https://[your-domain]/review.html" />
+  <meta property="og:title" content="اترك رأيك | iComputer Urban Tech DZ" />
+  <meta property="og:description" content="شارك تجربتك في خدمات الدعم التقني وصيانة الحواسيب في iComputer Urban Tech DZ." />
+  <meta property="og:url" content="https://[your-domain]/review.html" />
+  <meta name="robots" content="index,follow" />
+  <script src="js/theme.js"></script>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/scroll3d.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <header class="navbar glass">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo1.png" alt="iComputer Logo" class="brand-logo" onerror="this.style.display='none'" />
+        <span class="brand-mark">iC</span>
+        <span class="brand-text">iComputer <em>Urban Tech DZ</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#home" data-i18n="nav.home">الرئيسية</a>
+        <a href="booking.html" data-i18n="nav.booking">احجز موعد</a>
+        <a href="services.html" data-i18n="nav.services">الخدمات</a>
+        <a href="index.html#contact" data-i18n="nav.contact">تواصل</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button data-lang="ar" class="active">ع</button>
+          <button data-lang="fr">FR</button>
+          <button data-lang="en">EN</button>
+        </div>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="تبديل الوضع اللوني">☼</button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة" aria-controls="navLinks" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section review-page">
+      <div class="container review-shell">
+        <div class="review-header">
+          <span class="chip glass" data-i18n="review.title">اترك رأيك</span>
+          <h1 data-i18n="review.title">اترك رأيك</h1>
+        </div>
+
+        <form class="review-form glass" name="review" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+          <input type="hidden" name="form-name" value="review" />
+          <p class="hidden-field">
+            <label>لا تملأ هذا الحقل <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-field">
+            <label for="reviewName" data-i18n="review.name">الاسم</label>
+            <input id="reviewName" name="name" type="text" placeholder="أدخل اسمك" required />
+          </div>
+
+          <div class="form-field">
+            <label for="reviewService" data-i18n="review.service">الخدمة</label>
+            <select id="reviewService" name="service" required>
+              <option value="">اختر الخدمة</option>
+              <option value="دعم الحاسوب والبرامج">دعم الحاسوب والبرامج</option>
+              <option value="تركيب الشبكات">تركيب الشبكات</option>
+              <option value="الأمن السيبراني">الأمن السيبراني</option>
+              <option value="إنشاء السيرة الذاتية">إنشاء السيرة الذاتية</option>
+              <option value="تصميم عروض PowerPoint">تصميم عروض PowerPoint</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="reviewRating" data-i18n="review.rating">التقييم من 1 إلى 5</label>
+            <select id="reviewRating" name="rating" required>
+              <option value="">اختر التقييم</option>
+              <option value="5">5 - ممتاز</option>
+              <option value="4">4 - جيد جدًا</option>
+              <option value="3">3 - جيد</option>
+              <option value="2">2 - مقبول</option>
+              <option value="1">1 - ضعيف</option>
+            </select>
+          </div>
+
+          <div class="form-field form-field-full">
+            <label for="reviewText" data-i18n="review.text">نص الرأي</label>
+            <textarea id="reviewText" name="text" rows="7" placeholder="اكتب تجربتك هنا" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" data-i18n="review.submit">إرسال الرأي</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> iComputer Urban Tech DZ — <span data-i18n="footer.rights">جميع الحقوق محفوظة</span></p>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20iComputer." target="_blank" rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
+    <span aria-hidden="true">💬</span>
+  </a>
+
+  <script src="js/script.js"></script>
+  <script src="js/scroll3d.js" data-auto="main img, section img"></script>
+</body>
+</html>

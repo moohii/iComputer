@@ -1,15 +1,19 @@
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .nav-links {
     display: none;
     position: absolute; top: 70px; inset-inline-end: 16px;
     flex-direction: column; gap: 8px;
-    background: rgba(10, 15, 36, 0.95);
+    background: var(--surface);
     backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     padding: 20px; border-radius: 16px; min-width: 200px;
   }
   .nav-links.open { display: flex; }
   .menu-btn { display: block; }
+  .nav-inner { gap: 10px; }
+  .nav-actions { gap: 6px; flex-shrink: 0; }
+  .theme-toggle { min-width: 40px; min-height: 40px; padding-inline: 10px; }
+  .lang-switch button { min-width: 32px; min-height: 34px; padding: 4px 8px; }
 
   .hero-inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
   .hero-content { align-items: center; text-align: center; }
