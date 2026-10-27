@@ -3,23 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="تفاصيل خدمات iComputer Urban Tech DZ: الدعم التقني، الشبكات، والأمن الرقمي." />
+  <meta name="description" content="تفاصيل خدمات iComputer Urban Tech DZ: الدعم التقني، الشبكات، وإدارة أجهزة المكاتب بالجزائر العاصمة." />
   <title>تفاصيل الخدمة | iComputer Urban Tech DZ</title>
   <meta name="canonical" content="https://[your-domain]/service-details.html" />
   <meta property="og:title" content="تفاصيل الخدمة | iComputer Urban Tech DZ" />
-  <meta property="og:description" content="اكتشف تفاصيل خدمات الدعم التقني، صيانة الحواسيب، والشبكات في iComputer Urban Tech DZ." />
+  <meta property="og:description" content="اكتشف تفاصيل خدمات الدعم التقني وصيانة الحواسيب والشبكات للمكاتب والمؤسسات الصغيرة." />
   <meta property="og:url" content="https://[your-domain]/service-details.html" />
   <script src="js/theme.js"></script>
   <link rel="icon" href="images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/b2b.css" />
   <link rel="stylesheet" href="css/service-details.css" />
   <link rel="stylesheet" href="css/scroll3d.css" />
 </head>
 <body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
   <header class="navbar glass">
     <div class="container nav-inner">
       <a href="index.html#home" class="brand">
@@ -29,11 +33,22 @@
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="index.html#home" data-i18n="nav.home">الرئيسية</a>
-        <a href="booking.html" data-i18n="nav.booking">احجز موعد</a>
         <a href="services.html" data-i18n="nav.services">الخدمات</a>
-        <a href="index.html#contact" data-i18n="nav.contact">تواصل</a>
+        <a href="services/office-support.html">حلول المكاتب</a>
+        <a href="index.html#sectors">القطاعات</a>
+        <a href="knowledge.html">المعرفة</a>
+        <a href="booking.html" data-i18n="nav.booking">طلب خدمة</a>
       </nav>
       <div class="nav-actions">
+        <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="nav-wa-btn" data-whatsapp-link>
+          <span>💬</span>
+          <span>WhatsApp</span>
+        </a>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button data-lang="ar" class="active">ع</button>
+          <button data-lang="fr">FR</button>
+          <button data-lang="en">EN</button>
+        </div>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="تبديل الوضع اللوني">☼</button>
         <button class="menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة" aria-controls="navLinks" aria-expanded="false">☰</button>
       </div>
@@ -43,53 +58,112 @@
   <main class="service-details-page">
     <section class="section service-details-section">
       <div class="container">
-        <nav class="service-breadcrumb" aria-label="مسار التنقل">
+        <nav class="b2b-breadcrumb" aria-label="مسار التنقل">
           <a href="index.html">الرئيسية</a>
           <span aria-hidden="true">/</span>
           <a href="services.html">الخدمات</a>
           <span aria-hidden="true">/</span>
-          <span id="serviceBreadcrumb" aria-current="page">تفاصيل الخدمة</span>
+          <span id="serviceBreadcrumb" aria-current="page">دليل الخدمات المحدث</span>
         </nav>
 
-        <article class="service-detail-card glass service-detail-layout" id="serviceDetails" aria-live="polite">
-          <div class="service-detail-content">
-            <span class="service-detail-tag">تفاصيل الخدمة</span>
-            <h1 id="serviceTitle">تفاصيل الخدمة</h1>
-            <p class="service-detail-intro" id="serviceSummary"></p>
-            <div id="serviceDescription"></div>
-            <h2>ما الذي تتضمنه الخدمة؟</h2>
-            <ul class="service-detail-list" id="serviceFeatures"></ul>
-            <div class="service-detail-actions">
-              <a class="btn btn-primary" href="index.html#contact">اطلب الخدمة</a>
-              <a class="btn btn-ghost" href="services.html">العودة إلى الخدمات</a>
+        <article class="service-detail-card glass" style="max-width: 860px; margin: 0 auto; text-align: center; padding: 48px 32px;">
+          <span class="chip glass">خدمات B2B للمكاتب والمؤسسات</span>
+          <h1 style="margin: 16px 0; font-size: 2rem;">خدماتنا المتخصصة للمكاتب والشركات</h1>
+          <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 32px;">
+            تم تحديث هيكلة خدماتنا بالكامل لتلبية احتياجات المكاتب والمؤسسات الصغيرة في الجزائر العاصمة (مكاتب المحاسبة، المحامين، الموثقين، مكاتب الدراسات والوكالات التجارية).
+          </p>
+
+          <div class="grid grid-3" style="text-align: start; margin-bottom: 32px;">
+            <div style="padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border);">
+              <h4 style="margin-bottom: 6px;"><a href="services/office-support.html" style="color: var(--primary);">دعم المكاتب ←</a></h4>
+              <p style="font-size: 0.85rem; color: var(--muted); margin: 0;">تشخيص شامل وحلول لمشاكل الأجهزة والبرامج اليومية.</p>
+            </div>
+            <div style="padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border);">
+              <h4 style="margin-bottom: 6px;"><a href="services/computer-maintenance.html" style="color: var(--primary);">صيانة أجهزة الشركات ←</a></h4>
+              <p style="font-size: 0.85rem; color: var(--muted); margin: 0;">فحص النظام، تسريع الأداء، وتثبيت التعريفات الرسمية.</p>
+            </div>
+            <div style="padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border);">
+              <h4 style="margin-bottom: 6px;"><a href="services/office-network.html" style="color: var(--primary);">إعداد شبكة المكتب ←</a></h4>
+              <p style="font-size: 0.85rem; color: var(--muted); margin: 0;">ربط الحواسيب، مشاركة الطابعة والمجلدات دون انقطاع.</p>
+            </div>
+            <div style="padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border);">
+              <h4 style="margin-bottom: 6px;"><a href="services/printer-setup.html" style="color: var(--primary);">إعداد الطابعات ←</a></h4>
+              <p style="font-size: 0.85rem; color: var(--muted); margin: 0;">تعريف الطابعات ومشاركتها عبر الشبكة والـ USB.</p>
+            </div>
+            <div style="padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border);">
+              <h4 style="margin-bottom: 6px;"><a href="services/new-computer-setup.html" style="color: var(--primary);">تجهيز حاسوب جديد ←</a></h4>
+              <p style="font-size: 0.85rem; color: var(--muted); margin: 0;">حاسوب جاهز للعمل من أول دقيقة بكافة إعداداته.</p>
+            </div>
+            <div style="padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border);">
+              <h4 style="margin-bottom: 6px;"><a href="services/backup-files.html" style="color: var(--primary);">النسخ الاحتياطي ←</a></h4>
+              <p style="font-size: 0.85rem; color: var(--muted); margin: 0;">تنظيم ملفات العملاء وحمايتها من الفقدان المفاجئ.</p>
             </div>
           </div>
-          <div class="service-detail-media">
-            <img id="serviceImage" src="images/hero-bg.jpg" alt="خدمات iComputer التقنية" data-scroll3d="zoom" />
+
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <a href="services.html" class="btn btn-primary">عرض دليل الخدمات الكامل</a>
+            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-whatsapp" data-whatsapp-link>
+              <span class="btn-icon">💬</span>
+              <span>تواصل عبر WhatsApp</span>
+            </a>
           </div>
         </article>
-
-        <section class="service-not-found glass" id="serviceNotFound" hidden>
-          <h1>الخدمة غير موجودة</h1>
-          <p>لم نتمكن من العثور على تفاصيل الخدمة المطلوبة. تصفح قائمة الخدمات لاختيار خدمة متاحة.</p>
-          <a class="btn btn-primary" href="services.html">عرض الخدمات</a>
-        </section>
       </div>
     </section>
   </main>
 
-  <footer class="footer glass">
-    <div class="container footer-inner">
+  <footer class="footer-extended">
+    <div class="container footer-extended-grid">
+      <div class="footer-col">
+        <div class="brand" style="margin-bottom: 12px;">
+          <span class="brand-mark">iC</span>
+          <span class="brand-text">iComputer <em>Urban Tech DZ</em></span>
+        </div>
+        <p class="footer-brand-bio">
+          الدعم التقني للمكاتب والمؤسسات الصغيرة في الجزائر العاصمة. حلول عملية لأجهزة الكمبيوتر، الشبكات، الطابعات والنسخ الاحتياطي بدون تعقيد.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>الخدمات</h4>
+        <ul>
+          <li><a href="services/office-support.html">دعم المكاتب</a></li>
+          <li><a href="services/computer-maintenance.html">صيانة أجهزة الشركات</a></li>
+          <li><a href="services/office-network.html">إعداد شبكة المكتب</a></li>
+          <li><a href="services/printer-setup.html">إعداد الطابعات</a></li>
+          <li><a href="services/new-computer-setup.html">تجهيز حاسوب جديد</a></li>
+          <li><a href="services/backup-files.html">النسخ الاحتياطي</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>القطاعات</h4>
+        <ul>
+          <li><a href="services/accounting-offices.html">مكاتب المحاسبة</a></li>
+          <li><a href="services/law-offices.html">مكاتب المحامين</a></li>
+          <li><a href="services/notary-offices.html">الموثقون</a></li>
+          <li><a href="services/design-offices.html">مكاتب الدراسات</a></li>
+          <li><a href="services/small-business.html">الشركات الصغيرة</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="index.html#home">الرئيسية</a></li>
+          <li><a href="services.html">دليل الخدمات</a></li>
+          <li><a href="booking.html">طلب خدمة</a></li>
+          <li><a href="knowledge.html">المعرفة والشرح</a></li>
+          <li><a href="quran.html">القرآن الكريم</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
       <p>© <span id="year"></span> iComputer Urban Tech DZ — جميع الحقوق محفوظة</p>
     </div>
   </footer>
 
-  <a class="floating-whatsapp" href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20iComputer." target="_blank" rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
+  <a class="floating-whatsapp" href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أريد%20الاستفسار%20عن%20خدمات%20iComputer." target="_blank" rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
     <span aria-hidden="true">💬</span>
   </a>
 
   <script src="js/script.js"></script>
-  <script src="js/service-details.js"></script>
-  <script src="js/scroll3d.js" data-auto="main img, section img"></script>
 </body>
 </html>

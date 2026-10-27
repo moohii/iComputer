@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>صيانة حاسوب القصبة الجزائر | iComputer Urban Tech DZ</title>
-  <meta name="description" content="خدمات صيانة الحواسيب والدعم التقني في القصبة، الجزائر العاصمة، مع حلول برمجية، شبكات، وحماية البيانات." />
+  <title>الدعم التقني للمكاتب والمؤسسات الصغيرة في الجزائر العاصمة | iComputer Urban Tech DZ</title>
+  <meta name="description"
+    content="حلول تقنية وعملية للمكاتب والشركات الصغيرة في الجزائر العاصمة: صيانة أجهزة الكمبيوتر، إعداد الشبكات، ربط الطابعات، وتأمين النسخ الاحتياطي بدون الحاجة إلى مسؤول IT متفرغ." />
   <meta name="canonical" content="https://[your-domain]/index.html" />
-  <meta property="og:title" content="iComputer Urban Tech DZ | صيانة حاسوب القصبة الجزائر" />
-  <meta property="og:description" content="خدمات صيانة الحواسيب والدعم التقني في القصبة، الجزائر العاصمة، مع حلول برمجية وسير عمل موثوق." />
+  <meta property="og:title" content="iComputer Urban Tech DZ | الدعم التقني للمكاتب والمؤسسات الصغيرة" />
+  <meta property="og:description"
+    content="دعم تقني لمكتبك في الجزائر العاصمة، بدون الحاجة إلى مسؤول IT متفرغ. صيانة الحواسيب، شبكة المكتب، الطابعات والنسخ الاحتياطي." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://[your-domain]/index.html" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -15,35 +17,44 @@
   <link rel="icon" href="images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/intro.css" />
   <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/b2b.css" />
   <link rel="stylesheet" href="css/homepage.css" />
   <link rel="stylesheet" href="css/scroll3d.css" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "ProfessionalService",
       "name": "iComputer Urban Tech DZ",
-      "description": "صيانة حواسيب ودعم تقني",
-      "areaServed": ["Algiers", "القصبة"],
+      "description": "الدعم التقني للمكاتب والمؤسسات الصغيرة في الجزائر العاصمة",
+      "areaServed": ["Algiers", "الجزائر العاصمة"],
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "القصبة",
+        "addressLocality": "الجزائر الوسطى",
         "addressRegion": "Algiers",
         "addressCountry": "DZ"
       },
-      "url": "https://[your-domain]/",
-      "sameAs": ["https://wa.me/rai.med.elamine"]
+      "url": "https://icomputer.netlify.app",
+      "sameAs": [
+        "https://wa.me/rai.med.elamine",
+        "https://www.facebook.com/iComputer.MH",
+        "https://www.instagram.com/icomputer.urban_tech_dz/",
+        "https://www.tiktok.com/@icomputer_dz"
+      ]
     }
   </script>
 </head>
+
 <body>
   <div class="bg-orb orb-1"></div>
   <div class="bg-orb orb-2"></div>
   <div class="bg-orb orb-3"></div>
 
+  <!-- Header & Navigation -->
   <header class="navbar glass">
     <div class="container nav-inner">
       <a href="#home" class="brand">
@@ -53,63 +64,78 @@
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="#home" data-i18n="nav.home">الرئيسية</a>
-        <a href="booking.html" data-i18n="nav.booking">احجز موعد</a>
         <a href="services.html" data-i18n="nav.services">الخدمات</a>
-        <a href="#pricing" data-i18n="nav.pricing">الأسعار</a>
-        <a href="knowledge.html">الشرح والتعريف</a>
-        <a href="quran.html">القرآن</a>
-        <a href="#contact" data-i18n="nav.contact">تواصل</a>
+        <a href="services/office-support.html" data-i18n="nav.solutions">حلول المكاتب</a>
+        <a href="#sectors" data-i18n="nav.sectors">القطاعات</a>
+        <a href="#about" data-i18n="nav.about">من نحن</a>
+        <a href="knowledge.html" data-i18n="nav.knowledge">المعرفة</a>
+        <a href="booking.html" data-i18n="nav.booking">طلب خدمة</a>
       </nav>
       <div class="nav-actions">
+        <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="nav-wa-btn" data-whatsapp-link>
+          <span>💬</span>
+          <span data-i18n="nav.whatsapp">واتساب</span>
+        </a>
         <div class="lang-switch" role="group" aria-label="Language">
           <button data-lang="ar" class="active">ع</button>
           <button data-lang="fr">FR</button>
           <button data-lang="en">EN</button>
         </div>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="تبديل الوضع اللوني">☼</button>
-        <button class="menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة" aria-controls="navLinks" aria-expanded="false">☰</button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة" aria-controls="navLinks"
+          aria-expanded="false">☰</button>
       </div>
     </div>
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-content">
-          <span class="chip glass" data-i18n="hero.chip">الدعم التقني والبرمجي</span>
+          <span class="chip glass" data-i18n="hero.chip">دعم تقني لمكتبك بدون مسؤول IT متفرغ</span>
           <h1 class="hero-title">
-            <span data-i18n="hero.title1">دعم تقني وبرمجي</span>
-            <span class="gradient-text" data-i18n="hero.title2">للأفراد والشركات</span>
+            <span data-i18n="hero.title1">دعم تقني موثوق</span>
+            <span class="gradient-text" data-i18n="hero.title2">للمكاتب والمؤسسات الصغيرة</span>
           </h1>
-          <p class="hero-sub" data-i18n="hero.sub">مساعدة في البرامج وأنظمة التشغيل، إعداد الشبكات، حماية البيانات، وتجهيز الملفات الرقمية.</p>
+          <p class="hero-sub" data-i18n="hero.sub">
+            نساعد المكاتب في الجزائر العاصمة على تشغيل أجهزتها، شبكاتها وطابعاتها بشكل منظم وعملي، لضمان راحة البال واستمرارية العمل.
+          </p>
           <div class="hero-cta">
-            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-primary" data-whatsapp-link data-i18n="hero.cta1">اطلب عبر واتساب</a>
-            <a href="booking.html" class="btn btn-ghost" data-i18n="nav.booking">احجز موعد</a>
-            <a href="services.html" class="btn btn-ghost" data-i18n="hero.cta2">اكتشف خدماتنا</a>
+            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-whatsapp"
+              data-whatsapp-link>
+              <span class="btn-icon">💬</span>
+              <span data-i18n="hero.cta1">اطلب الدعم عبر WhatsApp</span>
+            </a>
+            <a href="booking.html" class="btn btn-primary" data-i18n="nav.booking">إرسال طلب خدمة</a>
+            <a href="services.html" class="btn btn-ghost" data-i18n="hero.cta2">استكشف الخدمات</a>
           </div>
         </div>
+
         <div class="hero-media">
           <div class="hero-image-card glass">
-            <video class="hero-img hero-motion-img" data-scroll3d="tilt" autoplay muted loop playsinline preload="auto" poster="images/hero-motion.gif" aria-label="شاشة كمبيوتر متحركة بلون فاخر">
+            <video class="hero-img hero-motion-img" data-scroll3d="tilt" autoplay muted loop playsinline preload="auto"
+              poster="images/hero-motion.gif" aria-label="شاشة مكتبية تفاعلية">
               <source src="images/hero-motion.mp4" type="video/mp4" />
             </video>
             <div class="hero-image-copy">
-              <span data-i18n="hero.imageLabel">دعم البرامج والأنظمة</span>
-              <strong data-i18n="hero.imageTitle">مساعدة تقنية تناسب احتياجك</strong>
-              <p data-i18n="hero.imageText">إعداد البرامج، حل مشكلات النظام، ومساندتك في الاستخدام.</p>
+              <span data-i18n="hero.imageLabel">حلول تقنية للمكاتب</span>
+              <strong data-i18n="hero.imageTitle">استمرارية عملك وراحة بالك</strong>
+              <p data-i18n="hero.imageText">إعداد الأجهزة، ربط الطابعات، تنظيم الشبكات والنسخ الاحتياطي للملفات الحيوية.</p>
             </div>
             <div class="floating-badge badge-top glass">
               <span class="badge-icon">⚡</span>
               <div class="badge-text">
-                <strong data-i18n="hero.badge1.title">استجابة سريعة</strong>
-                <small data-i18n="hero.badge1.desc">دعم فني متواصل</small>
+                <strong data-i18n="hero.badge1.title">بدون مسؤول IT متفرغ</strong>
+                <small data-i18n="hero.badge1.desc">حلول عملية للمكاتب</small>
               </div>
             </div>
-            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="floating-badge badge-bottom glass whatsapp-order-badge" data-whatsapp-link aria-label="WhatsApp">
+            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener"
+              class="floating-badge badge-bottom glass whatsapp-order-badge" data-whatsapp-link aria-label="WhatsApp">
               <span class="badge-icon">💬</span>
               <div class="badge-text">
-                <strong data-i18n="hero.badge2.title">الطلب عبر واتساب</strong>
-                <small data-i18n="hero.badge2.desc">لا يوجد محل استقبال</small>
+                <strong data-i18n="hero.badge2.title">تواصل عبر WhatsApp</strong>
+                <small data-i18n="hero.badge2.desc">استجابة سريعة ومباشرة</small>
               </div>
             </a>
           </div>
@@ -117,146 +143,262 @@
       </div>
     </section>
 
-    <section class="support-intro section" aria-labelledby="supportIntroTitle">
-      <div class="container support-intro-inner">
-        <div class="support-intro-heading">
-          <span class="chip glass" data-i18n="supportIntro.chip">خدمات تقنية للأفراد والشركات</span>
-          <h2 class="section-title" id="supportIntroTitle" data-i18n="supportIntro.title">تقنية تعمل كما تحتاجها</h2>
+    <!-- Trust Strip -->
+    <div class="b2b-trust-strip">
+      <div class="container trust-strip-inner">
+        <div class="trust-item">
+          <span class="trust-item-icon">✓</span>
+          <span>مخصص للمكاتب والمؤسسات الصغيرة</span>
         </div>
-        <div class="support-intro-copy">
-          <ul class="support-intro-list">
-            <li data-i18n="supportIntro.p1">حل مشكلات البرامج وأنظمة التشغيل، دون صيانة قطع الحاسوب.</li>
-            <li data-i18n="supportIntro.p2">تثبيت البرامج والأنظمة وتهيئتها للاستخدام.</li>
-            <li data-i18n="supportIntro.p3">إعداد الشبكات والاتصال، وحماية البيانات والنسخ الاحتياطي.</li>
-            <li data-i18n="supportIntro.p4">إنشاء السير الذاتية والعروض والملفات الرقمية.</li>
-            <li data-i18n="supportIntro.p5">أرسل طلبك عبر واتساب. لا يوجد محل استقبال.</li>
-          </ul>
+        <div class="trust-item">
+          <span class="trust-item-icon">✓</span>
+          <span>حلول عملية وسريعة بدون تعقيد</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item-icon">✓</span>
+          <span>بدون التزامات أو عقود مرهقة</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item-icon">📍</span>
+          <span>الجزائر العاصمة وضواحيها</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: لمن نقدم خدماتنا؟ (Target Sectors) -->
+    <section id="sectors" class="section">
+      <div class="container">
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 40px;">
+          <span class="chip glass">الفئات المستهدفة</span>
+          <h2 class="section-title">لمن نقدم خدماتنا؟</h2>
+          <p class="section-sub" style="margin-bottom: 0;">
+            نوفر حلولاً مصممة خصيصاً للمكاتب المستقلة والأنشطة المهنية التي تعتمد على حواسيب العمل دون وجود قسم تكنولوجيا معلومات داخلي:
+          </p>
+        </div>
+
+        <div class="sectors-grid">
+          <!-- Sector 1: مكاتب المحاسبة -->
+          <div class="sector-card glass">
+            <div class="sector-header">
+              <div class="sector-icon">📊</div>
+              <h3>مكاتب المحاسبة</h3>
+            </div>
+            <div class="sector-body">
+              <div class="sector-pain">
+                <strong>المشكلة الشائعة:</strong>
+                توقف طابعات الفواتير في أوقات التصريحات الجبائية، وتشتت ملفات الزبائن.
+              </div>
+              <div class="sector-solution">
+                <strong>كيف يمكننا المساعدة:</strong>
+                صيانة الأجهزة، مشاركة الطابعات، تنظيم ملفات الضرائب وإعداد خطة نسخ احتياطي دورية.
+              </div>
+            </div>
+            <div class="sector-footer">
+              <a href="services/accounting-offices.html" class="btn-sector">اكتشف الحل المحاسبي ←</a>
+            </div>
+          </div>
+
+          <!-- Sector 2: مكاتب المحامين -->
+          <div class="sector-card glass">
+            <div class="sector-header">
+              <div class="sector-icon">⚖️</div>
+              <h3>مكاتب المحامين</h3>
+            </div>
+            <div class="sector-body">
+              <div class="sector-pain">
+                <strong>المشكلة الشائعة:</strong>
+                تعطل الماسح الضوئي أو الطابعة قبل موعد الجلسة وصعوبة تبادل المذكرات مع الكاتب.
+              </div>
+              <div class="sector-solution">
+                <strong>كيف يمكننا المساعدة:</strong>
+                ضبط الطباعة السريعة، إعداد شبكة داخلية لتبادل العرائض، وتأمين حفظ المذكرات.
+              </div>
+            </div>
+            <div class="sector-footer">
+              <a href="services/law-offices.html" class="btn-sector">اكتشف الحل القانوني ←</a>
+            </div>
+          </div>
+
+          <!-- Sector 3: الموثقون -->
+          <div class="sector-card glass">
+            <div class="sector-header">
+              <div class="sector-icon">📜</div>
+              <h3>الموثقون</h3>
+            </div>
+            <div class="sector-body">
+              <div class="sector-pain">
+                <strong>المشكلة الشائعة:</strong>
+                أخطاء طباعة العقود على الورق الرسمي ومخاطر الفيروسات من أقراص الزبائن.
+              </div>
+              <div class="sector-solution">
+                <strong>كيف يمكننا المساعدة:</strong>
+                معايرة طابعات العقود بدقة، تأمين أجهزة المكتب، وحماية أرشيف العقود التوثيقية.
+              </div>
+            </div>
+            <div class="sector-footer">
+              <a href="services/notary-offices.html" class="btn-sector">اكتشف حلول التوثيق ←</a>
+            </div>
+          </div>
+
+          <!-- Sector 4: مكاتب الدراسات -->
+          <div class="sector-card glass">
+            <div class="sector-header">
+              <div class="sector-icon">📐</div>
+              <h3>مكاتب الدراسات والهندسة</h3>
+            </div>
+            <div class="sector-body">
+              <div class="sector-pain">
+                <strong>المشكلة الشائعة:</strong>
+                بطء فتح ملفات CAD الكبيرة وصعوبة نقل مجلدات المشاريع بين المهندسين.
+              </div>
+              <div class="sector-solution">
+                <strong>كيف يمكننا المساعدة:</strong>
+                تحسين أداء الحواسيب الهندسية، ربط طابعات المخططات، ومشاركة سريعة عبر الشبكة.
+              </div>
+            </div>
+            <div class="sector-footer">
+              <a href="services/design-offices.html" class="btn-sector">اكتشف الحل الهندسي ←</a>
+            </div>
+          </div>
+
+          <!-- Sector 5: الوكالات والشركات الصغيرة -->
+          <div class="sector-card glass">
+            <div class="sector-header">
+              <div class="sector-icon">🏢</div>
+              <h3>الوكالات والشركات الصغيرة</h3>
+            </div>
+            <div class="sector-body">
+              <div class="sector-pain">
+                <strong>المشكلة الشائعة:</strong>
+                امتلاك عدة أجهزة دون متابع تقني، وتكرار انقطاع الطابعة المشتركة والـ Wi-Fi.
+              </div>
+              <div class="sector-solution">
+                <strong>كيف يمكننا المساعدة:</strong>
+                تنظيم شبكة المكتب، تهيئة مجلدات الأقسام، وتقديم دعم مباشر عبر WhatsApp.
+              </div>
+            </div>
+            <div class="sector-footer">
+              <a href="services/small-business.html" class="btn-sector">اكتشف حلول الشركات ←</a>
+            </div>
+          </div>
+
+          <!-- Sector 6: أصحاب المكاتب الحرة -->
+          <div class="sector-card glass">
+            <div class="sector-header">
+              <div class="sector-icon">💼</div>
+              <h3>أصحاب المكاتب الحرة</h3>
+            </div>
+            <div class="sector-body">
+              <div class="sector-pain">
+                <strong>المشكلة الشائعة:</strong>
+                استغراق ساعات طويلة في حل مشاكل النظام وتحديثات البرامج بدلاً من التركيز على العمل.
+              </div>
+              <div class="sector-solution">
+                <strong>كيف يمكننا المساعدة:</strong>
+                تهيئة بيئة حاسوب مستقرة، أتمتة النسخ الاحتياطي، ودعم سريع عند حدوث أي خلل.
+              </div>
+            </div>
+            <div class="sector-footer">
+              <a href="services/office-support.html" class="btn-sector">اكتشف حلول المكاتب ←</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section">
+    <!-- Section: خدماتنا الأساسية (Core Services) -->
+    <section id="services" class="section" style="background: rgba(255, 255, 255, 0.015); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
       <div class="container">
-        <h2 class="section-title" data-i18n="services.title">خدماتنا</h2>
-        <p class="section-sub" data-i18n="services.sub">حلول شاملة متخصصة لتلبية كل احتیاجاتك التقنية.</p>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 36px;">
+          <div>
+            <span class="chip glass">تغطية تقنية شاملة</span>
+            <h2 class="section-title" style="margin-top: 8px; margin-bottom: 4px;">خدماتنا الأساسية للمكاتب</h2>
+            <p style="color: var(--muted); margin: 0;">حلول مخصصة لمعالجة جميع الاحتياجات التقنية اليومية في مكتبك:</p>
+          </div>
+          <a href="services.html" class="btn btn-ghost">عرض كافة الخدمات ←</a>
+        </div>
+
         <div class="grid grid-3">
           <article class="card glass service-card">
-            <a href="service-details.html?service=pc" class="service-link">
+            <a href="services/office-support.html" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="مساعدة تقنية في استخدام الحاسوب" class="card-img" data-scroll3d="tilt" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="دعم تقني للمكاتب" class="card-img" data-scroll3d="tilt" loading="lazy" />
+                <div class="card-icon">💼</div>
+              </div>
+              <div class="card-body">
+                <h3>دعم المكاتب والمؤسسات</h3>
+                <p>مساعدة تقنية متكاملة لتشخيص المشاكل، برامج العمل، وإدارة أجهزة المكتب عند الحاجة.</p>
+                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card glass service-card">
+            <a href="services/computer-maintenance.html" class="service-link">
+              <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=600&q=80" alt="صيانة أجهزة الشركات" class="card-img" data-scroll3d="tilt" loading="lazy" />
                 <div class="card-icon">🖥️</div>
               </div>
               <div class="card-body">
-                <h3 data-i18n="services.s1.title">دعم الحاسوب والبرامج</h3>
-                <p data-i18n="services.s1.desc">حل مشكلات البرامج وأنظمة التشغيل وإعدادها، دون صيانة المكونات المادية.</p>
+                <h3>صيانة أجهزة الشركات</h3>
+                <p>فحص الأقراص، تنظيف Windows، حل مشاكل النظام، وتثبيت التعريفات لتسريع استجابة العمل.</p>
+                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
               </div>
             </a>
           </article>
+
           <article class="card glass service-card">
-            <a href="service-details.html?service=network" class="service-link">
+            <a href="services/office-network.html" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="تركيب الشبكات" class="card-img" data-scroll3d="tilt" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="إعداد شبكة المكتب" class="card-img" data-scroll3d="tilt" loading="lazy" />
                 <div class="card-icon">🌐</div>
               </div>
               <div class="card-body">
-                <h3 data-i18n="services.s2.title">تركيب الشبكات</h3>
-                <p data-i18n="services.s2.desc">إعداد وتأمين شبكات سلكية ولاسلكية عالية الأداء للمنازل والشركات.</p>
+                <h3>إعداد شبكة المكتب</h3>
+                <p>ربط حواسيب المكتب ببعضها، مشاركة الملفات، مشاركة الطابعة، وضبط Wi-Fi مستقر.</p>
+                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
               </div>
             </a>
           </article>
+
           <article class="card glass service-card">
-            <a href="service-details.html?service=cv" class="service-link">
+            <a href="services/printer-setup.html" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="إنشاء سيرة ذاتية احترافية" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">📄</div>
+                <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80" alt="إعداد الطابعات للمكاتب" class="card-img" data-scroll3d="tilt" loading="lazy" />
+                <div class="card-icon">🖨️</div>
               </div>
               <div class="card-body">
-                <h3>إنشاء سيرة ذاتية احترافية (CV)</h3>
-                <p>إعداد سيرة ذاتية احترافية تعكس مهاراتك وتجعل ملفك أكثر قوة عند التقديم للوظائف.</p>
+                <h3>إعداد وربط الطابعات</h3>
+                <p>تثبيت التعريفات الأصلية، مشاركة الطابعة عبر الشبكة، وحل مشاكل الطباعة المعلقة.</p>
+                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
               </div>
             </a>
           </article>
+
           <article class="card glass service-card">
-            <a href="service-details.html?service=ppt" class="service-link">
+            <a href="services/new-computer-setup.html" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=600&q=80" alt="تصميم عروض PowerPoint" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">📊</div>
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80" alt="تجهيز حاسوب جديد" class="card-img" data-scroll3d="tilt" loading="lazy" />
+                <div class="card-icon">⚡</div>
               </div>
               <div class="card-body">
-                <h3>تصميم عروض PowerPoint</h3>
-                <p>تصميم عروض تقديمية احترافية للطلاب أو الشركات بأسلوب جذاب ومناسب للجمهور.</p>
+                <h3>تجهيز حاسوب جديد</h3>
+                <p>تهيئة كاملة للحواسيب الجديدة: نظام نظيف، تحديثات، برامج مكتبية، وجاهزية فورية للعمل.</p>
+                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
               </div>
             </a>
           </article>
+
           <article class="card glass service-card">
-            <a href="service-details.html?service=reports" class="service-link">
+            <a href="services/backup-files.html" class="service-link">
               <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="كتابة تقارير ومشاريع" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">📝</div>
-              </div>
-              <div class="card-body">
-                <h3>كتابة تقارير أو مشاريع دراسية</h3>
-                <p>كتابة تقارير ومشاريع أكاديمية أو علمية بشكل منظم واحترافي.</p>
-              </div>
-            </a>
-          </article>
-          <article class="card glass service-card">
-            <a href="service-details.html?service=excel" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="إعداد جداول Excel" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">📈</div>
-              </div>
-              <div class="card-body">
-                <h3>إعداد جداول Excel للمحاسبة أو التسيير</h3>
-                <p>تصميم جداول مالية وإدارية دقيقة تساعدك على تنظيم العمل والمحاسبة بسهولة.</p>
-              </div>
-            </a>
-          </article>
-          <article class="card glass service-card">
-            <a href="service-details.html?service=phones" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="تصليح الهواتف والبرامج" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">📱</div>
-              </div>
-              <div class="card-body">
-                <h3>تصليح الهواتف — برمجيًا وتسريعها</h3>
-                <p>إصلاح مشاكل البرامج، تسريع الأداء، وإعادة تشغيل الهواتف بشكل أفضل مع دعم أجهزة TV Box أيضًا.</p>
-              </div>
-            </a>
-          </article>
-          <article class="card glass service-card">
-            <a href="service-details.html?service=games" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="تحميل الألعاب وفلش الأجهزة" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">🎮</div>
-              </div>
-              <div class="card-body">
-                <h3>تحميل الألعاب وفلش الأجهزة</h3>
-                <p>إعداد ألعاب Retro/Arcade وفلش أجهزة Game Console مثل R36S وArkOS4Clone-06272026 بشكل احترافي.</p>
-              </div>
-            </a>
-          </article>
-          <article class="card glass service-card">
-            <a href="service-details.html?service=security" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="الأمن السيبراني وحماية البيانات" class="card-img" data-scroll3d="tilt" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="النسخ الاحتياطي وتنظيم الملفات" class="card-img" data-scroll3d="tilt" loading="lazy" />
                 <div class="card-icon">🛡️</div>
               </div>
               <div class="card-body">
-                <h3 data-i18n="services.s4.title">الأمن السيبراني</h3>
-                <p data-i18n="services.s4.desc">حماية البيانات، النسخ الاحتياطي، واسترجاع الملفات بعد الأعطال.</p>
-              </div>
-            </a>
-          </article>
-          <article class="card glass service-card">
-            <a href="service-details.html?service=os" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="images/systems-install.jpg" alt="أنظمة تشغيل مختلفة على أجهزة الحاسوب" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">💿</div>
-              </div>
-              <div class="card-body">
-                <h3>تثبيت أنظمة التشغيل</h3>
-                <p>تثبيت وتهيئة أنظمة التشغيل وإعداد الجهاز للاستخدام.</p>
+                <h3>تنظيم الملفات والنسخ الاحتياطي</h3>
+                <p>هيكلة ملفات العملاء، نسخ احتياطي دوري محلي وخارجي لتقليل مخاطر فقدان البيانات.</p>
+                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
               </div>
             </a>
           </article>
@@ -264,177 +406,402 @@
       </div>
     </section>
 
-    
-    <section id="subscription-promo" class="section sub-section">
+    <!-- Section: حلول حسب المشكلة (Solutions by Problem) -->
+    <section class="section">
       <div class="container">
-        <div class="sub-banner glass">
-          <div class="sub-header text-center">
-            <span class="chip glass" data-i18n="sub.chip">💼 حلول موجهة للشركات والمؤسسات</span>
-            <h2 class="sub-slogan" data-i18n="sub.slogan">توقف العمل بسبب عطل في الكمبيوتر يكلف أكثر من الوقاية.</h2>
-            <p class="sub-sub" data-i18n="sub.sub">اشتراك شهري متكامل يناسب الشركات الصغيرة والمتوسطة لضمان استمرارية نشاطك بدون توقف.</p>
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 36px;">
+          <span class="chip glass">تشخيص مباشر</span>
+          <h2 class="section-title">لديك مشكلة تقنية في المكتب؟</h2>
+          <p class="section-sub" style="margin-bottom: 0;">اختر المشكلة التي تواجهها لنقدم لك الحل المباشر والمناسب:</p>
+        </div>
+
+        <div class="problems-grid">
+          <div class="problem-card glass">
+            <div class="problem-card-top">
+              <span class="problem-icon">⏳</span>
+              <div>
+                <h3>الكمبيوتر بطيء جداً</h3>
+                <p>تشنج عند فتح الملفات أو إقلاع بطيء يستغرق دقائق طويلة.</p>
+              </div>
+            </div>
+            <a href="services/computer-maintenance.html" class="solution-tag">
+              <span>← الحل: تشخيص وتحسين الأداء</span>
+            </a>
           </div>
 
-          <div class="pillars-grid">
-            <div class="pillar-card glass">
-              <div class="pillar-icon">☁️</div>
-              <h3 data-i18n="sub.p1.title">النسخ الاحتياطي.</h3>
-              <p data-i18n="sub.p1.desc">Reliable Data Preservation.</p>
+          <div class="problem-card glass">
+            <div class="problem-card-top">
+              <span class="problem-icon">🖨️</span>
+              <div>
+                <h3>الطابعة لا تعمل</h3>
+                <p>رسائل خطأ في الطباعة، أو عدم تعرف الأجهزة على الطابعة المشتركة.</p>
+              </div>
             </div>
-            <div class="pillar-card glass">
-              <div class="pillar-icon">🔒</div>
-              <h3 data-i18n="sub.p2.title">حماية البيانات.</h3>
-              <p data-i18n="sub.p2.desc">Enhanced Cyber Security.</p>
-            </div>
-            <div class="pillar-card glass">
-              <div class="pillar-icon">🛠️</div>
-              <h3 data-i18n="sub.p3.title">دعم البرامج والأنظمة.</h3>
-              <p data-i18n="sub.p3.desc">إعداد البرامج وحل مشكلات النظام.</p>
-            </div>
-            <div class="pillar-card glass">
-              <div class="pillar-icon">👁️</div>
-              <h3 data-i18n="sub.p4.title">مراقبة الأجهزة.</h3>
-              <p data-i18n="sub.p4.desc">Proactive Network Vigilance.</p>
-            </div>
-            <div class="pillar-card glass">
-              <div class="pillar-icon">🎧</div>
-              <h3 data-i18n="sub.p5.title">دعم فني.</h3>
-              <p data-i18n="sub.p5.desc">Immediate Problem Resolution.</p>
-            </div>
+            <a href="services/printer-setup.html" class="solution-tag">
+              <span>← الحل: إعداد وإصلاح اتصال الطابعة</span>
+            </a>
           </div>
 
-          <div class="sub-footer text-center">
-            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-whatsapp-link>
-              <span class="btn-icon">🎁</span>
-              <span data-i18n="sub.cta">احصل على عرض مجاني</span>
+          <div class="problem-card glass">
+            <div class="problem-card-top">
+              <span class="problem-icon">📶</span>
+              <div>
+                <h3>الإنترنت يعمل لكن الأجهزة لا تتصل</h3>
+                <p>صعوبة رؤية الملفات المشتركة أو جهاز الأرشيف عبر الشبكة المحلية.</p>
+              </div>
+            </div>
+            <a href="services/office-network.html" class="solution-tag">
+              <span>← الحل: فحص الشبكة المحلية وعناوين IP</span>
+            </a>
+          </div>
+
+          <div class="problem-card glass">
+            <div class="problem-card-top">
+              <span class="problem-icon">💻</span>
+              <div>
+                <h3>اشتريت حاسوباً جديداً</h3>
+                <p>تحتاج لتثبيت Windows والتعريفات والبرامج المكتبية دون ضياع وقت.</p>
+              </div>
+            </div>
+            <a href="services/new-computer-setup.html" class="solution-tag">
+              <span>← الحل: تجهيز كامل جاهز للعمل</span>
+            </a>
+          </div>
+
+          <div class="problem-card glass">
+            <div class="problem-card-top">
+              <span class="problem-icon">📁</span>
+              <div>
+                <h3>ملفات المكتب غير منظمة</h3>
+                <p>تشتت الوثائق على عدة أجهزة والخوف من ضياع معاملات الزبائن.</p>
+              </div>
+            </div>
+            <a href="services/backup-files.html" class="solution-tag">
+              <span>← الحل: تنظيم وهيكلة ونسخ احتياطي</span>
+            </a>
+          </div>
+
+          <div class="problem-card glass">
+            <div class="problem-card-top">
+              <span class="problem-icon">🔗</span>
+              <div>
+                <h3>تحتاج لأكثر من جهاز متصل</h3>
+                <p>تريد ربط أجهزة الفريق والتعاون على نفس الملفات بسهولة وسرعة.</p>
+              </div>
+            </div>
+            <a href="services/office-network.html" class="solution-tag">
+              <span>← الحل: إعداد شبكة المكتب ومشاركة الملفات</span>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="pricing" class="section">
+    <!-- Section: طريقة العمل (Timeline) -->
+    <section class="section" style="background: rgba(255, 255, 255, 0.015); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
       <div class="container">
-        <h2 class="section-title" data-i18n="pricing.title">باقات الأسعار</h2>
-        <div class="grid grid-3">
-          <div class="card glass price-card">
-            <h3 data-i18n="pricing.p1.name">مبتدئ</h3>
-            <div class="price">2,000 <span>DZD</span></div>
-            <ul>
-              <li data-i18n="pricing.p1.f1">صيانة أساسية</li>
-              <li data-i18n="pricing.p1.f2">دعم عبر الهاتف</li>
-              <li data-i18n="pricing.p1.f3">زيارة واحدة شهريًا</li>
-            </ul>
-            <a href="#contact" class="btn btn-ghost" data-i18n="pricing.cta">اطلب الآن</a>
+        <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+          <span class="chip glass">سير العمل المنظم</span>
+          <h2 class="section-title">كيف نعمل مع مكتبك؟</h2>
+          <p class="section-sub">خطوات واضحة وبسيطة من لحظة التواصل وحتى تسليم النتيجة:</p>
+        </div>
+
+        <div class="timeline-track">
+          <div class="timeline-step glass">
+            <div class="timeline-num">1</div>
+            <h4>التواصل</h4>
+            <p>تتواصل معنا عبر WhatsApp أو ترسل طلب الخدمة عبر النموذج.</p>
           </div>
-          <div class="card glass price-card featured">
-            <span class="badge" data-i18n="pricing.popular">الأكثر طلبًا</span>
-            <h3 data-i18n="pricing.p2.name">أعمال</h3>
-            <div class="price">3,000 <span>DZD</span></div>
-            <ul>
-              <li data-i18n="pricing.p2.f1">صيانة شاملة</li>
-              <li data-i18n="pricing.p2.f2">دعم 24/7</li>
-              <li data-i18n="pricing.p2.f3">إدارة الشبكة</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary" data-i18n="pricing.cta">اطلب الآن</a>
+
+          <div class="timeline-step glass">
+            <div class="timeline-num">2</div>
+            <h4>فهم المشكلة</h4>
+            <p>نستمع لما يحدث في أجهزتك أو طبيعة ما تود إعداده في المكتب.</p>
           </div>
-          <div class="card glass price-card">
-            <h3 data-i18n="pricing.p3.name">مؤسسات</h3>
-            <div class="price" data-i18n="pricing.custom">حسب الطلب</div>
-            <ul>
-              <li data-i18n="pricing.p3.f1">حلول مخصصة</li>
-              <li data-i18n="pricing.p3.f2">مدير حساب مخصص</li>
-              <li data-i18n="pricing.p3.f3">SLA مضمون</li>
-            </ul>
-            <a href="#contact" class="btn btn-ghost" data-i18n="pricing.cta">اطلب الآن</a>
+
+          <div class="timeline-step glass">
+            <div class="timeline-num">3</div>
+            <h4>التشخيص</h4>
+            <p>معاينة الحالة التقنية وتحديد سبب العطل أو الاحتياج بدقة.</p>
+          </div>
+
+          <div class="timeline-step glass">
+            <div class="timeline-num">4</div>
+            <h4>اقتراح الحل</h4>
+            <p>توضيح الخطوات العملية المناسبة دون مبالغة أو تعقيدات.</p>
+          </div>
+
+          <div class="timeline-step glass">
+            <div class="timeline-num">5</div>
+            <h4>تنفيذ الخدمة</h4>
+            <p>إنجاز الصيانة، الإعداد، ربط الشبكة أو تثبيت النظام باحترافية.</p>
+          </div>
+
+          <div class="timeline-step glass">
+            <div class="timeline-num">6</div>
+            <h4>اختبار النتيجة</h4>
+            <p>التأكد من عمل الأجهزة والطابعات واستقرارها قبل إنهاء الخدمة.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="testimonialsSection" class="section testimonials-section">
+    <!-- Section: لماذا iComputer Urban Tech DZ؟ -->
+    <section class="section">
       <div class="container">
-        <div class="section-heading-row">
-          <h2 class="section-title" data-i18n="reviews.title">آراء العملاء</h2>
-          <a href="review.html" class="btn btn-ghost" data-i18n="reviews.write">اترك رأيك</a>
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 36px;">
+          <span class="chip glass">الثقة والمصداقية</span>
+          <h2 class="section-title">لماذا iComputer Urban Tech DZ؟</h2>
+          <p class="section-sub" style="margin-bottom: 0;">نركز على الحلول العملية التي تفيد أصحاب المكاتب دون ادعاءات غير حقيقية:</p>
         </div>
-        <div class="testimonials-grid" id="testimonialsList" aria-live="polite"></div>
+
+        <div class="why-us-grid">
+          <div class="why-card glass">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>خدمات موجهة للمكاتب والمؤسسات</h4>
+              <p>نفهم طبيعة بيئة العمل المكتبي، وأهمية استقرار البرامج وسرعة استرجاع الوثائق.</p>
+            </div>
+          </div>
+
+          <div class="why-card glass">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>حلول تقنية عملية</h4>
+              <p>نقدم ما تحتاجه فعلياً دون اقتراح برامج أو تعقيدات لا تلزم نشاطك اليومي.</p>
+            </div>
+          </div>
+
+          <div class="why-card glass">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>دعم تقني واضح ومباشر</h4>
+              <p>شرح مبسط للمشكلة وحلها دون مصطلحات تقنية معقدة، مع متابعة واضحة.</p>
+            </div>
+          </div>
+
+          <div class="why-card glass">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>بدون تعقيد أو عقود مرهقة</h4>
+              <p>مرونة تامة تناسب إمكانيات المؤسسات والمهن الحرة عند الحاجة الفعلية للدعم.</p>
+            </div>
+          </div>
+
+          <div class="why-card glass">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>مناسب للمؤسسات الصغيرة</h4>
+              <p>بديل اقتصادي ومرن جداً يغنيك عن التكاليف العالية لتوظيف تقني IT متفرغ.</p>
+            </div>
+          </div>
+
+          <div class="why-card glass">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>التواصل المباشر عبر WhatsApp</h4>
+              <p>سهولة التواصل وإرسال صور ورسائل الخطأ لتلقي التوجيه والمساعدة السريعة.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="container contact-grid">
-        <div>
-          <h2 class="section-title" data-i18n="contact.title">تواصل معنا</h2>
-          <p data-i18n="contact.sub">أرسل طلبك عبر واتساب. لا يوجد محل لاستقبال الزبائن.</p>
-          <ul class="contact-info">
-            <li>📍 <a href="https://maps.app.goo.gl/o3BeYZaTyHqvPLf27" target="_blank" rel="noopener" class="maps-link"><span data-i18n="contact.addr">الجزائر الوسطى (عرض الموقع على الخريطة) 🗺️</span></a></li>
-           <li>
-  💬 <a href="https://wa.me/rai.med.elamine"
-        target="_blank"
-        rel="noopener"
-        class="whatsapp-contact-link"
-        data-whatsapp-link
-        data-i18n="contact.whatsapp">
-    اطلب الخدمة عبر واتساب
-  </a>
-</li>
+    <!-- Section: من نحن (About) -->
+    <section id="about" class="section" style="background: rgba(255, 255, 255, 0.015); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+      <div class="container about-grid">
+        <div class="about-info">
+          <span class="chip glass">من نحن</span>
+          <h2 class="section-title">خبرة تقنية عملية في خدمة مكاتب الجزائر العاصمة</h2>
+          <p style="font-size: 1.05rem; color: var(--text-strong);">
+            محمد الأمين — تقني سامي في الإعلام الآلي (Senior IT Technician).
+          </p>
+          <p>
+            أساعد المكاتب والمؤسسات الصغيرة في الجزائر العاصمة (مكاتب محاسبة، محاماة، موثقون، مكاتب دراسات وشركات) في حل مشاكل الحواسيب، إعداد شبكات العمل المحلية، ربط الطابعات والماسحات، وتنظيم النسخ الاحتياطي للملفات.
+          </p>
+          <p>
+            الهدف الأساسي لـ <strong>iComputer Urban Tech DZ</strong> هو توفير دعم تقني يعتمد عليه، يمنح صاحب المكتب راحة البال واستمرارية العمل دون الحاجة لتحمل تكلفة مسؤول IT بدوام كامل.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px;">
+            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-whatsapp" data-whatsapp-link>
+              <span class="btn-icon">💬</span>
+              <span>تواصل عبر WhatsApp</span>
+            </a>
+            <a href="booking.html" class="btn btn-ghost">طلب خدمة</a>
+          </div>
+        </div>
 
-<li>
-  🎵 <a href="https://www.tiktok.com/@icomputer_dz"
-        target="_blank"
-        rel="noopener">
-    TikTok: @icomputer_dz
-  </a>
-</li>
+        <div class="about-media">
+          <div class="about-img-wrapper glass">
+            <img src="images/systems-install.jpg" alt="الدعم التقني للمكاتب في الجزائر" class="about-img" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=80'" />
+            <div class="about-experience-badge">
+              <span class="exp-num">IT</span>
+              <span class="exp-text">تقني سامي إعلام آلي</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<li>
-  📘 <a href="https://www.facebook.com/iComputer.MH"
-        target="_blank"
-        rel="noopener">
-    Facebook: iComputer.MH
-  </a>
-</li>
+    <!-- Section: الأسئلة الشائعة (FAQ) (Prompt Point 24) -->
+    <section id="faq" class="section">
+      <div class="container" style="max-width: 860px;">
+        <div style="text-align: center; margin-bottom: 36px;">
+          <span class="chip glass">إجابات شفافة</span>
+          <h2 class="section-title">الأسئلة الشائعة</h2>
+          <p class="section-sub">كل ما تحتاج معرفته حول خدمات الدعم التقني لمكتبك:</p>
+        </div>
 
-<li>
-  📷 <a href="https://www.instagram.com/icomputer.urban_tech_dz/"
-        target="_blank"
-        rel="noopener">
-    Instagram: @icomputer.urban_tech_dz
-  </a>
-</li>
-            <li>🏡 <span data-i18n="contact.workType">الطلبات عبر واتساب، لا يوجد محل لاستقبال الزبائن</span></li>
-<li>
-  💬 <a href="https://wa.me/rai.med.elamine"
-        target="_blank"
-        rel="noopener"
-        class="whatsapp-contact-link"
-        data-whatsapp-link
-        data-i18n="contact.whatsapp">
-    اطلب الخدمة عبر واتساب
-  </a>
-</li>          </ul>
-          <div class="contact-maps-box">
-            <a href="https://maps.app.goo.gl/o3BeYZaTyHqvPLf27" target="_blank" rel="noopener" class="btn btn-ghost btn-maps">
-              <span>📍 فتح الموقع في Google Maps</span>
+        <div class="faq-list">
+          <details class="glass">
+            <summary>هل تخدمون المكاتب والشركات الصغيرة؟</summary>
+            <p>
+              نعم، هذه هي فئتنا المستهدفة الأساسية. نركز على مكاتب المحاسبة، مكاتب المحامين، الموثقين، مكاتب الدراسات، الوكالات التجارية، والشركات التي تملك عدداً من الحواسيب ولا تملك موظف IT متفرغ.
+            </p>
+          </details>
+
+          <details class="glass">
+            <summary>هل تخدمون الأفراد أيضاً؟</summary>
+            <p>
+              نعم، نقدم الدعم البرمجي، تثبيت الأنظمة، وصيانة أجهزة الحواسيب للمهنيين وأصحاب المكاتب الحرة والعمل المستقل.
+            </p>
+          </details>
+
+          <details class="glass">
+            <summary>هل يمكن إعداد شبكة داخل المكتب؟</summary>
+            <p>
+              نعم، نقوم بتهيئة الراوتر، ربط أجهزة المكتب سلكياً أو عبر Wi-Fi، ضبط مشاركة المجلدات والصلاحيات، ومشاركة الطابعات المركزية بين جميع الموظفين.
+            </p>
+          </details>
+
+          <details class="glass">
+            <summary>هل يمكن تجهيز حاسوب جديد للعمل؟</summary>
+            <p>
+              بالتأكيد. تشمل الخدمة تثبيت نسخة Windows نظيفة ومستقرة، تثبيت التعريفات الأصلية والتحديثات، برامج العمل المكتبية الأساسية، إعداد الطابعة والبريد، ليكون الجهاز جاهزاً للاستخدام الفوري.
+            </p>
+          </details>
+
+          <details class="glass">
+            <summary>هل يمكن إعداد وربط طابعة المكتب؟</summary>
+            <p>
+              نعم، نقوم بتثبيت التعريفات الرسمية، ربط الطابعة عبر USB أو الشبكة (LAN / Wi-Fi)، تفعيل مشاركتها بين أجهزة المكتب، ومعالجة مشاكل طابور الطباعة.
+            </p>
+          </details>
+
+          <details class="glass">
+            <summary>هل تقدمون خدمة النسخ الاحتياطي للملفات؟</summary>
+            <p>
+              نعم، نساعدك في تنظيم مجلدات العمل وإعداد نظام نسخ احتياطي دوري محلي وخارجي للتقليل من مخاطر فقدان ملفات العملاء أو تعرض الأجهزة للأعطال المفاجئة.
+            </p>
+          </details>
+
+          <details class="glass">
+            <summary>هل يمكن طلب الدعم عبر WhatsApp؟</summary>
+            <p>
+              نعم، WhatsApp هو وسيلة التواصل الأساسية والمباشرة لدينا لاستقبال الاستفسارات، إرسال تفاصيل وصور المشكلة، وتنسيق موعد الدعم.
+            </p>
+          </details>
+
+          <details class="glass">
+            <summary>هل الخدمة داخل الجزائر العاصمة فقط؟</summary>
+            <p>
+              نطاق عملنا الأساسي يغطي بلدية الجزائر الوسطى وضواحي الجزائر العاصمة لضمان سرعة الاستجابة والمتابعة الفعالة.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section (Prompt Point 16) -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-banner">
+          <h2>هل يحتاج مكتبك إلى دعم تقني؟</h2>
+          <p>
+            تواصل معنا عبر WhatsApp أو أرسل تفاصيل المشكلة وسننسق معك مباشرة دون تعقيد.
+          </p>
+          <div class="final-cta-actions">
+            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-whatsapp" data-whatsapp-link>
+              <span class="btn-icon">💬</span>
+              <span>اطلب الدعم عبر WhatsApp</span>
+            </a>
+            <a href="booking.html" class="btn btn-ghost">
+              إرسال طلب خدمة
             </a>
           </div>
         </div>
-      
       </div>
     </section>
   </main>
 
-  <footer class="footer glass">
-    <div class="container footer-inner">
+  <!-- Extended B2B Footer (Prompt Point 26) -->
+  <footer class="footer-extended">
+    <div class="container footer-extended-grid">
+      <div class="footer-col">
+        <div class="brand" style="margin-bottom: 12px;">
+          <span class="brand-mark">iC</span>
+          <span class="brand-text">iComputer <em>Urban Tech DZ</em></span>
+        </div>
+        <p class="footer-brand-bio">
+          الدعم التقني للمكاتب والمؤسسات الصغيرة في الجزائر العاصمة. حلول عملية لأجهزة الكمبيوتر، الشبكات، الطابعات والنسخ الاحتياطي بدون تعقيد.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="footer-social-link" title="WhatsApp" data-whatsapp-link>💬</a>
+          <a href="https://www.facebook.com/iComputer.MH" target="_blank" rel="noopener" class="footer-social-link" title="Facebook">📘</a>
+          <a href="https://www.instagram.com/icomputer.urban_tech_dz/" target="_blank" rel="noopener" class="footer-social-link" title="Instagram">📷</a>
+          <a href="https://www.tiktok.com/@icomputer_dz" target="_blank" rel="noopener" class="footer-social-link" title="TikTok">🎵</a>
+          <a href="https://maps.app.goo.gl/o3BeYZaTyHqvPLf27" target="_blank" rel="noopener" class="footer-social-link" title="Google Maps">📍</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>الخدمات</h4>
+        <ul>
+          <li><a href="services/office-support.html">دعم المكاتب والمؤسسات</a></li>
+          <li><a href="services/computer-maintenance.html">صيانة أجهزة الشركات</a></li>
+          <li><a href="services/office-network.html">إعداد شبكة المكتب</a></li>
+          <li><a href="services/printer-setup.html">إعداد الطابعات</a></li>
+          <li><a href="services/new-computer-setup.html">تجهيز حاسوب جديد</a></li>
+          <li><a href="services/backup-files.html">النسخ الاحتياطي وتنظيم الملفات</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>القطاعات</h4>
+        <ul>
+          <li><a href="services/accounting-offices.html">مكاتب المحاسبة</a></li>
+          <li><a href="services/law-offices.html">مكاتب المحامين</a></li>
+          <li><a href="services/notary-offices.html">الموثقون</a></li>
+          <li><a href="services/design-offices.html">مكاتب الدراسات</a></li>
+          <li><a href="services/small-business.html">الشركات الصغيرة والوكالات</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="services.html">دليل الخدمات</a></li>
+          <li><a href="services/office-support.html">حلول المكاتب</a></li>
+          <li><a href="booking.html">طلب خدمة</a></li>
+          <li><a href="knowledge.html">المعرفة والشرح</a></li>
+          <li><a href="quran.html">القرآن الكريم</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
       <p>© <span id="year"></span> iComputer Urban Tech DZ — <span data-i18n="footer.rights">جميع الحقوق محفوظة</span></p>
     </div>
   </footer>
 
-  <a class="floating-whatsapp" href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20iComputer." target="_blank" rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
+  <a class="floating-whatsapp"
+    href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20دعم%20تقني%20لمكتبي." target="_blank"
+    rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
     <span aria-hidden="true">💬</span>
   </a>
 
-  <script src="js/intro.js"></script>
   <script src="js/script.js"></script>
   <script src="js/scroll3d.js" data-auto="main img, section img"></script>
 </body>

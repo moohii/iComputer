@@ -3,21 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>احجز موعد | iComputer Urban Tech DZ</title>
-  <meta name="description" content="احجز موعدًا للدعم التقني، صيانة الحواسيب، أو خدمات الشبكات في iComputer Urban Tech DZ." />
+  <title>طلب خدمة ودعم تقني للمكاتب | iComputer Urban Tech DZ</title>
+  <meta name="description" content="نموذج طلب دعم تقني، صيانة أجهزة، إعداد شبكات وطابعات للمكاتب والمؤسسات الصغيرة في الجزائر العاصمة." />
   <meta name="canonical" content="https://[your-domain]/booking.html" />
-  <meta property="og:title" content="احجز موعد | iComputer Urban Tech DZ" />
-  <meta property="og:description" content="احجز موعدًا للدعم التقني وصيانة الحواسيب في القصبة، الجزائر العاصمة." />
+  <meta property="og:title" content="طلب خدمة ودعم تقني للمكاتب | iComputer Urban Tech DZ" />
+  <meta property="og:description" content="حلول تقنية عملية لمكتبك بدون الحاجة إلى مسؤول IT متفرغ. اطلب الدعم بسهولة وسنتواصل معك." />
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://[your-domain]/booking.html" />
   <meta name="robots" content="index,follow" />
   <script src="js/theme.js"></script>
   <link rel="icon" href="images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/b2b.css" />
   <link rel="stylesheet" href="css/scroll3d.css" />
+  <style>
+    .booking-grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 600px) {
+      .booking-grid-2col {
+        grid-template-columns: 1fr;
+      }
+    }
+    .booking-page-layout {
+      padding: 60px 0 80px;
+    }
+    .booking-shell-b2b {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 40px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .booking-shell-b2b {
+        grid-template-columns: 1fr;
+      }
+    }
+    .booking-info-box {
+      padding: 32px;
+      border-radius: 24px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .booking-form-box {
+      padding: 36px 32px;
+      border-radius: 24px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+    }
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .form-field label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-strong);
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--primary);
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .form-field select option {
+      background: var(--surface);
+      color: var(--text);
+    }
+    .radio-group-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .radio-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--text);
+      cursor: pointer;
+    }
+    .hidden-field {
+      display: none !important;
+    }
+  </style>
 </head>
 <body>
   <div class="bg-orb orb-1"></div>
@@ -33,11 +127,18 @@
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="index.html#home" data-i18n="nav.home">الرئيسية</a>
-        <a href="booking.html" data-i18n="nav.booking">احجز موعد</a>
         <a href="services.html" data-i18n="nav.services">الخدمات</a>
-        <a href="index.html#contact" data-i18n="nav.contact">تواصل</a>
+        <a href="services/office-support.html">حلول المكاتب</a>
+        <a href="index.html#sectors">القطاعات</a>
+        <a href="index.html#about" data-i18n="nav.about">من نحن</a>
+        <a href="knowledge.html">المعرفة</a>
+        <a href="booking.html" class="active" style="color: var(--primary); font-weight:700;">طلب خدمة</a>
       </nav>
       <div class="nav-actions">
+        <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="nav-wa-btn" data-whatsapp-link>
+          <span>💬</span>
+          <span>WhatsApp</span>
+        </a>
         <div class="lang-switch" role="group" aria-label="Language">
           <button data-lang="ar" class="active">ع</button>
           <button data-lang="fr">FR</button>
@@ -49,87 +150,213 @@
     </div>
   </header>
 
-  <main>
-    <section class="section booking-page">
-      <div class="container booking-shell">
-        <div class="booking-copy">
-          <span class="chip glass" data-i18n="booking.title">احجز موعدك</span>
-          <h1 data-i18n="booking.title">احجز موعدك</h1>
-          <p data-i18n="booking.subtitle">اختر الخدمة المناسبة لك وسنقوم بالتواصل معك قريبًا.</p>
-          <ul class="booking-benefits">
-            <li>🎧 دعم فني متخصص</li>
-            <li>🔒 حماية البيانات والنسخ الاحتياطي</li>
-            <li>📍 خدمة في القصبة والجزائر العاصمة</li>
-          </ul>
-        </div>
+  <main class="booking-page-layout">
+    <div class="container">
+      <nav class="b2b-breadcrumb" aria-label="مسار التنقل">
+        <a href="index.html">الرئيسية</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">طلب خدمة ودعم تقني</span>
+      </nav>
 
-        <form class="booking-form glass" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
-          <input type="hidden" name="form-name" value="booking" />
-          <p class="hidden-field">
-            <label>لا تملأ هذا الحقل <input name="bot-field" /></label>
+      <div class="booking-shell-b2b">
+        <aside class="booking-info-box">
+          <span class="chip glass">دعم تقني للمكاتب والمؤسسات</span>
+          <h1 style="font-size: 1.8rem; line-height: 1.3; color: var(--text-strong);">أرسل طلبك وسنقوم بالتواصل معك</h1>
+          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.7;">
+            إذا كان مكتبك في الجزائر العاصمة وتواجه مشكلة في الأجهزة، الطابعة، الشبكة أو ترغب في إعداد نسخ احتياطي أو حاسوب جديد، املأ النموذج أدناه أو راسلنا عبر WhatsApp مباشرة.
           </p>
 
-          <div class="form-field">
-            <label for="bookingName" data-i18n="booking.name">الاسم</label>
-            <input id="bookingName" name="name" type="text" placeholder="أدخل اسمك" required />
+          <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color:#10b981; font-size:1.2rem;">✓</span>
+              <div>
+                <strong style="display:block; color:var(--text-strong); font-size:0.95rem;">تشخيص دقيق للمشكلة</strong>
+                <small style="color:var(--muted);">نراجع طبيعة العطل وخطوات المعالجة العملية.</small>
+              </div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color:#10b981; font-size:1.2rem;">✓</span>
+              <div>
+                <strong style="display:block; color:var(--text-strong); font-size:0.95rem;">مخصص للمكاتب الصغيرة</strong>
+                <small style="color:var(--muted);">محاسبة، محاماة، موثقون، مكاتب دراسات وشركات.</small>
+              </div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color:#10b981; font-size:1.2rem;">✓</span>
+              <div>
+                <strong style="display:block; color:var(--text-strong); font-size:0.95rem;">استجابة عبر WhatsApp</strong>
+                <small style="color:var(--muted);">تواصل مباشر وسريع دون إجراءات معقدة.</small>
+              </div>
+            </div>
           </div>
 
-          <div class="form-field">
-            <label for="bookingPhone" data-i18n="booking.phone">الهاتف / WhatsApp</label>
-            <input id="bookingPhone" name="phone" type="tel" inputmode="tel" placeholder="+213 000 000 000" required />
+          <div style="margin-top: 12px; padding: 18px; border-radius: 16px; background: rgba(37, 99, 235, 0.08); border: 1px solid var(--glass-border);">
+            <strong style="display:block; margin-bottom: 6px; color: var(--text-strong);">هل تفضل المحادثة المباشرة؟</strong>
+            <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 12px;">يمكنك إرسال رسالتك مباشرة عبر WhatsApp لشرح الحالة فورًا.</p>
+            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%;" data-whatsapp-link>
+              <span class="btn-icon">💬</span>
+              <span>تواصل فوري عبر WhatsApp</span>
+            </a>
           </div>
+        </aside>
 
-          <div class="form-field">
-            <label for="bookingService" data-i18n="booking.service">الخدمة</label>
-            <select id="bookingService" name="service" required>
-              <option value="" data-i18n="booking.serviceOption">اختر الخدمة</option>
-              <option value="دعم الحاسوب والبرامج">دعم الحاسوب والبرامج</option>
-              <option value="تركيب الشبكات">تركيب الشبكات</option>
-              <option value="الأمن السيبراني">الأمن السيبراني</option>
-              <option value="إنشاء السيرة الذاتية">إنشاء السيرة الذاتية</option>
-              <option value="تصميم عروض PowerPoint">تصميم عروض PowerPoint</option>
-              <option value="كتابة التقارير أو المشاريع">كتابة التقارير أو المشاريع</option>
-              <option value="إعداد جداول Excel">إعداد جداول Excel</option>
-            </select>
-          </div>
+        <section class="booking-form-box">
+          <form class="booking-form" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
+            <input type="hidden" name="form-name" value="booking" />
+            <p class="hidden-field">
+              <label>لا تملأ هذا الحقل <input name="bot-field" /></label>
+            </p>
 
-          <div class="form-field">
-            <label for="bookingDate" data-i18n="booking.date">اليوم</label>
-            <input id="bookingDate" name="date" type="date" required />
-          </div>
+            <div class="booking-grid-2col">
+              <div class="form-field">
+                <label for="bookingName">الاسم واللقب *</label>
+                <input id="bookingName" name="name" type="text" placeholder="مثال: كريم بن علي" required />
+              </div>
+              <div class="form-field">
+                <label for="bookingOffice">اسم المكتب / المؤسسة *</label>
+                <input id="bookingOffice" name="office_name" type="text" placeholder="مثال: مكتب دراسات الهناء" required />
+              </div>
+            </div>
 
-          <div class="form-field">
-            <label for="bookingPeriod" data-i18n="booking.period">الفترة</label>
-            <select id="bookingPeriod" name="period" required>
-              <option value="" data-i18n="booking.periodOption">اختر الفترة</option>
-              <option value="صباحًا">صباحًا</option>
-              <option value="بعد الظهر">بعد الظهر</option>
-              <option value="مساءً">مساءً</option>
-            </select>
-          </div>
+            <div class="booking-grid-2col">
+              <div class="form-field">
+                <label for="bookingActivity">نوع النشاط *</label>
+                <select id="bookingActivity" name="activity_type" required>
+                  <option value="">اختر نوع النشاط</option>
+                  <option value="مكتب محاسبة ومراجعة حسابات">مكتب محاسبة ومراجعة حسابات</option>
+                  <option value="مكتب محاماة واستشارات قانونية">مكتب محاماة واستشارات قانونية</option>
+                  <option value="مكتب توثيق (موثق)">مكتب توثيق (موثق)</option>
+                  <option value="مكتب دراسات وهندسة">مكتب دراسات وهندسة</option>
+                  <option value="وكالة تجارية / شركة صغيرة">وكالة تجارية / شركة صغيرة</option>
+                  <option value="مكتب حر / نشاط مهني">مكتب حر / نشاط مهني</option>
+                  <option value="آخر">آخر</option>
+                </select>
+              </div>
 
-          <div class="form-field form-field-full">
-            <label for="bookingProblem" data-i18n="booking.description">وصف المشكلة (اختياري)</label>
-            <textarea id="bookingProblem" name="problem" rows="5" placeholder="أخبرنا باختصار عن المشكلة"></textarea>
-          </div>
+              <div class="form-field">
+                <label for="bookingPhone">رقم WhatsApp *</label>
+                <input id="bookingPhone" name="whatsapp_number" type="tel" inputmode="tel" placeholder="05 / 06 / 07 XX XX XX" required />
+              </div>
+            </div>
 
-          <button type="submit" class="btn btn-primary" data-i18n="booking.submit">إرسال الطلب</button>
-        </form>
+            <div class="form-field">
+              <label for="bookingService">نوع الخدمة المطلوبة *</label>
+              <select id="bookingService" name="service_type" required>
+                <option value="">اختر الخدمة</option>
+                <option value="دعم تقني شامل للمكتب">دعم تقني شامل للمكتب</option>
+                <option value="صيانة أجهزة الحاسوب">صيانة أجهزة الحاسوب</option>
+                <option value="إعداد أو فحص شبكة المكتب">إعداد أو فحص شبكة المكتب</option>
+                <option value="إعداد وربط الطابعات">إعداد وربط الطابعات</option>
+                <option value="تجهيز حاسوب جديد للعمل">تجهيز حاسوب جديد للعمل</option>
+                <option value="تنظيم الملفات والنسخ الاحتياطي">تنظيم الملفات والنسخ الاحتياطي</option>
+                <option value="أخرى">أخرى</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="bookingProblem">وصف المشكلة أو الاحتياج *</label>
+              <textarea id="bookingProblem" name="problem_description" rows="4" placeholder="اذكر باختصار الأجهزة المتأثرة، ما يحدث بالتحديد، أو ما تود إعداده في المكتب..." required></textarea>
+            </div>
+
+            <div class="booking-grid-2col">
+              <div class="form-field">
+                <label>هل المشكلة مستعجلة؟</label>
+                <div class="radio-group-row">
+                  <label class="radio-label">
+                    <input type="radio" name="urgency" value="نعم - تعطل عمل المكتب" />
+                    <span>نعم، يعطل العمل</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="urgency" value="عادي - في أقرب وقت متاح" checked />
+                    <span>عادي، خلال اليوم أو الغد</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label>طريقة التواصل المفضلة</label>
+                <div class="radio-group-row">
+                  <label class="radio-label">
+                    <input type="radio" name="contact_preference" value="رسائل WhatsApp" checked />
+                    <span>رسائل WhatsApp</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="contact_preference" value="اتصال هاتفي" />
+                    <span>اتصال هاتفي</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px; padding: 14px 24px; font-size: 1.05rem;">
+              إرسال طلب الخدمة
+            </button>
+          </form>
+        </section>
       </div>
-    </section>
+    </div>
   </main>
 
-  <footer class="footer glass">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> iComputer Urban Tech DZ — <span data-i18n="footer.rights">جميع الحقوق محفوظة</span></p>
+  <footer class="footer-extended">
+    <div class="container footer-extended-grid">
+      <div class="footer-col">
+        <div class="brand" style="margin-bottom: 12px;">
+          <span class="brand-mark">iC</span>
+          <span class="brand-text">iComputer <em>Urban Tech DZ</em></span>
+        </div>
+        <p class="footer-brand-bio">
+          الدعم التقني للمكاتب والمؤسسات الصغيرة في الجزائر العاصمة. حلول عملية لأجهزة الكمبيوتر، الشبكات، الطابعات والنسخ الاحتياطي بدون تعقيد.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="footer-social-link" title="WhatsApp" data-whatsapp-link>💬</a>
+          <a href="https://www.facebook.com/iComputer.MH" target="_blank" rel="noopener" class="footer-social-link" title="Facebook">📘</a>
+          <a href="https://www.instagram.com/icomputer.urban_tech_dz/" target="_blank" rel="noopener" class="footer-social-link" title="Instagram">📷</a>
+          <a href="https://www.tiktok.com/@icomputer_dz" target="_blank" rel="noopener" class="footer-social-link" title="TikTok">🎵</a>
+          <a href="https://maps.app.goo.gl/o3BeYZaTyHqvPLf27" target="_blank" rel="noopener" class="footer-social-link" title="Google Maps">📍</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>الخدمات</h4>
+        <ul>
+          <li><a href="services/office-support.html">دعم المكاتب</a></li>
+          <li><a href="services/computer-maintenance.html">صيانة أجهزة الشركات</a></li>
+          <li><a href="services/office-network.html">إعداد شبكة المكتب</a></li>
+          <li><a href="services/printer-setup.html">إعداد الطابعات</a></li>
+          <li><a href="services/new-computer-setup.html">تجهيز حاسوب جديد</a></li>
+          <li><a href="services/backup-files.html">النسخ الاحتياطي</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>القطاعات</h4>
+        <ul>
+          <li><a href="services/accounting-offices.html">مكاتب المحاسبة</a></li>
+          <li><a href="services/law-offices.html">مكاتب المحامين</a></li>
+          <li><a href="services/notary-offices.html">الموثقون</a></li>
+          <li><a href="services/design-offices.html">مكاتب الدراسات</a></li>
+          <li><a href="services/small-business.html">الشركات الصغيرة</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="index.html#home">الرئيسية</a></li>
+          <li><a href="services.html">دليل الخدمات</a></li>
+          <li><a href="booking.html">طلب خدمة</a></li>
+          <li><a href="knowledge.html">المعرفة والشرح</a></li>
+          <li><a href="quran.html">القرآن الكريم</a></li>
+          <li><a href="index.html#faq">الأسئلة الشائعة</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <p>© <span id="year"></span> iComputer Urban Tech DZ — جميع الحقوق محفوظة</p>
     </div>
   </footer>
 
-  <a class="floating-whatsapp" href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20iComputer." target="_blank" rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
+  <a class="floating-whatsapp" href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أريد%20الاستفسار%20عن%20دعم%20تقني%20لمكتبي." target="_blank" rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
     <span aria-hidden="true">💬</span>
   </a>
 
   <script src="js/script.js"></script>
-  <script src="js/scroll3d.js" data-auto="main img, section img"></script>
 </body>
 </html>

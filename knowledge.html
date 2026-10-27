@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مقالات تقنية وتعريفات | iComputer Urban Tech DZ</title>
-  <meta name="description" content="مقالات وتعريفات تقنية متنوعة في أنظمة الحواسيب، الشبكات، والأمن الرقمي." />
+  <title>الشرح والتعريف | مقالات تقنية وحلول حاسوبية | iComputer Urban Tech DZ</title>
+  <meta name="description" content="مقالات وشروحات تقنية متخصصة من iComputer: أدوات الإقلاع (Ventoy)، فحص الأقراص (CrystalDiskInfo)، الحماية السحابية (VirusTotal)، صيانة الأنظمة والشبكات." />
   <meta name="canonical" content="https://[your-domain]/knowledge.html" />
-  <meta property="og:title" content="مقالات تقنية وتعريفات | iComputer Urban Tech DZ" />
-  <meta property="og:description" content="مقاطع تعليمية ومعلومات تقنية في مجال الحواسيب والشبكات والأمن الرقمي." />
+  <meta property="og:title" content="الشرح والتعريف | مقالات تقنية وحلول حاسوبية | iComputer Urban Tech DZ" />
+  <meta property="og:description" content="دليل معرفي شامل لأقوى أدوات صيانة الحواسيب، استعادة البيانات، الأمن الرقمي، والبرمجيات مفتوحة المصدر." />
   <meta property="og:url" content="https://[your-domain]/knowledge.html" />
+  <link rel="icon" href="images/favicon.ico" />
   <script src="js/theme.js"></script>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="css/scroll3d.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/knowledge.css" />
+  <link rel="stylesheet" href="css/scroll3d.css" />
 </head>
 <body>
   <div class="bg-orb orb-1"></div>
@@ -25,76 +27,952 @@
   <header class="navbar glass">
     <div class="container nav-inner">
       <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="iComputer Logo" class="brand-logo" onerror="this.style.display='none'" />
+        <img src="images/logo1.png" alt="iComputer Logo" class="brand-logo" onerror="this.src='images/logo.png'" />
         <span class="brand-mark">iC</span>
         <span class="brand-text">iComputer <em>Urban Tech DZ</em></span>
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="index.html#home" data-i18n="nav.home">الرئيسية</a>
-        <a href="booking.html" data-i18n="nav.booking">احجز موعد</a>
         <a href="services.html" data-i18n="nav.services">الخدمات</a>
-        <a href="index.html#portfolio">أعمالنا</a>
-        <a href="index.html#contact" data-i18n="nav.contact">تواصل</a>
+        <a href="services/office-support.html">حلول المكاتب</a>
+        <a href="knowledge.html" class="active" style="color: var(--primary); font-weight:700;">المعرفة</a>
+        <a href="quran.html">القرآن</a>
+        <a href="booking.html" data-i18n="nav.booking">طلب خدمة</a>
       </nav>
       <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button data-lang="ar" class="active">ع</button>
+          <button data-lang="fr">FR</button>
+          <button data-lang="en">EN</button>
+        </div>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="تبديل الوضع اللوني">☼</button>
         <button class="menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة" aria-controls="navLinks" aria-expanded="false">☰</button>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="section">
+  <main class="knowledge-page">
+    <section class="section knowledge-hero">
       <div class="container">
-        <article class="service-detail-card glass" style="margin-bottom: 24px;">
-          <span class="service-detail-tag">مقال تقني</span>
-          <h1>AlternativeTo: منصة مجانية لإيجاد بدائل البرامج والتطبيقات</h1>
-          <p class="service-detail-intro">
-            AlternativeTo هو موقع إلكتروني مجاني يساعد المستخدمين على العثور على بدائل ممتازة للبرامج والتطبيقات والخدمات عبر الإنترنت، استنادًا إلى آراء ومساهمات المستخدمين.
+        <!-- Breadcrumb -->
+        <nav class="service-breadcrumb" aria-label="مسار التنقل">
+          <a href="index.html">الرئيسية</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">الشرح والتعريف</span>
+        </nav>
+
+        <!-- Header -->
+        <div class="knowledge-header">
+          <span class="knowledge-hero-chip">
+            <span>🛡️</span>
+            <span>دليل المعرفة التقنية والحلول الموثوقة</span>
+          </span>
+          <h1 class="knowledge-title">الشرح والتعريف — مقالات تقنية متخصصة</h1>
+          <p class="knowledge-subtitle">
+            مكتبة متكاملة تضم شروحات عملية لأهم أدوات صيانة الحواسيب، تشخيص الأعطال، فحص العتاد، والبرمجيات الحرة ومفتوحة المصدر (FOSS) التي نعتمد عليها في <strong>iComputer Urban Tech DZ</strong> لضمان أعلى مستويات الكفاءة والأمان.
           </p>
 
-          <div class="service-detail-grid">
-            <div>
-              <p class="service-detail-quote">
-                يتيح الموقع للمستخدمين البحث عن بديل لبرنامج معين أو التعرّف على أدوات أخرى مشابهة، مع معلومات حول الميزات، الأنواع، والتقييمات التي يقدمها المجتمع.
-              </p>
-              <ul class="service-detail-list">
-                <li>يُقدّم قائمة مقترحة لكل برنامج أو خدمة تبحث عنها</li>
-                <li>يعتمد على آراء ومساهمات المستخدمين في التقييم</li>
-                <li>مفيد جدًا عند البحث عن أدوات بديلة مجانية أو أفضل</li>
-                <li>يُستخدم في مجالات البرمجيات، الإنتاجية، التصميم، وإدارة المهام</li>
-              </ul>
+          <!-- Quick Stats Bar -->
+          <div class="knowledge-stats-bar">
+            <div class="knowledge-stat-chip">
+              <span class="stat-icon">📚</span>
+              <span><strong>9</strong> مقالات تقنية شاملة</span>
             </div>
-            <div class="service-detail-media">
-              <img src="https://alternativeto.net/static/logo.svg" alt="شعار موقع AlternativeTo" />
+            <div class="knowledge-stat-chip">
+              <span class="stat-icon">⚡</span>
+              <span>حلول مجانية ومفتوحة المصدر (FOSS)</span>
             </div>
-          </div>
-        </article>
-
-        <article class="service-detail-card glass">
-          <span class="service-detail-tag">مقال تقني</span>
-          <h1>Romspedia: موسوعة رقمية لألعاب الكونسول القديمة وملفات ROMs</h1>
-          <p class="service-detail-intro">
-            Romspedia هو موقع إلكتروني وموسوعة رقمية مخصصة لتحميل ألعاب أجهزة الكونسول القديمة، مثل ملفات ROMs وISOs، بالإضافة إلى توفير المحاكيات اللازمة لتشغيلها على الحاسوب أو الهاتف.
-          </p>
-
-          <div class="service-detail-grid">
-            <div>
-              <p class="service-detail-quote">
-                يجمع الموقع بين مكتبة كبيرة من الألعاب القديمة والمحاكيات، مما يجعل من السهل على المستخدمين استرجاع تجربة الألعاب الكلاسيكية أو تجربة الألعاب القديمة على الأجهزة الحديثة.
-              </p>
-              <ul class="service-detail-list">
-                <li>يوفر ملفات ROMs وISOs لألعاب قديمة متنوعة</li>
-                <li>يدعم عدة أنظمة كونسول مثل PSP وPS2 وNintendo وSega</li>
-                <li>يقدم روابط مباشرة إلى المحاكيات المناسبة لتشغيل الألعاب</li>
-                <li>مناسب لمن يحبون الألعاب الكلاسيكية والاحتفاظ بالتراث الرقمي</li>
-              </ul>
+            <div class="knowledge-stat-chip">
+              <span class="stat-icon">🔍</span>
+              <span>فحص العتاد، الأنظمة، والأمن السيبراني</span>
             </div>
-            <div class="service-detail-media">
-              <img src="https://www.romspedia.com/assets/img/logo.png" alt="شعار موقع Romspedia" onerror="this.src='https://www.romspedia.com/favicon.ico'" />
+            <div class="knowledge-stat-chip">
+              <span class="stat-icon">🇩🇿</span>
+              <span>موثوقة ومجربة ميدانياً في الجزائر</span>
             </div>
           </div>
-        </article>
+        </div>
+
+        <!-- Toolbar: Search & Category Filters -->
+        <div class="knowledge-toolbar glass">
+          <div class="knowledge-search-wrapper">
+            <span class="knowledge-search-icon" aria-hidden="true">🔍</span>
+            <input
+              type="search"
+              id="knowledgeSearch"
+              class="knowledge-search-input"
+              placeholder="ابحث في المقالات (مثال: Ventoy, استعادة البيانات, SSD, حماية, تنظيف, فيروسات)..."
+              aria-label="البحث في المقالات التقنية"
+            />
+            <button type="button" id="knowledgeSearchClear" class="knowledge-search-clear" aria-label="مسح نص البحث">×</button>
+          </div>
+
+          <div class="knowledge-filter-bar" role="tablist" aria-label="تصنيفات المقالات">
+            <span class="knowledge-filter-label">التصنيف:</span>
+            <button type="button" class="filter-pill active" data-filter="all">
+              <span>الكل</span>
+              <span class="filter-count" id="countAll">9</span>
+            </button>
+            <button type="button" class="filter-pill" data-filter="os">
+              <span>🖥️ صيانة وأنظمة التشغيل</span>
+              <span class="filter-count">3</span>
+            </button>
+            <button type="button" class="filter-pill" data-filter="hardware">
+              <span>💾 تشخيص العتاد والتخزين</span>
+              <span class="filter-count">1</span>
+            </button>
+            <button type="button" class="filter-pill" data-filter="security">
+              <span>🛡️ الأمن الرقمي والخصوصية</span>
+              <span class="filter-count">2</span>
+            </button>
+            <button type="button" class="filter-pill" data-filter="tools">
+              <span>🚀 أدوات ومنصات رقمية</span>
+              <span class="filter-count">2</span>
+            </button>
+            <button type="button" class="filter-pill" data-filter="networking">
+              <span>🌐 شبكات واتصالات</span>
+              <span class="filter-count">1</span>
+            </button>
+          </div>
+
+          <!-- Quick Navigation -->
+          <div class="knowledge-quicknav">
+            <span class="knowledge-quicknav-label">انتقال سريع:</span>
+            <a href="#ventoy" class="quicknav-link">Ventoy</a>
+            <a href="#crystaldisk" class="quicknav-link">CrystalDiskInfo</a>
+            <a href="#virustotal" class="quicknav-link">VirusTotal</a>
+            <a href="#hirens" class="quicknav-link">Hiren's BootCD</a>
+            <a href="#alternativeto" class="quicknav-link">AlternativeTo</a>
+            <a href="#wireshark" class="quicknav-link">Wireshark</a>
+            <a href="#bleachbit" class="quicknav-link">BleachBit</a>
+            <a href="#keepassxc" class="quicknav-link">KeePassXC</a>
+            <a href="#romspedia" class="quicknav-link">Romspedia</a>
+          </div>
+        </div>
+
+        <!-- Articles Container -->
+        <div class="knowledge-articles-list" id="articlesContainer">
+
+          <!-- ARTICLE 1: Ventoy -->
+          <article
+            id="ventoy"
+            class="service-detail-card glass knowledge-article-item"
+            data-category="os"
+            data-keywords="ventoy boot usb iso windows linux ubuntu hirens multi boot فلاشة اقلاع فورمات تثبيت نظام bios uefi"
+          >
+            <div class="article-meta-row">
+              <span class="service-detail-tag tag-os">🖥️ أنظمة وتشغيل</span>
+              <span class="article-badge">مفتوح المصدر (GPL v3)</span>
+              <span class="article-badge">أداة إقلاع ذكية</span>
+              <span class="article-time">⏱️ 4 دقائق قراءة</span>
+            </div>
+
+            <h2>
+              <a href="#ventoy" class="article-anchor">
+                Ventoy: الحل السحري لتثبيت أنظمة تشغيل متعددة من فلاشة USB واحدة
+                <span class="anchor-symbol" aria-hidden="true">#</span>
+              </a>
+            </h2>
+
+            <p class="service-detail-intro">
+              أداة مجانية ومفتوحة المصدر أحدثت ثورة تقنية في عالم الدعم الفني وتثبيت الأنظمة، حيث تتيح لك تشغيل وتثبيت عشرات أنظمة التشغيل وحزم الإنقاذ من فلاشة USB واحدة دون الحاجة لإعادة تهيئتها (Formatting) في كل مرة.
+            </p>
+
+            <div class="service-detail-grid">
+              <div>
+                <p class="service-detail-quote">
+                  على عكس الطرق التقليدية التي تحرق ملف ISO واحداً وتمسح كل ما على الفلاشة، يعمل Ventoy بتثبيت محمل إقلاع ذكي داخل الفلاشة. بعد ذلك، تصبح إضافة أي نظام تشغيل جديد مجرد عملية <strong>نسخ ولصق مباشرة</strong> لملف الـ ISO!
+                </p>
+
+                <ul class="service-detail-list">
+                  <li><strong>توافق هائل:</strong> اختبار ودعم أكثر من 1200 ملف ISO رسمياً (Windows 11/10/7، Ubuntu، Fedora، Kali، Arch).</li>
+                  <li><strong>دعم الإقلاع المزدوج:</strong> يعمل بسلاسة تامة على الأجهزة القديمة (Legacy BIOS) والحديثة (UEFI).</li>
+                  <li><strong>تجاوز قيود Windows 11:</strong> يوفر خيارات آلية لتخطي متطلبات شريحة TPM 2.0 والـ Secure Boot والحساب الإجباري.</li>
+                  <li><strong>استخدام متعدد للفلاشة:</strong> يمكنك وضع ملفاتك وصورك الشخصية بجانب ملفات الـ ISO دون أي تعارض إطلاقاً.</li>
+                </ul>
+
+                <div class="article-actions">
+                  <a href="https://www.ventoy.net" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+                    <span>تحميل أداة Ventoy</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <button type="button" class="btn-action-ghost" data-copy-link="ventoy">
+                    <span>📋 نسخ الرابط</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="knowledge-media-card">
+                <div class="media-logo-frame">
+                  <img
+                    src="https://www.ventoy.net/static/img/ventoy.png"
+                    alt="شعار أداة Ventoy"
+                    loading="lazy"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div style="display:none; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+                    <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#6ba8f5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="6" y="2" width="12" height="20" rx="3" ry="3"></rect>
+                      <line x1="10" y1="6" x2="14" y2="6"></line>
+                      <line x1="9" y1="18" x2="15" y2="18"></line>
+                    </svg>
+                    <span style="font-weight:700; color:#6ba8f5;">Ventoy Multi-Boot</span>
+                  </div>
+                </div>
+
+                <div class="media-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">الترخيص</span>
+                    <span class="spec-val">مفتوح المصدر (GPLv3)</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">الأنظمة المدعومة</span>
+                    <span class="spec-val">Windows & Linux</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">طريقة العمل</span>
+                    <span class="spec-val">نسخ ولصق الـ ISO</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">أنماط الإقلاع</span>
+                    <span class="spec-val">UEFI + Legacy BIOS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 2: CrystalDiskInfo -->
+          <article
+            id="crystaldisk"
+            class="service-detail-card glass knowledge-article-item"
+            data-category="hardware"
+            data-keywords="crystaldiskinfo crystaldiskmark ssd hdd nvme smart بد سيكتور صحة القرص تلف الهارد حرارة تخزين سرعة"
+          >
+            <div class="article-meta-row">
+              <span class="service-detail-tag tag-hardware">💾 تشخيص العتاد</span>
+              <span class="article-badge">أداة تشخيص قياسية</span>
+              <span class="article-badge">فحص S.M.A.R.T</span>
+              <span class="article-time">⏱️ 3 دقائق قراءة</span>
+            </div>
+
+            <h2>
+              <a href="#crystaldisk" class="article-anchor">
+                CrystalDiskInfo: فحص صحة أقراص التخزين SSD و HDD وتفادي فقدان البيانات
+                <span class="anchor-symbol" aria-hidden="true">#</span>
+              </a>
+            </h2>
+
+            <p class="service-detail-intro">
+              البرنامج القياسي العالمي لفحص الحالة الصحية لأقراص التخزين الداخلية والخارجية، يعتمد على قراءة بيانات S.M.A.R.T الحيوية للكشف المبكر عن الأعطال الميكانيكية وتدهور رقاقات الذاكرة قبل أن تنهار وتتسبب في ضياع ملفاتك.
+            </p>
+
+            <div class="service-detail-grid">
+              <div>
+                <p class="service-detail-quote">
+                  تلف القرص الصلب المفاجئ هو الكابوس الأكبر لمستخدمي الحواسيب. تمنحك هذه الأداة تقريراً فورياً بحالة القرص (سليم Good، تحذير Caution، أو حرج Bad) مع بيان عدد القطاعات التالفة (Bad Sectors) ودرجة الحرارة الحالية.
+                </p>
+
+                <ul class="service-detail-list">
+                  <li><strong>مراقبة صحة الـ SSD:</strong> معرفة النسبة المئوية المتبقية من عمر خلايا الذاكرة وإجمالي حجم البيانات المكتوبة (TBW).</li>
+                  <li><strong>كشف القطاعات التالفة (Bad Sectors):</strong> متابعة عداد Reallocated Sectors لتفادي الانهيار التام للأقراص الميكانيكية HDD.</li>
+                  <li><strong>مراقبة الحرارة الفورية:</strong> تنبيهك بارتفاع حرارة وحدات NVMe السريعة التي قد تؤدي للاختناق الحراري وتلف المكونات.</li>
+                  <li><strong>معلومات تفصيلية عن القرص:</strong> نوع المنفذ (SATA / PCIe Gen4)، ساعات العمل الإجمالية، وعدد مرات التشغيل.</li>
+                </ul>
+
+                <div class="article-actions">
+                  <a href="https://crystalmark.info" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+                    <span>تحميل CrystalDiskInfo</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <button type="button" class="btn-action-ghost" data-copy-link="crystaldisk">
+                    <span>📋 نسخ الرابط</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="knowledge-media-card">
+                <div class="media-logo-frame">
+                  <img
+                    src="https://crystalmark.info/images/theme/default/logo.png"
+                    alt="شعار CrystalDiskInfo"
+                    loading="lazy"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div style="display:none; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+                    <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="22" y1="12" x2="2" y2="12"></line>
+                      <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                      <line x1="6" y1="16" x2="6.01" y2="16"></line>
+                      <line x1="10" y1="16" x2="10.01" y2="16"></line>
+                    </svg>
+                    <span style="font-weight:700; color:#fbbf24;">CrystalDisk S.M.A.R.T</span>
+                  </div>
+                </div>
+
+                <div class="media-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">الترخيص</span>
+                    <span class="spec-val">مجاني (Freeware / MIT)</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">نوع الأقراص</span>
+                    <span class="spec-val">NVMe, SSD, HDD, USB</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">نظام التشغيل</span>
+                    <span class="spec-val">Windows 11 / 10 / 8 / 7</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">المطور</span>
+                    <span class="spec-val">Crystal Dew World</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 3: VirusTotal -->
+          <article
+            id="virustotal"
+            class="service-detail-card glass knowledge-article-item"
+            data-category="security"
+            data-keywords="virustotal سحابي فحص ملفات روابط برامج خبيثة فيروسات تروجان انتي فايروس أمن سيبراني google chronicle"
+          >
+            <div class="article-meta-row">
+              <span class="service-detail-tag tag-security">🛡️ أمن رقمي وحماية</span>
+              <span class="article-badge">منصة سحابية من Google</span>
+              <span class="article-badge">+70 محرك حماية</span>
+              <span class="article-time">⏱️ 3 دقائق قراءة</span>
+            </div>
+
+            <h2>
+              <a href="#virustotal" class="article-anchor">
+                VirusTotal: الفحص السحابي الشامل للملفات والروابط بأكثر من 70 محرك حماية
+                <span class="anchor-symbol" aria-hidden="true">#</span>
+              </a>
+            </h2>
+
+            <p class="service-detail-intro">
+              خدمة سحابية رائدة ومجانية تابعة لشركة Google (Chronicle)، تتيح لك تحليل أي ملف مشبوه، رابط موقع، أو عنوان IP عبر تشغيل أكثر من 70 محرك مكافحة فيروسات متقدم في نفس اللحظة دون الحاجة لتثبيت أي برامج ثقيلة على جهازك.
+            </p>
+
+            <div class="service-detail-grid">
+              <div>
+                <p class="service-detail-quote">
+                  برنامج الحماية المثبت على جهازك قد يخطئ في تشخيص البرمجيات الخبيثة الحديثة (Zero-Day) أو يعطي إنذاراً كاذباً. يجمع VirusTotal آراء عمالقة الأمن (Kaspersky, Bitdefender, Microsoft, ESET, Avast) في شاشة واحدة واضحة.
+                </p>
+
+                <ul class="service-detail-list">
+                  <li><strong>فحص متعدد المحركات:</strong> فحص فوري للملف بحجم يصل إلى 650 ميغابايت بمقارنة أكثر من سبعين شركة حماية عالمية.</li>
+                  <li><strong>بيئة الاختبار المعزولة (Sandbox):</strong> تشغيل الملف في بيئة آمنة لرصد سلوكه والملفات التي يحاول تعديلها أو الاتصال بها.</li>
+                  <li><strong>فحص الروابط والمواقع:</strong> التحقق من الروابط المشبوهة لكشف صفحات التصيد الاحتيالي (Phishing) قبل الضغط عليها.</li>
+                  <li><strong>تحليل البصمات الرقمية (Hashes):</strong> البحث ببصمة الملف (SHA-256 أو MD5) لمعرفة سجله الأمني دون الحاجة لرفعه مجدداً.</li>
+                </ul>
+
+                <div class="article-actions">
+                  <a href="https://www.virustotal.com" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+                    <span>زيارة منصة VirusTotal</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <button type="button" class="btn-action-ghost" data-copy-link="virustotal">
+                    <span>📋 نسخ الرابط</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="knowledge-media-card">
+                <div class="media-logo-frame">
+                  <img
+                    src="https://www.virustotal.com/gui/images/logo.svg"
+                    alt="شعار VirusTotal"
+                    loading="lazy"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div style="display:none; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+                    <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      <path d="M9 12l2 2 4-4"></path>
+                    </svg>
+                    <span style="font-weight:700; color:#34d399;">VirusTotal Security</span>
+                  </div>
+                </div>
+
+                <div class="media-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">الترخيص</span>
+                    <span class="spec-val">خدمة ويب مجانية</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">عدد المحركات</span>
+                    <span class="spec-val">+70 مضاد فيروسات</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">الحد الأقصى للملف</span>
+                    <span class="spec-val">650 ميغابايت</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">المالك</span>
+                    <span class="spec-val">Google Chronicle</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 4: Hiren's BootCD PE -->
+          <article
+            id="hirens"
+            class="service-detail-card glass knowledge-article-item"
+            data-category="os"
+            data-keywords="hirens bootcd pe طوارئ انقاذ اصلاح ويندوز استعادة ملفات كسر كلمة سر فورمات mbr gpt bsod شاشة زرقاء"
+          >
+            <div class="article-meta-row">
+              <span class="service-detail-tag tag-os">🖥️ طوارئ وإنقاذ النظام</span>
+              <span class="article-badge">بيئة Windows 10 PE</span>
+              <span class="article-badge">حقيبة الفني الشاملة</span>
+              <span class="article-time">⏱️ 4 دقائق قراءة</span>
+            </div>
+
+            <h2>
+              <a href="#hirens" class="article-anchor">
+                Hiren's BootCD PE: حقيبة الإنقاذ الشاملة لإصلاح الحواسيب واستعادة البيانات
+                <span class="anchor-symbol" aria-hidden="true">#</span>
+              </a>
+            </h2>
+
+            <p class="service-detail-intro">
+              الأسطوانة الإنقاذية الأشهر عالمياً بين فنيي الصيانة، مبنية على بيئة Windows 10 PE 64-bit، ومحملة بعشرات البرامج الاحترافية المجانية لإسعاف الحواسيب التي ترفض الإقلاع أو تعاني من انهيار مفاجئ في ملفات النظام.
+            </p>
+
+            <div class="service-detail-grid">
+              <div>
+                <p class="service-detail-quote">
+                  عندما يفشل جهازك في الإقلاع وتظهر الشاشة الزرقاء (BSOD) أو تتلف ملفات الـ Boot، يتيح لك هذا القرص تشغيل واجهة ويندوز سريعة تعمل مباشرة من الذاكرة العشوائية (RAM) لنسخ ملفاتك الهامة وإنقاذ القرص دون مساس بالبيانات.
+                </p>
+
+                <ul class="service-detail-list">
+                  <li><strong>استخراج البيانات عند تعطل النظام:</strong> الوصول الكامل للأقراص ونقل الملفات المهمة إلى فلاشة خارجية قبل الفورمات.</li>
+                  <li><strong>إعادة تعيين كلمات المرور:</strong> فتح الحواسيب المقفلة وإزالة كلمات السر لحسابات الويندوز المحلية في ثوانٍ.</li>
+                  <li><strong>إصلاح جداول الأقسام:</strong> معالجة مشكلات الـ MBR وGPT وإصلاح قطاعات الإقلاع المتضررة عبر أدوات تقسيم متطورة.</li>
+                  <li><strong>فحص العتاد والذاكرة:</strong> أدوات متقدمة لفحص سلامة الرام (MemTest86) وتشخيص سلامة المعالج واللوحة الأم.</li>
+                </ul>
+
+                <div class="article-actions">
+                  <a href="https://www.hirensbootcd.org" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+                    <span>تحميل Hiren's BootCD PE</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <button type="button" class="btn-action-ghost" data-copy-link="hirens">
+                    <span>📋 نسخ الرابط</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="knowledge-media-card">
+                <div class="media-logo-frame">
+                  <img
+                    src="https://www.hirensbootcd.org/wp-content/uploads/2018/06/logo.png"
+                    alt="شعار Hiren's BootCD PE"
+                    loading="lazy"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div style="display:none; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+                    <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <line x1="12" y1="2" x2="12" y2="4"></line>
+                      <line x1="12" y1="20" x2="12" y2="22"></line>
+                      <line x1="2" y1="12" x2="4" y2="12"></line>
+                      <line x1="20" y1="12" x2="22" y2="12"></line>
+                    </svg>
+                    <span style="font-weight:700; color:#60a5fa;">Hiren's Rescue Suite</span>
+                  </div>
+                </div>
+
+                <div class="media-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">الترخيص</span>
+                    <span class="spec-val">مجاني 100% (Freeware)</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">نواة البيئة</span>
+                    <span class="spec-val">Windows 10 PE x64</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">طريقة التشغيل</span>
+                    <span class="spec-val">فلاشة إقلاع USB / DVD</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">التوافق</span>
+                    <span class="spec-val">UEFI & Secure Boot</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 5: AlternativeTo -->
+          <article
+            id="alternativeto"
+            class="service-detail-card glass knowledge-article-item"
+            data-category="tools"
+            data-keywords="alternativeto بدائل برامج مفتوح المصدر اوفيس فوتوشوب تطبيقات مجانية مجتمع تقييمات"
+          >
+            <div class="article-meta-row">
+              <span class="service-detail-tag tag-tools">🚀 أدوات وتطبيقات</span>
+              <span class="article-badge">منصة رقمية مجانية</span>
+              <span class="article-badge">تقييم جماعي Crowdsourced</span>
+              <span class="article-time">⏱️ 3 دقائق قراءة</span>
+            </div>
+
+            <h2>
+              <a href="#alternativeto" class="article-anchor">
+                AlternativeTo: الدليل المفتوح لإيجاد أفضل بدائل البرامج والتطبيقات
+                <span class="anchor-symbol" aria-hidden="true">#</span>
+              </a>
+            </h2>
+
+            <p class="service-detail-intro">
+              منصة رقمية عالمية ومجانية تساعدك على العثور على بدائل ممتازة للبرامج والخدمات الشهيرة باهظة الثمن، استناداً إلى تصويت المجتمع وآراء آلاف التقنيين والمستخدمين حول العالم.
+            </p>
+
+            <div class="service-detail-grid">
+              <div>
+                <p class="service-detail-quote">
+                  إذا كنت تبحث عن بديل مجاني أو مفتوح المصدر لبرامج مثل Photoshop أو Microsoft Office أو Premiere أو Notion، يقدم لك AlternativeTo مقارنة مباشرة للخصائص والميزات الفنية ونوع الترخيص والمنصات المدعومة.
+                </p>
+
+                <ul class="service-detail-list">
+                  <li><strong>فلترة ذكية حسب نوع الرخصة:</strong> خيارات فرز محددة لعرض البرامج مفتوحة المصدر (Open Source) أو المجانية تماماً.</li>
+                  <li><strong>توافق المنصات:</strong> تصفية البرامج المتوافقة مع Windows أو macOS أو Linux أو تطبيقات الويب والهواتف.</li>
+                  <li><strong>مراجعات حقيقية وتجارب مستخدمين:</strong> استعراض إيجابيات وسلبيات كل برنامج مقارنة بالبديل الأصلي.</li>
+                  <li><strong>توفير تكاليف الاشتراكات:</strong> مساعدة الشركات الصغيرة والأفراد في الاستغناء عن الرخص المكلفة دون المساس بالإنتاجية.</li>
+                </ul>
+
+                <div class="article-actions">
+                  <a href="https://alternativeto.net" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+                    <span>زيارة AlternativeTo</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <button type="button" class="btn-action-ghost" data-copy-link="alternativeto">
+                    <span>📋 نسخ الرابط</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="knowledge-media-card">
+                <div class="media-logo-frame">
+                  <img
+                    src="https://alternativeto.net/static/logo.svg"
+                    alt="شعار موقع AlternativeTo"
+                    loading="lazy"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div style="display:none; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+                    <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <span style="font-weight:700; color:#c084fc;">AlternativeTo Hub</span>
+                  </div>
+                </div>
+
+                <div class="media-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">الترخيص</span>
+                    <span class="spec-val">دليل ويب مجاني</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">طبيعة التقييم</span>
+                    <span class="spec-val">تصويت مجتمعي مفتوح</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">التغطية</span>
+                    <span class="spec-val">+100,000 برنامج وخدمة</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">التركيز</span>
+                    <span class="spec-val">برمجيات FOSS & بدائل</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 6: Wireshark -->
+          <article
+            id="wireshark"
+            class="service-detail-card glass knowledge-article-item"
+            data-category="networking"
+            data-keywords="wireshark شبكات تحليل حزم packet sniffing dns tcp udp بروتوكول اتصال تدقيق أمان"
+          >
+            <div class="article-meta-row">
+              <span class="service-detail-tag tag-networking">🌐 شبكات واتصال</span>
+              <span class="article-badge">مفتوح المصدر (GPL)</span>
+              <span class="article-badge">تحليل الحزم Packet Sniffer</span>
+              <span class="article-time">⏱️ 4 دقائق قراءة</span>
+            </div>
+
+            <h2>
+              <a href="#wireshark" class="article-anchor">
+                Wireshark: المعيار العالمي لتحليل حزم البيانات وتشخيص أعطال الشبكات
+                <span class="anchor-symbol" aria-hidden="true">#</span>
+              </a>
+            </h2>
+
+            <p class="service-detail-intro">
+              البرنامج الأكثر شهرة واعتماداً حول العالم في مجال هندسة الشبكات والأمن السيبراني، يتيح التقاط حركة مرور البيانات وتحليل الحزم البرمجية (Packet Sniffing) على مستوى عميق لمعرفة سبب بطء الاتصال أو رصد الاختراقات.
+            </p>
+
+            <div class="service-detail-grid">
+              <div>
+                <p class="service-detail-quote">
+                  يعمل Wireshark كـ "مجهر رقمي" فائق الدقة، يترجم نبضات كابل الإيثرنت وإشارات الواي فاي إلى حزم مفهومة، مما يساعد مهندسي الشبكات على كشف مشاكل انقطاع الاتصال وأخطاء خوادم DNS وتسريبات البيانات غير المشفرة.
+                </p>
+
+                <ul class="service-detail-list">
+                  <li><strong>التقاط حي للبيانات:</strong> مراقبة فورية لجميع الاتصالات الصادرة والواردة عبر بطاقة الشبكة (Ethernet / Wi-Fi).</li>
+                  <li><strong>فك تشفير مئات البروتوكولات:</strong> تحليل متعمق لبروتوكولات TCP وUDP وDNS وHTTP وDHCP وTLS في جميع طبقات OSI.</li>
+                  <li><strong>محرك تصفية عبقري (Display Filters):</strong> عزل حزم البيانات الخاصة بعنوان IP محدد أو منفذ أو خدمة في ثانية واحدة.</li>
+                  <li><strong>تشخيص بطء الشبكة:</strong> رصد عمليات إعادة إرسال الحزم (TCP Retransmissions) وفقدان البيانات بدقة لا تقبل الشك.</li>
+                </ul>
+
+                <div class="article-actions">
+                  <a href="https://www.wireshark.org" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+                    <span>زيارة موقع Wireshark</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <button type="button" class="btn-action-ghost" data-copy-link="wireshark">
+                    <span>📋 نسخ الرابط</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="knowledge-media-card">
+                <div class="media-logo-frame">
+                  <img
+                    src="https://www.wireshark.org/assets/theme-2021/images/wireshark_logo.svg"
+                    alt="شعار برنامج Wireshark"
+                    loading="lazy"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div style="display:none; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+                    <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span style="font-weight:700; color:#22d3ee;">Wireshark Packet DPI</span>
+                  </div>
+                </div>
+
+                <div class="media-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">الترخيص</span>
+                    <span class="spec-val">مفتوح المصدر (GPL v2)</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">الأنظمة</span>
+                    <span class="spec-val">Windows, macOS, Linux</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">الوظيفة الأساسية</span>
+                    <span class="spec-val">Deep Packet Inspection</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">المطور</span>
+                    <span class="spec-val">Wireshark Foundation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 7: BleachBit -->
+          <article
+            id="bleachbit"
+            class="service-detail-card glass knowledge-article-item"
+            data-category="os"
+            data-keywords="bleachbit تنظيف النظام مساحة كاش كوكيز حماية الخصوصية تمزيق ملفات بديل ccleaner مفتوح المصدر"
+          >
+            <div class="article-meta-row">
+              <span class="service-detail-tag tag-os">🖥️ صيانة ونظافة النظام</span>
+              <span class="article-badge">بديل مفتوح وآمن</span>
+              <span class="article-badge">تمزيق الملفات Shred</span>
+              <span class="article-time">⏱️ 3 دقائق قراءة</span>
+            </div>
+
+            <h2>
+              <a href="#bleachbit" class="article-anchor">
+                BleachBit: أداة مجانية ومفتوحة المصدر لتنظيف النظام وحماية الخصوصية
+                <span class="anchor-symbol" aria-hidden="true">#</span>
+              </a>
+            </h2>
+
+            <p class="service-detail-intro">
+              البديل المفتوح المصدر والآمن لبرامج تنظيف الحواسيب الشهيرة، صُمم لتحرير مساحات التخزين بحذف الملفات المؤقتة وسجلات التصفح والكاش الزائد دون أي برمجيات إعلانية أو تتبع خفي.
+            </p>
+
+            <div class="service-detail-grid">
+              <div>
+                <p class="service-detail-quote">
+                  بمرور الوقت، تتراكم في الويندوز آلاف الملفات غير المرئية (Crash Logs, Thumbs Cache, Browser Histories) التي تستهلك الجيجابايت وتبطئ استجابة النظام. يمنحك BleachBit تحكماً كاملاً وشفافاً فيما يتم حذفه.
+                </p>
+
+                <ul class="service-detail-list">
+                  <li><strong>تحرير مساحات تخزين حقيقية:</strong> تفريغ آمن لملفات الكاش، والملفات المؤقتة للمتصفحات (Chrome, Firefox, Edge).</li>
+                  <li><strong>تمزيق الملفات نهائياً (File Shredding):</strong> مسح الملفات الحساسة بطرق معتمدة لمنع استرجاعها عبر برامج استعادة الملفات.</li>
+                  <li><strong>خالٍ تماماً من البرمجيات الضارة:</strong> لا يحتوي على إعلانات، ولا يثبت برامج جانبية، ولا يرسل أي بيانات قياس عن بُعد (Telemetry).</li>
+                  <li><strong>مسح المساحة الحرة (Wipe Free Space):</strong> طمس آثار الملفات القديمة المحذوفة سابقاً لضمان عدم استعادتها أبداً.</li>
+                </ul>
+
+                <div class="article-actions">
+                  <a href="https://www.bleachbit.org" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+                    <span>تحميل BleachBit</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <button type="button" class="btn-action-ghost" data-copy-link="bleachbit">
+                    <span>📋 نسخ الرابط</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="knowledge-media-card">
+                <div class="media-logo-frame">
+                  <img
+                    src="https://www.bleachbit.org/sites/default/files/bleachbit-logo-96.png"
+                    alt="شعار أداة BleachBit"
+                    loading="lazy"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div style="display:none; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+                    <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2v4"></path>
+                      <path d="M12 18v4"></path>
+                      <path d="M4.93 4.93l2.83 2.83"></path>
+                      <path d="M16.24 16.24l2.83 2.83"></path>
+                      <path d="M2 12h4"></path>
+                      <path d="M18 12h4"></path>
+                      <path d="M4.93 19.07l2.83-2.83"></path>
+                      <path d="M16.24 7.76l2.83-2.83"></path>
+                    </svg>
+                    <span style="font-weight:700; color:#60a5fa;">BleachBit System Cleaner</span>
+                  </div>
+                </div>
+
+                <div class="media-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">الترخيص</span>
+                    <span class="spec-val">مفتوح المصدر (GPL v3)</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">الأنظمة</span>
+                    <span class="spec-val">Windows & Linux</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">الخصوصية</span>
+                    <span class="spec-val">صفر تتبع / بدون إعلانات</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">الميزة الحصرية</span>
+                    <span class="spec-val">DoD 5220.22-M Shredder</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 8: KeePassXC -->
+          <article
+            id="keepassxc"
+            class="service-detail-card glass knowledge-article-item"
+            data-category="security"
+            data-keywords="keepassxc كلمات المرور أمان تشفير aes256 تخزين محلي خزينة سرية 2fa totp بدون انترنت"
+          >
+            <div class="article-meta-row">
+              <span class="service-detail-tag tag-security">🛡️ أمان وكلمات المرور</span>
+              <span class="article-badge">تشفير محلي صارم</span>
+              <span class="article-badge">AES-256 / ChaCha20</span>
+              <span class="article-time">⏱️ 3 دقائق قراءة</span>
+            </div>
+
+            <h2>
+              <a href="#keepassxc" class="article-anchor">
+                KeePassXC: الخزينة الرقمية المشفرة لإدارة كلمات المرور بأمان محلي تام
+                <span class="anchor-symbol" aria-hidden="true">#</span>
+              </a>
+            </h2>
+
+            <p class="service-detail-intro">
+              تطبيق مجاني ومفتوح المصدر رائد لإدارة وتخزين كلمات المرور الحساسة والملاحظات السرية محلياً على جهازك داخل قاعدة بيانات مشفرة بأقوى المعايير العسكرية، دون الاعتماد على أي خوادم سحابية خارجية.
+            </p>
+
+            <div class="service-detail-grid">
+              <div>
+                <p class="service-detail-quote">
+                  في ظل تكرار اختراقات المنصات السحابية التجارية، يمنحك KeePassXC السيادة الكاملة على بياناتك؛ ملف قاعدة البيانات المشفر (.kdbx) يبقى تحت تصرفك وتحت حمايتك وحدك، مع إمكانية نقله بأمان عبر أي وسيط ترغب به.
+                </p>
+
+                <ul class="service-detail-list">
+                  <li><strong>تشفير فائق القوة:</strong> حماية قاعدة البيانات بخوارزميات AES-256 وChaCha20 مع دوال اشتقاق مفاتيح مقاومة للهجمات (Argon2).</li>
+                  <li><strong>توليد كلمات سر معقدة:</strong> منشئ كلمات مرور مدمج يولد عبارات سرية يستحيل تخمينها أو كسرها عبر القوة الغاشمة.</li>
+                  <li><strong>دعم التحقق بخطوتين (TOTP):</strong> إنشاء رموز 2FA المؤقتة داخل التطبيق مباشرة دون الحاجة لتطبيق هاتف خارجي.</li>
+                  <li><strong>الملء التلقائي الذكي (Auto-Type):</strong> كتابة اسم المستخدم وكلمة السر تلقائياً في أي نافذة أو متصفح بأمان.</li>
+                </ul>
+
+                <div class="article-actions">
+                  <a href="https://keepassxc.org" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+                    <span>تحميل KeePassXC</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <button type="button" class="btn-action-ghost" data-copy-link="keepassxc">
+                    <span>📋 نسخ الرابط</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="knowledge-media-card">
+                <div class="media-logo-frame">
+                  <img
+                    src="https://keepassxc.org/assets/img/keepassxc-logo.svg"
+                    alt="شعار برنامج KeePassXC"
+                    loading="lazy"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div style="display:none; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+                    <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span style="font-weight:700; color:#34d399;">KeePassXC Encrypted Vault</span>
+                  </div>
+                </div>
+
+                <div class="media-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">الترخيص</span>
+                    <span class="spec-val">مفتوح المصدر (GPL v3)</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">التشفير</span>
+                    <span class="spec-val">AES-256 / ChaCha20</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">التخزين</span>
+                    <span class="spec-val">محلي 100% (Offline-First)</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">دعم المفاتيح</span>
+                    <span class="spec-val">YubiKey & Hardware Keys</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 9: Romspedia -->
+          <article
+            id="romspedia"
+            class="service-detail-card glass knowledge-article-item"
+            data-category="tools"
+            data-keywords="romspedia العاب كلاسيكية محاكيات كونسول roms iso ps2 psp nintendo sega تراث رقمي"
+          >
+            <div class="article-meta-row">
+              <span class="service-detail-tag tag-tools">🚀 تراث رقمي ومحاكيات</span>
+              <span class="article-badge">موسوعة رقمية</span>
+              <span class="article-badge">محاكيات Emulators</span>
+              <span class="article-time">⏱️ 3 دقائق قراءة</span>
+            </div>
+
+            <h2>
+              <a href="#romspedia" class="article-anchor">
+                Romspedia: موسوعة رقمية لألعاب الكونسول القديمة وملفات المحاكيات
+                <span class="anchor-symbol" aria-hidden="true">#</span>
+              </a>
+            </h2>
+
+            <p class="service-detail-intro">
+              موسوعة ومكتبة رقمية مخصصة للحفاظ على التراث الرقمي لألعاب أجهزة الكونسول الكلاسيكية، وتوفير ملفات الألعاب (ROMs وISOs) والمحاكيات اللازمة لتشغيلها على أجهزة الحاسوب والهواتف الحديثة.
+            </p>
+
+            <div class="service-detail-grid">
+              <div>
+                <p class="service-detail-quote">
+                  يجمع الموقع بين أرشيف ضخم للألعاب الكلاسيكية وروابط المحاكيات المعتمدة، مما يساعد هواة الألعاب القديمة على استرجاع تجارب الطفولة وتشغيل منصات الجيل القديم على الشاشات الحديثة بأعلى دقة ممكنة.
+                </p>
+
+                <ul class="service-detail-list">
+                  <li><strong>مكتبة ألعاب ضخمة:</strong> أرشيف منظم يضم ملفات ROMs وISOs لأشهر المنصات الكلاسيكية.</li>
+                  <li><strong>دعم منصات متعددة:</strong> أجهزة شهيرة تشمل PlayStation (PS1, PS2, PSP), Nintendo (GBA, NDS), وSega.</li>
+                  <li><strong>روابط المحاكيات المعتمدة:</strong> توجيه المستخدمين لأفضل المحاكيات المستقرة والآمنة مثل PCSX2 وPPSSPP.</li>
+                  <li><strong>إرشادات الضبط والتشغيل:</strong> توجيهات حول ربط أذرع التحكم الحديثة وضبط الرسوميات لتجربة لعب سلسة.</li>
+                </ul>
+
+                <div class="article-actions">
+                  <a href="https://www.romspedia.com" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+                    <span>زيارة Romspedia</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <button type="button" class="btn-action-ghost" data-copy-link="romspedia">
+                    <span>📋 نسخ الرابط</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="knowledge-media-card">
+                <div class="media-logo-frame">
+                  <img
+                    src="https://www.romspedia.com/assets/img/logo.png"
+                    alt="شعار موقع Romspedia"
+                    loading="lazy"
+                    onerror="this.src='https://www.romspedia.com/favicon.ico'; this.onerror=function(){ this.style.display='none'; this.nextElementSibling.style.display='flex'; };"
+                  />
+                  <div style="display:none; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+                    <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="6" width="20" height="12" rx="4"></rect>
+                      <line x1="6" y1="12" x2="10" y2="12"></line>
+                      <line x1="8" y1="10" x2="8" y2="14"></line>
+                      <line x1="15" y1="11" x2="15.01" y2="11"></line>
+                      <line x1="18" y1="13" x2="18.01" y2="13"></line>
+                    </svg>
+                    <span style="font-weight:700; color:#c084fc;">Romspedia Retrogaming</span>
+                  </div>
+                </div>
+
+                <div class="media-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">الترخيص</span>
+                    <span class="spec-val">موسوعة رقمية مجانية</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">المنصات المدعومة</span>
+                    <span class="spec-val">PSP, PS2, GBA, NDS, Sega</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">الهدف</span>
+                    <span class="spec-val">حفظ التراث الرقمي</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">التشغيل</span>
+                    <span class="spec-val">محاكيات PC & Android</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty Search State -->
+        <div class="knowledge-empty-state" id="knowledgeEmptyState">
+          <div class="empty-state-icon">🔍</div>
+          <h3 class="empty-state-title">لم يتم العثور على مقالات مطابقة</h3>
+          <p class="empty-state-text">حاول البحث بكلمة أخرى، أو استكشف التصنيفات المتاحة بالأعلى.</p>
+          <button type="button" class="btn btn-primary" id="resetSearchBtn">إعادة ضبط البحث وعرض الكل</button>
+        </div>
+
       </div>
     </section>
   </main>
@@ -105,11 +983,19 @@
     </div>
   </footer>
 
+  <!-- Floating WhatsApp -->
   <a class="floating-whatsapp" href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20iComputer." target="_blank" rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
     <span aria-hidden="true">💬</span>
   </a>
 
+  <!-- Copy Toast -->
+  <div class="knowledge-toast" id="knowledgeToast" role="alert" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-message">تم نسخ الرابط بنجاح!</span>
+  </div>
+
   <script src="js/script.js"></script>
+  <script src="js/knowledge.js"></script>
   <script src="js/scroll3d.js" data-auto="main img, section img"></script>
 </body>
 </html>
