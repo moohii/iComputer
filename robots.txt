@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /thanks.html
-Sitemap: https://[your-domain]/sitemap.xml
+Sitemap: https://icomputer.netlify.app/sitemap.xml

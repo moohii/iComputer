@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://[your-domain]/index.html</loc>
+    <loc>https://icomputer.netlify.app/index.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services.html</loc>
+    <loc>https://icomputer.netlify.app/services.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services/office-support.html</loc>
+    <loc>https://icomputer.netlify.app/services/office-support.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services/computer-maintenance.html</loc>
+    <loc>https://icomputer.netlify.app/services/computer-maintenance.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services/office-network.html</loc>
+    <loc>https://icomputer.netlify.app/services/office-network.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services/printer-setup.html</loc>
+    <loc>https://icomputer.netlify.app/services/printer-setup.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services/new-computer-setup.html</loc>
+    <loc>https://icomputer.netlify.app/services/new-computer-setup.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services/backup-files.html</loc>
+    <loc>https://icomputer.netlify.app/services/backup-files.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services/accounting-offices.html</loc>
+    <loc>https://icomputer.netlify.app/services/accounting-offices.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services/law-offices.html</loc>
+    <loc>https://icomputer.netlify.app/services/law-offices.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services/notary-offices.html</loc>
+    <loc>https://icomputer.netlify.app/services/notary-offices.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services/design-offices.html</loc>
+    <loc>https://icomputer.netlify.app/services/design-offices.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/services/small-business.html</loc>
+    <loc>https://icomputer.netlify.app/services/small-business.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/booking.html</loc>
+    <loc>https://icomputer.netlify.app/booking.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/knowledge.html</loc>
+    <loc>https://icomputer.netlify.app/knowledge.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://[your-domain]/quran.html</loc>
+    <loc>https://icomputer.netlify.app/quran.html</loc>
     <priority>0.5</priority>
   </url>
 </urlset>
