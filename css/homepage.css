@@ -414,6 +414,34 @@ html[data-theme="dark"] .service-card .card-icon {
   padding: 22px 24px 26px;
 }
 
+.student-home-service-card {
+  grid-column: 1 / -1;
+}
+
+.student-home-service-card .service-link {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  height: 100%;
+}
+
+.student-home-service-card .card-img-wrapper {
+  height: 100%;
+  min-height: 220px;
+}
+
+.student-home-service-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.student-home-service-action {
+  margin-top: 12px;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .service-card h3 {
   color: #1d1d1f;
   font-size: 19px;
@@ -1157,6 +1185,10 @@ html[data-theme="light"] #pricing {
 }
 
 @media (max-width: 900px) {
+  .student-home-service-card .service-link {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  }
+
   .support-intro-inner {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -1168,6 +1200,14 @@ html[data-theme="light"] #pricing {
 }
 
 @media (max-width: 600px) {
+  .student-home-service-card .service-link {
+    grid-template-columns: 1fr;
+  }
+
+  .student-home-service-card .card-img-wrapper {
+    min-height: 180px;
+  }
+
   .hero-image-card::after {
     inset-block-start: 35%;
   }

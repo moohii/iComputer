@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let matchesSearch = true;
       if (query.length > 0) {
-        const textContent = (article.dataset.keywords || "" + " " + article.innerText).toLowerCase();
+        const textContent = ((article.dataset.keywords || "") + " " + article.innerText).toLowerCase();
         matchesSearch = textContent.includes(query);
       }
 
