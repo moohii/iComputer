@@ -1,30 +1,31 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>دعم الكمبيوتر للمكاتب والأفراد في الجزائر العاصمة | iComputer Urban Tech DZ</title>
   <meta name="description"
-    content="دعم الكمبيوتر والبرامج للأفراد والمكاتب في الجزائر العاصمة: تثبيت Windows، صيانة الأنظمة، إعداد Wi-Fi والطابعات، ودعم تقني للمؤسسات الصغيرة." />
+    content="دعم الكمبيوتر والبرامج للأفراد والمكاتب في الجزائر العاصمة: صيانة الحواسيب، تثبيت Windows، إعداد الشبكات والطابعات، النسخ الاحتياطي ودعم تقني للمؤسسات الصغيرة." />
   <link rel="canonical" href="https://icomputer.netlify.app/index.html" />
   <meta property="og:title" content="iComputer Urban Tech DZ | دعم الكمبيوتر في الجزائر العاصمة" />
   <meta property="og:description"
     content="دعم الكمبيوتر والبرامج، تثبيت Windows، إعداد Wi-Fi والطابعات، وخدمات تقنية للمكاتب في الجزائر العاصمة." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://icomputer.netlify.app/index.html" />
+  <meta property="og:image" content="https://icomputer.netlify.app/images/logo1.png" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0B0F14" />
   <script src="js/theme.js"></script>
   <link rel="icon" href="images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="css/b2b.css" />
   <link rel="stylesheet" href="css/homepage.css" />
-  <link rel="stylesheet" href="css/scroll3d.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -43,773 +44,922 @@
 </head>
 
 <body>
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
-  <div class="bg-orb orb-3"></div>
+  <a class="skip-link" href="#main">تخطي إلى المحتوى</a>
 
   <!-- Header & Navigation -->
   <header class="navbar glass">
     <div class="container nav-inner">
-      <a href="#home" class="brand">
-        <img src="images/logo1.png" alt="iComputer Logo" class="brand-logo" onerror="this.style.display='none'" />
-        <span class="brand-mark">iC</span>
-        <span class="brand-text">iComputer <em>Urban Tech DZ</em></span>
+      <a href="index.html" class="brand" aria-label="iComputer Urban Tech DZ">
+        <img src="images/logo1.png" alt="" class="brand-logo" width="34" height="34" />
+        <span class="brand-text" dir="ltr">iComputer <em>Urban Tech DZ</em></span>
       </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#home" data-i18n="nav.home">الرئيسية</a>
-        <a href="services.html" data-i18n="nav.services">الخدمات</a>
-        <a href="services/office-support.html" data-i18n="nav.solutions">حلول المكاتب</a>
-        <a href="#sectors" data-i18n="nav.sectors">القطاعات</a>
-        <a href="#about" data-i18n="nav.about">من نحن</a>
-        <a href="knowledge.html" data-i18n="nav.knowledge">المعرفة</a>
-        <a href="booking.html" data-i18n="nav.booking">طلب خدمة</a>
+
+      <nav class="nav-links" id="navLinks" aria-label="التنقل الرئيسي">
+        <a href="index.html#home" data-nav="home" data-i18n="nav.home">الرئيسية</a>
+        <a href="services.html" data-nav="services" data-i18n="nav.services">الخدمات</a>
+        <a href="services/office-support.html" data-nav="solutions" data-i18n="nav.solutions">حلول المكاتب</a>
+        <a href="index.html#sectors" data-nav="sectors" data-i18n="nav.sectors">القطاعات</a>
+        <a href="index.html#about" data-nav="about" data-i18n="nav.about">من نحن</a>
+        <a href="knowledge.html" data-nav="knowledge" data-i18n="nav.knowledge">المعرفة</a>
+        <a href="booking.html" data-nav="booking" data-i18n="nav.booking">طلب خدمة</a>
       </nav>
+
       <div class="nav-actions">
-        <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="nav-wa-btn" data-whatsapp-link>
-          <span>💬</span>
+        <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="nav-wa-btn"
+          data-whatsapp-link aria-label="WhatsApp">
+          <span aria-hidden="true"><svg class="icon"><use href="#i-whatsapp"></use></svg></span>
           <span data-i18n="nav.whatsapp">واتساب</span>
         </a>
+
         <div class="lang-switch" role="group" aria-label="Language">
-          <button data-lang="ar" class="active">ع</button>
-          <button data-lang="fr">FR</button>
-          <button data-lang="en">EN</button>
+          <button type="button" data-lang="ar" class="active" aria-pressed="true" lang="ar">ع</button>
+          <button type="button" data-lang="fr" aria-pressed="false" lang="fr">FR</button>
+          <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
         </div>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="تبديل الوضع اللوني">☼</button>
+
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="تبديل الوضع اللوني" aria-pressed="true">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+        </button>
+
         <button class="menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة" aria-controls="navLinks"
-          aria-expanded="false">☰</button>
+          aria-expanded="false">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
+  <main id="main">
+    <!-- Hero -->
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-content">
-          <span class="chip glass" data-i18n="hero.chip">دعم تقني للأفراد والمكاتب في الجزائر العاصمة</span>
+          <span class="hero-eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.eyebrow">الجزائر العاصمة · دعم تقني للمكاتب والأفراد</span>
+          </span>
+
           <h1 class="hero-title">
-            <span data-i18n="hero.title1">دعم تقني موثوق</span>
-            <span class="gradient-text" data-i18n="hero.title2">للأفراد والمكاتب والمؤسسات الصغيرة</span>
+            <span data-i18n="hero.title1">دعم تقني لمكتبك</span>
+            <span class="accent" data-i18n="hero.title2">بلا توقف.</span>
           </h1>
+
           <p class="hero-sub" data-i18n="hero.sub">
-            نساعد الأفراد والمكاتب في الجزائر العاصمة في مشكلات الكمبيوتر والبرامج، تثبيت Windows، وإعداد الشبكات والطابعات.
+            صيانة الحواسيب، تثبيت Windows، الشبكات والطابعات، والنسخ الاحتياطي — بزيارة ميدانية أو عن بُعد، في الجزائر العاصمة.
           </p>
-          <div class="hero-cta">
+
+          <div class="hero-actions">
             <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-whatsapp"
               data-whatsapp-link>
-              <span class="btn-icon">💬</span>
-              <span data-i18n="hero.cta1">اطلب الدعم عبر WhatsApp</span>
+              <span class="btn-icon" aria-hidden="true"><svg class="icon"><use href="#i-whatsapp"></use></svg></span>
+              <span data-i18n="hero.cta1">اطلب دعماً عبر WhatsApp</span>
             </a>
-            <a href="booking.html" class="btn btn-primary" data-i18n="nav.booking">إرسال طلب خدمة</a>
-            <a href="services.html" class="btn btn-ghost" data-i18n="hero.cta2">استكشف الخدمات</a>
+            <a href="services.html" class="btn btn-ghost">
+              <span data-i18n="hero.cta2">استعرض الخدمات</span>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+            </a>
           </div>
+
+          <ul class="hero-meta">
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span data-i18n="hero.meta1">بدون عقد إلزامي</span>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span data-i18n="hero.meta2">ميداني أو عن بُعد</span>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span data-i18n="hero.meta3">تنسيق مباشر عبر WhatsApp</span>
+            </li>
+          </ul>
         </div>
 
-        <div class="hero-media">
-          <div class="hero-image-card glass">
-            <video class="hero-img hero-motion-img" data-scroll3d="tilt" autoplay muted loop playsinline preload="auto"
-              poster="images/hero-motion.gif" aria-label="شاشة مكتبية تفاعلية">
-              <source src="images/hero-motion.mp4" type="video/mp4" />
-            </video>
-            <div class="hero-image-copy">
-              <span data-i18n="hero.imageLabel">دعم تقني للأفراد والمكاتب</span>
-              <strong data-i18n="hero.imageTitle">مساعدة تقنية واضحة وعملية</strong>
-              <p data-i18n="hero.imageText">إعداد الكمبيوتر وWindows، ربط الطابعات، وضبط الشبكات حسب الحاجة.</p>
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <div class="hero-frame__bar">
+              <span class="dot" aria-hidden="true"></span>
+              <span class="dot" aria-hidden="true"></span>
+              <span class="dot" aria-hidden="true"></span>
+              <span class="hero-frame__label">iComputer / support</span>
+              <span class="hero-frame__status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span data-i18n="hero.frame.status">حسب التوفر</span>
+              </span>
             </div>
-            <div class="floating-badge badge-top glass">
-              <span class="badge-icon">⚡</span>
-              <div class="badge-text">
-                <strong data-i18n="hero.badge1.title">بدون مسؤول IT متفرغ</strong>
-                <small data-i18n="hero.badge1.desc">حلول عملية للمكاتب</small>
+
+            <div class="hero-panel">
+              <div class="hero-panel__head">
+                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-monitor"></use></svg></span>
+                <div class="hero-panel__title">
+                  <strong data-i18n="hero.dash.title">حالة مكتبك</strong>
+                  <small data-i18n="hero.dash.sub">فحص سريع · الجزائر العاصمة</small>
+                </div>
+                <span class="hero-panel__badge">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  <span data-i18n="hero.dash.online">متصل</span>
+                </span>
+              </div>
+
+              <ul class="hero-status">
+                <li>
+                  <span data-i18n="hero.dash.row1">أجهزة المكتب</span>
+                  <b>6 / 6</b>
+                  <span class="hero-status__bar" aria-hidden="true"><i style="--v: 100%"></i></span>
+                </li>
+                <li>
+                  <span data-i18n="hero.dash.row2">الشبكة</span>
+                  <b>Wi-Fi</b>
+                  <span class="hero-status__bar" aria-hidden="true"><i style="--v: 86%"></i></span>
+                </li>
+                <li>
+                  <span data-i18n="hero.dash.row3">النسخ الاحتياطي</span>
+                  <b data-i18n="hero.dash.ok">سليم</b>
+                  <span class="hero-status__bar" aria-hidden="true"><i style="--v: 72%"></i></span>
+                </li>
+              </ul>
+
+              <div class="hero-ticket">
+                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-wrench"></use></svg></span>
+                <div>
+                  <strong data-i18n="hero.dash.ticket">تم حل مشكلة الطابعة</strong>
+                  <small data-i18n="hero.dash.ticketmeta">آخر تدخل · 18 دقيقة</small>
+                </div>
+                <span class="hero-ticket__check" aria-hidden="true">
+                  <svg class="icon"><use href="#i-check"></use></svg>
+                </span>
+              </div>
+
+              <div class="hero-frame__foot hero-frame__foot--panel">
+                <span><svg class="icon" aria-hidden="true"><use href="#i-windows"></use></svg><b data-i18n="hero.chip1">Windows</b></span>
+                <span><svg class="icon" aria-hidden="true"><use href="#i-network"></use></svg><b data-i18n="hero.chip2">الشبكة</b></span>
+                <span><svg class="icon" aria-hidden="true"><use href="#i-database"></use></svg><b data-i18n="hero.chip4">النسخ الاحتياطي</b></span>
               </div>
             </div>
-            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener"
-              class="floating-badge badge-bottom glass whatsapp-order-badge" data-whatsapp-link aria-label="WhatsApp">
-              <span class="badge-icon">💬</span>
-              <div class="badge-text">
-                <strong data-i18n="hero.badge2.title">تواصل عبر WhatsApp</strong>
-                <small data-i18n="hero.badge2.desc">استجابة سريعة ومباشرة</small>
-              </div>
-            </a>
+
+            <p class="hero-frame__caption">
+              <svg class="icon" aria-hidden="true"><use href="#i-message"></use></svg>
+              <span data-i18n="hero.overlay.text">تشخيص، إصلاح، وضبط للأجهزة والشبكات والطابعات.</span>
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Trust Strip -->
-    <div class="b2b-trust-strip">
+    <!-- Trust strip -->
+    <div class="trust-strip">
       <div class="container trust-strip-inner">
         <div class="trust-item">
-          <span class="trust-item-icon">✓</span>
-          <span>مخصص للمكاتب والمؤسسات الصغيرة</span>
+          <svg class="icon" aria-hidden="true"><use href="#i-building"></use></svg>
+          <span data-i18n="trust.1">مكاتب ومؤسسات صغيرة</span>
         </div>
         <div class="trust-item">
-          <span class="trust-item-icon">✓</span>
-          <span>حلول عملية وسريعة بدون تعقيد</span>
+          <svg class="icon" aria-hidden="true"><use href="#i-wrench"></use></svg>
+          <span data-i18n="trust.2">حلول عملية بدون تعقيد</span>
         </div>
         <div class="trust-item">
-          <span class="trust-item-icon">✓</span>
-          <span>بدون التزامات أو عقود مرهقة</span>
+          <svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>
+          <span data-i18n="trust.3">بدون التزامات طويلة</span>
         </div>
         <div class="trust-item">
-          <span class="trust-item-icon">📍</span>
-          <span>الجزائر العاصمة، حسب توفر الخدمة</span>
+          <svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>
+          <span data-i18n="trust.4">الجزائر العاصمة · حسب التوفر</span>
         </div>
       </div>
     </div>
 
-    <!-- Section: لمن نقدم خدماتنا؟ (Target Sectors) -->
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div class="section-head__copy">
+            <span class="eyebrow" data-i18n="home.services.eyebrow">الخدمات</span>
+            <h2 class="section-title" data-i18n="home.services.title">كل ما يحتاجه مكتبك، في مكان واحد</h2>
+            <p class="section-sub" data-i18n="home.services.description">
+              سبع خدمات أساسية تغطي الأجهزة، الأنظمة، الشبكات، الطابعات والبيانات — بلا وسطاء.
+            </p>
+          </div>
+          <a href="services.html" class="btn btn-ghost">
+            <span data-i18n="home.services.all">كل الخدمات</span>
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+
+        <div class="services-grid">
+          <a class="service-tile" href="services/office-support.html">
+            <div class="service-tile__media">
+              <img src="images/services/office-support.svg" alt="" loading="lazy" width="800" height="560" />
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"></use></svg></span>
+              <span class="service-index">01</span>
+            </div>
+            <div class="service-tile__body">
+              <h3 data-i18n="svc.support.title">دعم المكاتب والمؤسسات</h3>
+              <p data-i18n="svc.support.desc">متابعة تقنية لأجهزة المكتب، البرامج، والبريد والطابعات عند الحاجة.</p>
+              <span class="service-tile__link">
+                <span data-i18n="svc.details">التفاصيل</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
+
+          <a class="service-tile" href="services/computer-maintenance.html">
+            <div class="service-tile__media">
+              <img src="images/services/computer-maintenance.svg" alt="" loading="lazy" width="800" height="560" />
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-wrench"></use></svg></span>
+              <span class="service-index">02</span>
+            </div>
+            <div class="service-tile__body">
+              <h3 data-i18n="svc.maintenance.title">صيانة وإصلاح الحواسيب</h3>
+              <p data-i18n="svc.maintenance.desc">تشخيص الأعطال، تنظيف النظام، تسريع الأداء واستبدال الأجزاء التالفة.</p>
+              <span class="service-tile__link">
+                <span data-i18n="svc.details">التفاصيل</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
+
+          <a class="service-tile" href="services/computer-maintenance.html">
+            <div class="service-tile__media">
+              <img src="images/services/windows-software.svg" alt="" loading="lazy" width="800" height="560" />
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-windows"></use></svg></span>
+              <span class="service-index">03</span>
+            </div>
+            <div class="service-tile__body">
+              <h3 data-i18n="svc.windows.title">Windows وتثبيت البرامج</h3>
+              <p data-i18n="svc.windows.desc">تثبيت نظيف، تعريفات أصلية، تحديثات، ومعالجة أخطاء النظام.</p>
+              <span class="service-tile__link">
+                <span data-i18n="svc.details">التفاصيل</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
+
+          <a class="service-tile" href="services/office-network.html">
+            <div class="service-tile__media">
+              <img src="images/services/office-network.svg" alt="" loading="lazy" width="800" height="560" />
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-network"></use></svg></span>
+              <span class="service-index">04</span>
+            </div>
+            <div class="service-tile__body">
+              <h3 data-i18n="svc.network.title">الشبكة وWi-Fi</h3>
+              <p data-i18n="svc.network.desc">ضبط الراوتر، مشاركة الملفات، وربط أجهزة المكتب بشبكة مستقرة.</p>
+              <span class="service-tile__link">
+                <span data-i18n="svc.details">التفاصيل</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
+
+          <a class="service-tile" href="services/printer-setup.html">
+            <div class="service-tile__media">
+              <img src="images/services/printer-setup.svg" alt="" loading="lazy" width="800" height="560" />
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg></span>
+              <span class="service-index">05</span>
+            </div>
+            <div class="service-tile__body">
+              <h3 data-i18n="svc.printer.title">الطابعات والماسحات</h3>
+              <p data-i18n="svc.printer.desc">تثبيت التعريفات، المشاركة عبر الشبكة، وحل مشاكل طابور الطباعة.</p>
+              <span class="service-tile__link">
+                <span data-i18n="svc.details">التفاصيل</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
+
+          <a class="service-tile" href="services/new-computer-setup.html">
+            <div class="service-tile__media">
+              <img src="images/services/new-computer-setup.svg" alt="" loading="lazy" width="800" height="560" />
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-laptop"></use></svg></span>
+              <span class="service-index">06</span>
+            </div>
+            <div class="service-tile__body">
+              <h3 data-i18n="svc.setup.title">تجهيز حاسوب جديد</h3>
+              <p data-i18n="svc.setup.desc">جهاز جاهز للعمل من أول يوم: نظام، برامج، طابعة وإعدادات.</p>
+              <span class="service-tile__link">
+                <span data-i18n="svc.details">التفاصيل</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
+
+          <a class="service-tile" href="services/backup-files.html">
+            <div class="service-tile__media">
+              <img src="images/services/backup-files.svg" alt="" loading="lazy" width="800" height="560" />
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg></span>
+              <span class="service-index">07</span>
+            </div>
+            <div class="service-tile__body">
+              <h3 data-i18n="svc.backup.title">النسخ الاحتياطي والملفات</h3>
+              <p data-i18n="svc.backup.desc">تنظيم مجلدات العمل وخطة نسخ دورية تحمي بيانات المكتب.</p>
+              <span class="service-tile__link">
+                <span data-i18n="svc.details">التفاصيل</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Student services feature -->
+        <div class="student-feature">
+          <div class="student-feature__content">
+            <span class="eyebrow" data-i18n="student.eyebrow">خدمة إضافية</span>
+            <h3 data-i18n="studentService.title">تنسيق مذكرات وتقارير الطلبة</h3>
+            <p data-i18n="studentService.description">
+              تنسيق مستندات Word للمذكرات وتقارير التربص ومشاريع نهاية التكوين، مع فهرس وترقيم وتصدير PDF حسب تعليمات المؤسسة.
+            </p>
+            <ul class="student-benefits">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="student.b1">فهرس آلي</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="student.b2">ترقيم وهوامش</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="student.b3">تصدير PDF</span></li>
+            </ul>
+            <p class="student-note" style="font-size:.8rem;color:var(--faint);" data-i18n="student.note">
+              حسب تعليمات المؤسسة، ودون كتابة المحتوى الأكاديمي.
+            </p>
+            <div class="student-feature__actions">
+              <a href="services/memoires-etudiants.html" class="btn btn-primary">
+                <span data-i18n="student.cta">خدمات الطلبة</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a href="booking.html" class="btn btn-ghost">
+                <span data-i18n="nav.booking">طلب خدمة</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="student-art">
+            <img src="images/services/student-documents.svg" alt="" loading="lazy" width="800" height="560" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- B2B band -->
+    <section class="b2b-band" id="b2b">
+      <div class="container">
+        <div class="b2b-panel">
+          <div class="b2b-panel__content">
+            <span class="eyebrow" data-i18n="b2b.eyebrow">حلول B2B</span>
+            <h2 class="section-title" data-i18n="b2b.title">مكتب صغير، دون قسم تقني؟</h2>
+            <p data-i18n="b2b.text">
+              نتولى الجانب التقني اليومي لمكتبك حتى يتفرغ فريقك للعمل. تدخل سريع، شرح واضح، وحلول تناسب حجم النشاط.
+            </p>
+            <ul class="b2b-points">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="b2b.point1">تشخيص شامل لأجهزة وشبكة المكتب</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="b2b.point2">خطة صيانة ونسخ احتياطي حسب الحاجة</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="b2b.point3">دعم مباشر عبر WhatsApp وتنسيق مواعيد مرن</span></li>
+            </ul>
+            <p style="margin-top:18px;color:var(--faint);font-size:.8rem;" data-i18n="b2b.note">
+              بدون التزام بعقد سنوي — الخدمة تُحدد بعد المعاينة.
+            </p>
+            <div class="hero-actions" style="margin-top:22px;margin-bottom:0;">
+              <a href="services/office-support.html" class="btn btn-primary">
+                <span data-i18n="b2b.cta">تحدث عن احتياج مكتبك</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="b2b-stack">
+            <a class="b2b-stack__item" href="services/accounting-offices.html">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg></span>
+              <div>
+                <strong data-i18n="b2b.item1">مكاتب المحاسبة</strong>
+                <small data-i18n="b2b.item1d">أجهزة، طابعات فواتير، ونسخ احتياطي موسمي</small>
+              </div>
+              <span class="b2b-stack__meta">01</span>
+            </a>
+            <a class="b2b-stack__item" href="services/law-offices.html">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-scale"></use></svg></span>
+              <div>
+                <strong data-i18n="b2b.item2">مكاتب المحاماة</strong>
+                <small data-i18n="b2b.item2d">طباعة سريعة، شبكة تبادل المذكرات، وحفظ آمن</small>
+              </div>
+              <span class="b2b-stack__meta">02</span>
+            </a>
+            <a class="b2b-stack__item" href="services/notary-offices.html">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-file-text"></use></svg></span>
+              <div>
+                <strong data-i18n="b2b.item3">الموثقون</strong>
+                <small data-i18n="b2b.item3d">معايرة طابعات العقود وحماية أرشيف الوثائق</small>
+              </div>
+              <span class="b2b-stack__meta">03</span>
+            </a>
+            <a class="b2b-stack__item" href="services/design-offices.html">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-ruler"></use></svg></span>
+              <div>
+                <strong data-i18n="b2b.item4">مكاتب الدراسات</strong>
+                <small data-i18n="b2b.item4d">أداء الحواسيب الهندسية وطابعات المخططات</small>
+              </div>
+              <span class="b2b-stack__meta">04</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sectors -->
     <section id="sectors" class="section">
       <div class="container">
-        <div style="text-align: center; max-width: 760px; margin: 0 auto 40px;">
-          <span class="chip glass">الفئات المستهدفة</span>
-          <h2 class="section-title">لمن نقدم خدماتنا؟</h2>
-          <p class="section-sub" style="margin-bottom: 0;">
-            نوفر حلولاً مصممة خصيصاً للمكاتب المستقلة والأنشطة المهنية التي تعتمد على حواسيب العمل دون وجود قسم تكنولوجيا معلومات داخلي:
+        <div class="section-head section-head--center">
+          <span class="eyebrow" data-i18n="sectors.eyebrow">القطاعات</span>
+          <h2 class="section-title" data-i18n="sectors.title">حلول مبنية على طريقة عمل مكتبك</h2>
+          <p class="section-sub" data-i18n="sectors.description">
+            لكل نشاط طريقته في حفظ الوثائق والطباعة. نتعامل مع الأجهزة بما يخدم سير العمل اليومي.
           </p>
         </div>
 
         <div class="sectors-grid">
-          <!-- Sector 1: مكاتب المحاسبة -->
-          <div class="sector-card glass">
+          <article class="sector-card">
             <div class="sector-header">
-              <div class="sector-icon">📊</div>
-              <h3>مكاتب المحاسبة</h3>
+              <span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg></span>
+              <h3 data-i18n="sector.accounting.title">مكاتب المحاسبة</h3>
             </div>
             <div class="sector-body">
-              <div class="sector-pain">
-                <strong>المشكلة الشائعة:</strong>
-                توقف طابعات الفواتير في أوقات التصريحات الجبائية، وتشتت ملفات الزبائن.
-              </div>
-              <div class="sector-solution">
-                <strong>كيف يمكننا المساعدة:</strong>
-                صيانة الأجهزة، مشاركة الطابعات، تنظيم ملفات الضرائب وإعداد خطة نسخ احتياطي دورية.
-              </div>
+              <p data-i18n="sector.accounting.text">أجهزة، طابعات فواتير، ونسخ احتياطي لملفات الزبائن والتصريحات.</p>
             </div>
             <div class="sector-footer">
-              <a href="services/accounting-offices.html" class="btn-sector">اكتشف الحل المحاسبي ←</a>
+              <a class="btn-sector" href="services/accounting-offices.html" data-i18n="sector.link">التفاصيل</a>
             </div>
-          </div>
+          </article>
 
-          <!-- Sector 2: مكاتب المحامين -->
-          <div class="sector-card glass">
+          <article class="sector-card">
             <div class="sector-header">
-              <div class="sector-icon">⚖️</div>
-              <h3>مكاتب المحامين</h3>
+              <span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-scale"></use></svg></span>
+              <h3 data-i18n="sector.law.title">مكاتب المحاماة</h3>
             </div>
             <div class="sector-body">
-              <div class="sector-pain">
-                <strong>المشكلة الشائعة:</strong>
-                تعطل الماسح الضوئي أو الطابعة قبل موعد الجلسة وصعوبة تبادل المذكرات مع الكاتب.
-              </div>
-              <div class="sector-solution">
-                <strong>كيف يمكننا المساعدة:</strong>
-                ضبط الطباعة السريعة، إعداد شبكة داخلية لتبادل العرائض، وتأمين حفظ المذكرات.
-              </div>
+              <p data-i18n="sector.law.text">طباعة سريعة، ماسح ضوئي، وشبكة لتبادل المذكرات بين المكتب والكاتب.</p>
             </div>
             <div class="sector-footer">
-              <a href="services/law-offices.html" class="btn-sector">اكتشف الحل القانوني ←</a>
+              <a class="btn-sector" href="services/law-offices.html" data-i18n="sector.link">التفاصيل</a>
             </div>
-          </div>
+          </article>
 
-          <!-- Sector 3: الموثقون -->
-          <div class="sector-card glass">
+          <article class="sector-card">
             <div class="sector-header">
-              <div class="sector-icon">📜</div>
-              <h3>الموثقون</h3>
+              <span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-file-text"></use></svg></span>
+              <h3 data-i18n="sector.notary.title">الموثقون</h3>
             </div>
             <div class="sector-body">
-              <div class="sector-pain">
-                <strong>المشكلة الشائعة:</strong>
-                أخطاء طباعة العقود على الورق الرسمي ومخاطر الفيروسات من أقراص الزبائن.
-              </div>
-              <div class="sector-solution">
-                <strong>كيف يمكننا المساعدة:</strong>
-                معايرة طابعات العقود بدقة، تأمين أجهزة المكتب، وحماية أرشيف العقود التوثيقية.
-              </div>
+              <p data-i18n="sector.notary.text">معايرة طابعات العقود، أرشفة آمنة، وحماية الأجهزة من الوسائط الخارجية.</p>
             </div>
             <div class="sector-footer">
-              <a href="services/notary-offices.html" class="btn-sector">اكتشف حلول التوثيق ←</a>
+              <a class="btn-sector" href="services/notary-offices.html" data-i18n="sector.link">التفاصيل</a>
             </div>
-          </div>
+          </article>
 
-          <!-- Sector 4: مكاتب الدراسات -->
-          <div class="sector-card glass">
+          <article class="sector-card">
             <div class="sector-header">
-              <div class="sector-icon">📐</div>
-              <h3>مكاتب الدراسات والهندسة</h3>
+              <span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-ruler"></use></svg></span>
+              <h3 data-i18n="sector.design.title">مكاتب الدراسات</h3>
             </div>
             <div class="sector-body">
-              <div class="sector-pain">
-                <strong>المشكلة الشائعة:</strong>
-                بطء فتح ملفات CAD الكبيرة وصعوبة نقل مجلدات المشاريع بين المهندسين.
-              </div>
-              <div class="sector-solution">
-                <strong>كيف يمكننا المساعدة:</strong>
-                تحسين أداء الحواسيب الهندسية، ربط طابعات المخططات، ومشاركة سريعة عبر الشبكة.
-              </div>
+              <p data-i18n="sector.design.text">أداء للحواسيب الهندسية، طابعات A3، ومشاركة سريعة للمخططات.</p>
             </div>
             <div class="sector-footer">
-              <a href="services/design-offices.html" class="btn-sector">اكتشف الحل الهندسي ←</a>
+              <a class="btn-sector" href="services/design-offices.html" data-i18n="sector.link">التفاصيل</a>
             </div>
-          </div>
+          </article>
 
-          <!-- Sector 5: الوكالات والشركات الصغيرة -->
-          <div class="sector-card glass">
+          <article class="sector-card">
             <div class="sector-header">
-              <div class="sector-icon">🏢</div>
-              <h3>الوكالات والشركات الصغيرة</h3>
+              <span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-building"></use></svg></span>
+              <h3 data-i18n="sector.agency.title">الوكالات والشركات</h3>
             </div>
             <div class="sector-body">
-              <div class="sector-pain">
-                <strong>المشكلة الشائعة:</strong>
-                امتلاك عدة أجهزة دون متابع تقني، وتكرار انقطاع الطابعة المشتركة والـ Wi-Fi.
-              </div>
-              <div class="sector-solution">
-                <strong>كيف يمكننا المساعدة:</strong>
-                تنظيم شبكة المكتب، تهيئة مجلدات الأقسام، وتقديم دعم مباشر عبر WhatsApp.
-              </div>
+              <p data-i18n="sector.agency.text">شبكة موحدة، مجلدات مشتركة، ودعم مباشر عند توقف العمل.</p>
             </div>
             <div class="sector-footer">
-              <a href="services/office-support.html" class="btn-sector">اكتشف حلول الشركات ←</a>
+              <a class="btn-sector" href="services/office-support.html" data-i18n="sector.link">التفاصيل</a>
             </div>
-          </div>
+          </article>
 
-          <!-- Sector 6: أصحاب المكاتب الحرة -->
-          <div class="sector-card glass">
+          <article class="sector-card">
             <div class="sector-header">
-              <div class="sector-icon">💼</div>
-              <h3>أصحاب المكاتب الحرة</h3>
+              <span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"></use></svg></span>
+              <h3 data-i18n="sector.freelance.title">المكاتب الحرة</h3>
             </div>
             <div class="sector-body">
-              <div class="sector-pain">
-                <strong>المشكلة الشائعة:</strong>
-                استغراق ساعات طويلة في حل مشاكل النظام وتحديثات البرامج بدلاً من التركيز على العمل.
-              </div>
-              <div class="sector-solution">
-                <strong>كيف يمكننا المساعدة:</strong>
-                تهيئة بيئة حاسوب مستقرة، أتمتة النسخ الاحتياطي، ودعم سريع عند حدوث أي خلل.
-              </div>
+              <p data-i18n="sector.freelance.text">بيئة عمل مستقرة، برامج أساسية، ونسخ احتياطي تلقائي للوثائق.</p>
             </div>
             <div class="sector-footer">
-              <a href="services/office-support.html" class="btn-sector">اكتشف حلول المكاتب ←</a>
+              <a class="btn-sector" href="services/office-support.html" data-i18n="sector.link">التفاصيل</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section: خدماتنا الأساسية (Core Services) -->
-    <section id="services" class="section" style="background: rgba(255, 255, 255, 0.015); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
-      <div class="container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 36px;">
-          <div>
-            <span class="chip glass">تغطية تقنية شاملة</span>
-            <h2 class="section-title" style="margin-top: 8px; margin-bottom: 4px;" data-i18n="home.services.title">خدماتنا التقنية للمكاتب والطلبة</h2>
-            <p style="color: var(--muted); margin: 0;" data-i18n="home.services.description">دعم تقني للمكاتب والأفراد، مع تنسيق مستندات الطلبة حسب تعليمات مؤسساتهم.</p>
-          </div>
-          <a href="services.html" class="btn btn-ghost">عرض كافة الخدمات ←</a>
-        </div>
-
-        <div class="grid grid-3">
-          <article class="card glass service-card">
-            <a href="services/office-support.html" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="دعم تقني للمكاتب" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">💼</div>
-              </div>
-              <div class="card-body">
-                <h3>دعم المكاتب والمؤسسات</h3>
-                <p>مساعدة تقنية متكاملة لتشخيص المشاكل، برامج العمل، وإدارة أجهزة المكتب عند الحاجة.</p>
-                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
-              </div>
-            </a>
-          </article>
-
-          <article class="card glass service-card">
-            <a href="services/computer-maintenance.html" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=600&q=80" alt="صيانة أجهزة الشركات" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">🖥️</div>
-              </div>
-              <div class="card-body">
-                <h3>صيانة أجهزة الشركات</h3>
-                <p>فحص الأقراص، تنظيف Windows، حل مشاكل النظام، وتثبيت التعريفات لتسريع استجابة العمل.</p>
-                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
-              </div>
-            </a>
-          </article>
-
-          <article class="card glass service-card">
-            <a href="services/office-network.html" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="إعداد شبكة المكتب" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">🌐</div>
-              </div>
-              <div class="card-body">
-                <h3>إعداد شبكة المكتب</h3>
-                <p>ربط حواسيب المكتب ببعضها، مشاركة الملفات، مشاركة الطابعة، وضبط Wi-Fi مستقر.</p>
-                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
-              </div>
-            </a>
-          </article>
-
-          <article class="card glass service-card">
-            <a href="services/printer-setup.html" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80" alt="إعداد الطابعات للمكاتب" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">🖨️</div>
-              </div>
-              <div class="card-body">
-                <h3>إعداد وربط الطابعات</h3>
-                <p>تثبيت التعريفات الأصلية، مشاركة الطابعة عبر الشبكة، وحل مشاكل الطباعة المعلقة.</p>
-                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
-              </div>
-            </a>
-          </article>
-
-          <article class="card glass service-card">
-            <a href="services/new-computer-setup.html" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80" alt="تجهيز حاسوب جديد" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">⚡</div>
-              </div>
-              <div class="card-body">
-                <h3>تجهيز حاسوب جديد</h3>
-                <p>تهيئة كاملة للحواسيب الجديدة: نظام نظيف، تحديثات، برامج مكتبية، وجاهزية فورية للعمل.</p>
-                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
-              </div>
-            </a>
-          </article>
-
-          <article class="card glass service-card">
-            <a href="services/backup-files.html" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="النسخ الاحتياطي وتنظيم الملفات" class="card-img" data-scroll3d="tilt" loading="lazy" />
-                <div class="card-icon">🛡️</div>
-              </div>
-              <div class="card-body">
-                <h3>تنظيم الملفات والنسخ الاحتياطي</h3>
-                <p>هيكلة ملفات العملاء، نسخ احتياطي دوري محلي وخارجي لتقليل مخاطر فقدان البيانات.</p>
-                <div style="margin-top: 12px; font-weight: 700; color: var(--primary); font-size: 0.9rem;">اقرأ المزيد ←</div>
-              </div>
-            </a>
-          </article>
-
-          <article class="card glass service-card student-home-service-card">
-            <a href="services/memoires-etudiants.html" class="service-link">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80" alt="طالب يكتب مذكرات دراسية" class="card-img" data-i18n-alt="studentService.imageAlt" loading="lazy" />
-                <div class="card-icon" aria-hidden="true">🎓</div>
-              </div>
-              <div class="card-body">
-                <h3 data-i18n="studentService.title">تنسيق مذكرات وتقارير الطلبة</h3>
-                <p data-i18n="studentService.description">تنسيق مستندات Word للمذكرات وتقارير التربص ومشاريع نهاية التكوين، مع فهرس وترقيم وتصدير PDF حسب تعليمات المؤسسة.</p>
-                <div class="student-home-service-action" data-i18n="studentService.action">اقرأ المزيد ←</div>
-              </div>
-            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Section: حلول حسب المشكلة (Solutions by Problem) -->
-    <section class="section">
+    <!-- Problems -->
+    <section class="section section--soft">
       <div class="container">
-        <div style="text-align: center; max-width: 760px; margin: 0 auto 36px;">
-          <span class="chip glass">تشخيص مباشر</span>
-          <h2 class="section-title">لديك مشكلة تقنية في المكتب؟</h2>
-          <p class="section-sub" style="margin-bottom: 0;">اختر المشكلة التي تواجهها لنقدم لك الحل المباشر والمناسب:</p>
+        <div class="section-head section-head--center">
+          <span class="eyebrow" data-i18n="problems.eyebrow">تشخيص سريع</span>
+          <h2 class="section-title" data-i18n="problems.title">مشكلة تقنية تعطّل عملك؟</h2>
+          <p class="section-sub" data-i18n="problems.description">اختر العرض الأقرب لحالتك، وانتقل إلى الحل المناسب.</p>
         </div>
 
         <div class="problems-grid">
-          <div class="problem-card glass">
+          <article class="problem-card">
             <div class="problem-card-top">
-              <span class="problem-icon">⏳</span>
+              <span class="problem-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span>
               <div>
-                <h3>الكمبيوتر بطيء جداً</h3>
-                <p>تشنج عند فتح الملفات أو إقلاع بطيء يستغرق دقائق طويلة.</p>
+                <h3 data-i18n="prob.slow.title">الكمبيوتر بطيء</h3>
+                <p data-i18n="prob.slow.desc">إقلاع طويل، تجمد عند فتح الملفات، أو أداء غير مستقر.</p>
               </div>
             </div>
-            <a href="services/computer-maintenance.html" class="solution-tag">
-              <span>← الحل: تشخيص وتحسين الأداء</span>
+            <a class="solution-tag" href="services/computer-maintenance.html">
+              <span data-i18n="prob.slow.link">الحل: تشخيص وتحسين الأداء</span>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
             </a>
-          </div>
+          </article>
 
-          <div class="problem-card glass">
+          <article class="problem-card">
             <div class="problem-card-top">
-              <span class="problem-icon">🖨️</span>
+              <span class="problem-icon"><svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg></span>
               <div>
-                <h3>الطابعة لا تعمل</h3>
-                <p>رسائل خطأ في الطباعة، أو عدم تعرف الأجهزة على الطابعة المشتركة.</p>
+                <h3 data-i18n="prob.printer.title">الطابعة لا تعمل</h3>
+                <p data-i18n="prob.printer.desc">رسائل خطأ، طابور عالق، أو الجهاز لا يظهر على الشبكة.</p>
               </div>
             </div>
-            <a href="services/printer-setup.html" class="solution-tag">
-              <span>← الحل: إعداد وإصلاح اتصال الطابعة</span>
+            <a class="solution-tag" href="services/printer-setup.html">
+              <span data-i18n="prob.printer.link">الحل: إعداد وإصلاح الطابعة</span>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
             </a>
-          </div>
+          </article>
 
-          <div class="problem-card glass">
+          <article class="problem-card">
             <div class="problem-card-top">
-              <span class="problem-icon">📶</span>
+              <span class="problem-icon"><svg class="icon" aria-hidden="true"><use href="#i-wifi"></use></svg></span>
               <div>
-                <h3>الإنترنت يعمل لكن الأجهزة لا تتصل</h3>
-                <p>صعوبة رؤية الملفات المشتركة أو جهاز الأرشيف عبر الشبكة المحلية.</p>
+                <h3 data-i18n="prob.network.title">الأجهزة لا تتصل ببعضها</h3>
+                <p data-i18n="prob.network.desc">الإنترنت يعمل لكن الملفات والطابعة المشتركة غير متاحة.</p>
               </div>
             </div>
-            <a href="services/office-network.html" class="solution-tag">
-              <span>← الحل: فحص الشبكة المحلية وعناوين IP</span>
+            <a class="solution-tag" href="services/office-network.html">
+              <span data-i18n="prob.network.link">الحل: فحص الشبكة والمشاركة</span>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
             </a>
-          </div>
+          </article>
 
-          <div class="problem-card glass">
+          <article class="problem-card">
             <div class="problem-card-top">
-              <span class="problem-icon">💻</span>
+              <span class="problem-icon"><svg class="icon" aria-hidden="true"><use href="#i-laptop"></use></svg></span>
               <div>
-                <h3>اشتريت حاسوباً جديداً</h3>
-                <p>تحتاج لتثبيت Windows والتعريفات والبرامج المكتبية دون ضياع وقت.</p>
+                <h3 data-i18n="prob.new.title">حاسوب جديد بدون إعداد</h3>
+                <p data-i18n="prob.new.desc">تحتاج Windows، تعريفات، برامج مكتبية وطابعة جاهزة.</p>
               </div>
             </div>
-            <a href="services/new-computer-setup.html" class="solution-tag">
-              <span>← الحل: تجهيز كامل جاهز للعمل</span>
+            <a class="solution-tag" href="services/new-computer-setup.html">
+              <span data-i18n="prob.new.link">الحل: تجهيز كامل للعمل</span>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
             </a>
-          </div>
+          </article>
 
-          <div class="problem-card glass">
+          <article class="problem-card">
             <div class="problem-card-top">
-              <span class="problem-icon">📁</span>
+              <span class="problem-icon"><svg class="icon" aria-hidden="true"><use href="#i-folder"></use></svg></span>
               <div>
-                <h3>ملفات المكتب غير منظمة</h3>
-                <p>تشتت الوثائق على عدة أجهزة والخوف من ضياع معاملات الزبائن.</p>
+                <h3 data-i18n="prob.files.title">ملفات المكتب غير منظمة</h3>
+                <p data-i18n="prob.files.desc">وثائق متفرقة وخوف من فقدان معاملات الزبائن.</p>
               </div>
             </div>
-            <a href="services/backup-files.html" class="solution-tag">
-              <span>← الحل: تنظيم وهيكلة ونسخ احتياطي</span>
+            <a class="solution-tag" href="services/backup-files.html">
+              <span data-i18n="prob.files.link">الحل: تنظيم ونسخ احتياطي</span>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
             </a>
-          </div>
+          </article>
 
-          <div class="problem-card glass">
+          <article class="problem-card">
             <div class="problem-card-top">
-              <span class="problem-icon">🔗</span>
+              <span class="problem-icon"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"></use></svg></span>
               <div>
-                <h3>تحتاج لأكثر من جهاز متصل</h3>
-                <p>تريد ربط أجهزة الفريق والتعاون على نفس الملفات بسهولة وسرعة.</p>
+                <h3 data-i18n="prob.office.title">لا يوجد متابع تقني</h3>
+                <p data-i18n="prob.office.desc">عدة أجهزة ومشاكل متكررة دون شخص مسؤول.</p>
               </div>
             </div>
-            <a href="services/office-network.html" class="solution-tag">
-              <span>← الحل: إعداد شبكة المكتب ومشاركة الملفات</span>
+            <a class="solution-tag" href="services/office-support.html">
+              <span data-i18n="prob.office.link">الحل: دعم مكتبي منتظم</span>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
             </a>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Section: طريقة العمل (Timeline) -->
-    <section class="section" style="background: rgba(255, 255, 255, 0.015); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+    <!-- Process -->
+    <section class="section">
       <div class="container">
-        <div style="text-align: center; max-width: 760px; margin: 0 auto;">
-          <span class="chip glass">سير العمل المنظم</span>
-          <h2 class="section-title">كيف نعمل مع مكتبك؟</h2>
-          <p class="section-sub">خطوات واضحة وبسيطة من لحظة التواصل وحتى تسليم النتيجة:</p>
+        <div class="section-head section-head--center">
+          <span class="eyebrow" data-i18n="process.eyebrow">طريقة العمل</span>
+          <h2 class="section-title" data-i18n="process.title">من الرسالة إلى جهاز يعمل</h2>
+          <p class="section-sub" data-i18n="process.description">أربع خطوات واضحة، بدون مصطلحات أو إجراءات معقدة.</p>
         </div>
 
         <div class="timeline-track">
-          <div class="timeline-step glass">
-            <div class="timeline-num">1</div>
-            <h4>التواصل</h4>
-            <p>تتواصل معنا عبر WhatsApp أو ترسل طلب الخدمة عبر النموذج.</p>
+          <div class="timeline-step">
+            <div class="timeline-num">01</div>
+            <h4 data-i18n="process.1.title">التواصل</h4>
+            <p data-i18n="process.1.text">واتساب أو طلب خدمة، مع وصف مختصر للمشكلة.</p>
           </div>
-
-          <div class="timeline-step glass">
-            <div class="timeline-num">2</div>
-            <h4>فهم المشكلة</h4>
-            <p>نستمع لما يحدث في أجهزتك أو طبيعة ما تود إعداده في المكتب.</p>
+          <div class="timeline-step">
+            <div class="timeline-num">02</div>
+            <h4 data-i18n="process.2.title">التشخيص</h4>
+            <p data-i18n="process.2.text">معاينة الحالة وتحديد السبب والتكلفة قبل التنفيذ.</p>
           </div>
-
-          <div class="timeline-step glass">
-            <div class="timeline-num">3</div>
-            <h4>التشخيص</h4>
-            <p>معاينة الحالة التقنية وتحديد سبب العطل أو الاحتياج بدقة.</p>
+          <div class="timeline-step">
+            <div class="timeline-num">03</div>
+            <h4 data-i18n="process.3.title">التنفيذ</h4>
+            <p data-i18n="process.3.text">إصلاح، إعداد أو تركيب، مع اختبار كل خطوة.</p>
           </div>
-
-          <div class="timeline-step glass">
-            <div class="timeline-num">4</div>
-            <h4>اقتراح الحل</h4>
-            <p>توضيح الخطوات العملية المناسبة دون مبالغة أو تعقيدات.</p>
-          </div>
-
-          <div class="timeline-step glass">
-            <div class="timeline-num">5</div>
-            <h4>تنفيذ الخدمة</h4>
-            <p>إنجاز الصيانة، الإعداد، ربط الشبكة أو تثبيت النظام باحترافية.</p>
-          </div>
-
-          <div class="timeline-step glass">
-            <div class="timeline-num">6</div>
-            <h4>اختبار النتيجة</h4>
-            <p>التأكد من عمل الأجهزة والطابعات واستقرارها قبل إنهاء الخدمة.</p>
+          <div class="timeline-step">
+            <div class="timeline-num">04</div>
+            <h4 data-i18n="process.4.title">التسليم</h4>
+            <p data-i18n="process.4.text">شرح ما تم، وتوصيات بسيطة للوقاية والمتابعة.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section: لماذا iComputer Urban Tech DZ؟ -->
-    <section class="section">
+    <!-- Why us -->
+    <section class="section section--soft">
       <div class="container">
-        <div style="text-align: center; max-width: 760px; margin: 0 auto 36px;">
-          <span class="chip glass">الثقة والمصداقية</span>
-          <h2 class="section-title">لماذا iComputer Urban Tech DZ؟</h2>
-          <p class="section-sub" style="margin-bottom: 0;">نركز على الحلول العملية التي تفيد أصحاب المكاتب دون ادعاءات غير حقيقية:</p>
+        <div class="section-head section-head--center">
+          <span class="eyebrow" data-i18n="why.eyebrow">لماذا iComputer</span>
+          <h2 class="section-title" data-i18n="why.title">تقني واحد يفهم مكتبك</h2>
+          <p class="section-sub" data-i18n="why.description">لا وكالة كبيرة ولا دعم آلي. تواصل مباشر مع من ينفذ العمل.</p>
         </div>
 
         <div class="why-us-grid">
-          <div class="why-card glass">
-            <div class="why-check">✓</div>
+          <div class="why-card">
+            <div class="why-check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></div>
             <div>
-              <h4>خدمات موجهة للمكاتب والمؤسسات</h4>
-              <p>نفهم طبيعة بيئة العمل المكتبي، وأهمية استقرار البرامج وسرعة استرجاع الوثائق.</p>
+              <h4 data-i18n="why.1.title">خبرة عملية</h4>
+              <p data-i18n="why.1.text">عمل ميداني مع مكاتب المحاسبة والمحاماة والتوثيق.</p>
             </div>
           </div>
-
-          <div class="why-card glass">
-            <div class="why-check">✓</div>
+          <div class="why-card">
+            <div class="why-check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></div>
             <div>
-              <h4>حلول تقنية عملية</h4>
-              <p>نقدم ما تحتاجه فعلياً دون اقتراح برامج أو تعقيدات لا تلزم نشاطك اليومي.</p>
+              <h4 data-i18n="why.2.title">حلول بلا مبالغة</h4>
+              <p data-i18n="why.2.text">نقترح ما تحتاجه فعلاً، دون برامج أو تكاليف زائدة.</p>
             </div>
           </div>
-
-          <div class="why-card glass">
-            <div class="why-check">✓</div>
+          <div class="why-card">
+            <div class="why-check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></div>
             <div>
-              <h4>دعم تقني واضح ومباشر</h4>
-              <p>شرح مبسط للمشكلة وحلها دون مصطلحات تقنية معقدة، مع متابعة واضحة.</p>
+              <h4 data-i18n="why.3.title">شرح واضح</h4>
+              <p data-i18n="why.3.text">تفهم المشكلة والحل بلغة بسيطة، قبل وبعد التدخل.</p>
             </div>
           </div>
-
-          <div class="why-card glass">
-            <div class="why-check">✓</div>
+          <div class="why-card">
+            <div class="why-check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></div>
             <div>
-              <h4>بدون تعقيد أو عقود مرهقة</h4>
-              <p>مرونة تامة تناسب إمكانيات المؤسسات والمهن الحرة عند الحاجة الفعلية للدعم.</p>
-            </div>
-          </div>
-
-          <div class="why-card glass">
-            <div class="why-check">✓</div>
-            <div>
-              <h4>مناسب للمؤسسات الصغيرة</h4>
-              <p>بديل اقتصادي ومرن جداً يغنيك عن التكاليف العالية لتوظيف تقني IT متفرغ.</p>
-            </div>
-          </div>
-
-          <div class="why-card glass">
-            <div class="why-check">✓</div>
-            <div>
-              <h4>التواصل المباشر عبر WhatsApp</h4>
-              <p>سهولة التواصل وإرسال صور ورسائل الخطأ لتلقي التوجيه والمساعدة السريعة.</p>
+              <h4 data-i18n="why.4.title">مرونة في التوقيت</h4>
+              <p data-i18n="why.4.text">تنسيق المواعيد حسب طبيعة عمل المكتب واستعجاله.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section: من نحن (About) -->
-    <section id="about" class="section" style="background: rgba(255, 255, 255, 0.015); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+    <!-- About -->
+    <section id="about" class="section">
       <div class="container about-grid">
         <div class="about-info">
-          <span class="chip glass">من نحن</span>
-          <h2 class="section-title">خبرة تقنية عملية في خدمة مكاتب الجزائر العاصمة</h2>
-          <p style="font-size: 1.05rem; color: var(--text-strong);">
-            محمد الأمين — تقني سامي في الإعلام الآلي (Senior IT Technician).
+          <span class="eyebrow" data-i18n="about.eyebrow">من نحن</span>
+          <h2 class="section-title" data-i18n="about.title">خبرة تقنية محلية، بمعايير مهنية</h2>
+          <p data-i18n="about.p1">
+            محمد الأمين — تقني سامي في الإعلام الآلي. أساعد المكاتب والمؤسسات الصغيرة في الجزائر العاصمة على تشغيل أجهزتها وشبكاتها بثبات.
           </p>
-          <p>
-            أساعد المكاتب والمؤسسات الصغيرة في الجزائر العاصمة (مكاتب محاسبة، محاماة، موثقون، مكاتب دراسات وشركات) في حل مشاكل الحواسيب، إعداد شبكات العمل المحلية، ربط الطابعات والماسحات، وتنظيم النسخ الاحتياطي للملفات.
+          <p data-i18n="about.p2">
+            iComputer Urban Tech DZ هو شريك تقني مرن: تدخل عند الحاجة، شرح واضح، ومتابعة دون تكلفة مسؤول IT بدوام كامل.
           </p>
-          <p>
-            الهدف الأساسي لـ <strong>iComputer Urban Tech DZ</strong> هو توفير دعم تقني يعتمد عليه، يمنح صاحب المكتب راحة البال واستمرارية العمل دون الحاجة لتحمل تكلفة مسؤول IT بدوام كامل.
-          </p>
-          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px;">
-            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-whatsapp" data-whatsapp-link>
-              <span class="btn-icon">💬</span>
-              <span>تواصل عبر WhatsApp</span>
+          <ul class="about-points">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="about.point1">تشخيص وإصلاح أجهزة وشبكات</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="about.point2">إعداد أنظمة وبرامج عمل</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="about.point3">حماية البيانات والنسخ الاحتياطي</span></li>
+          </ul>
+          <div class="about-actions">
+            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-whatsapp"
+              data-whatsapp-link>
+              <span class="btn-icon" aria-hidden="true"><svg class="icon"><use href="#i-whatsapp"></use></svg></span>
+              <span data-i18n="about.cta1">تواصل عبر WhatsApp</span>
             </a>
-            <a href="booking.html" class="btn btn-ghost">طلب خدمة</a>
+            <a href="booking.html" class="btn btn-ghost" data-i18n="about.cta2">طلب خدمة</a>
           </div>
         </div>
 
         <div class="about-media">
-          <div class="about-img-wrapper glass">
-            <img src="images/systems-install.jpg" alt="الدعم التقني للمكاتب في الجزائر" class="about-img" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=80'" />
-            <div class="about-experience-badge">
-              <span class="exp-num">IT</span>
-              <span class="exp-text">تقني سامي إعلام آلي</span>
+          <div class="about-media__frame">
+            <img src="images/hero-bg.jpg" alt="لوحة إلكترونية دوائر حاسوب — بيئة عمل تقنية" loading="lazy" width="1400" height="787" />
+          </div>
+          <div class="about-badge">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-monitor"></use></svg></span>
+            <div>
+              <strong data-i18n="about.badge.title">تقني سامي إعلام آلي</strong>
+              <small data-i18n="about.badge.text">دعم مكاتب · الجزائر العاصمة</small>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section: الأسئلة الشائعة (FAQ) (Prompt Point 24) -->
-    <section id="faq" class="section">
-      <div class="container" style="max-width: 860px;">
-        <div style="text-align: center; margin-bottom: 36px;">
-          <span class="chip glass">إجابات شفافة</span>
-          <h2 class="section-title">الأسئلة الشائعة</h2>
-          <p class="section-sub">كل ما تحتاج معرفته حول خدمات الدعم التقني لمكتبك:</p>
+    <!-- FAQ -->
+    <section id="faq" class="section section--soft">
+      <div class="container" style="max-width: 900px;">
+        <div class="section-head section-head--center">
+          <span class="eyebrow" data-i18n="faq.eyebrow">الأسئلة الشائعة</span>
+          <h2 class="section-title" data-i18n="faq.title">أسئلة قبل طلب الخدمة</h2>
+          <p class="section-sub" data-i18n="faq.description">إجابات مباشرة حول نطاق الخدمة وطريقة العمل.</p>
         </div>
 
         <div class="faq-list">
-          <details class="glass">
-            <summary>هل تخدمون المكاتب والشركات الصغيرة؟</summary>
-            <p>
-              نعم، هذه هي فئتنا المستهدفة الأساسية. نركز على مكاتب المحاسبة، مكاتب المحامين، الموثقين، مكاتب الدراسات، الوكالات التجارية، والشركات التي تملك عدداً من الحواسيب ولا تملك موظف IT متفرغ.
-            </p>
+          <details>
+            <summary data-i18n="faq.q1">هل تخدمون المكاتب والشركات الصغيرة؟</summary>
+            <p data-i18n="faq.a1">نعم، هذا هو مجالنا الأساسي: مكاتب المحاسبة، المحاماة، التوثيق، الدراسات، والوكالات الصغيرة التي لا تملك مسؤول IT متفرغ.</p>
           </details>
-
-          <details class="glass">
-            <summary>هل تخدمون الأفراد أيضاً؟</summary>
-            <p>
-              نعم، نقدم الدعم البرمجي، تثبيت الأنظمة، وصيانة أجهزة الحواسيب للمهنيين وأصحاب المكاتب الحرة والعمل المستقل.
-            </p>
+          <details>
+            <summary data-i18n="faq.q2">هل يمكن إعداد شبكة داخل المكتب؟</summary>
+            <p data-i18n="faq.a2">نعم. نضبط الراوتر، نربط الأجهزة سلكياً أو عبر Wi-Fi، ونفعّل مشاركة المجلدات والطابعات مع صلاحيات مناسبة.</p>
           </details>
-
-          <details class="glass">
-            <summary>هل يمكن إعداد شبكة داخل المكتب؟</summary>
-            <p>
-              نعم، نقوم بتهيئة الراوتر، ربط أجهزة المكتب سلكياً أو عبر Wi-Fi، ضبط مشاركة المجلدات والصلاحيات، ومشاركة الطابعات المركزية بين جميع الموظفين.
-            </p>
+          <details>
+            <summary data-i18n="faq.q3">هل تقدمون دعماً عن بُعد؟</summary>
+            <p data-i18n="faq.a3">بعض المشاكل البرمجية يمكن حلها عن بُعد بعد موافقتك. أما الأعطال المادية أو إعداد الشبكة فيحتاجان غالباً إلى زيارة.</p>
           </details>
-
-          <details class="glass">
-            <summary>هل يمكن تجهيز حاسوب جديد للعمل؟</summary>
-            <p>
-              بالتأكيد. تشمل الخدمة تثبيت نسخة Windows نظيفة ومستقرة، تثبيت التعريفات الأصلية والتحديثات، برامج العمل المكتبية الأساسية، إعداد الطابعة والبريد، ليكون الجهاز جاهزاً للاستخدام الفوري.
-            </p>
+          <details>
+            <summary data-i18n="faq.q4">هل يمكن تجهيز حاسوب جديد؟</summary>
+            <p data-i18n="faq.a4">نعم: تثبيت Windows نظيف، التعريفات الأصلية، التحديثات، البرامج المكتبية الأساسية، وإعداد الطابعة والبريد.</p>
           </details>
-
-          <details class="glass">
-            <summary>هل يمكن إعداد وربط طابعة المكتب؟</summary>
-            <p>
-              نعم، نقوم بتثبيت التعريفات الرسمية، ربط الطابعة عبر USB أو الشبكة (LAN / Wi-Fi)، تفعيل مشاركتها بين أجهزة المكتب، ومعالجة مشاكل طابور الطباعة.
-            </p>
+          <details>
+            <summary data-i18n="faq.q5">هل تساعدون في النسخ الاحتياطي؟</summary>
+            <p data-i18n="faq.a5">نعم، ننظم مجلدات العمل ونضع خطة نسخ دورية محلية وخارجية تقلل خطر فقدان ملفات الزبائن.</p>
           </details>
-
-          <details class="glass">
-            <summary>هل تقدمون خدمة النسخ الاحتياطي للملفات؟</summary>
-            <p>
-              نعم، نساعدك في تنظيم مجلدات العمل وإعداد نظام نسخ احتياطي دوري محلي وخارجي للتقليل من مخاطر فقدان ملفات العملاء أو تعرض الأجهزة للأعطال المفاجئة.
-            </p>
-          </details>
-
-          <details class="glass">
-            <summary>هل يمكن طلب الدعم عبر WhatsApp؟</summary>
-            <p>
-              نعم، WhatsApp هو وسيلة التواصل الأساسية والمباشرة لدينا لاستقبال الاستفسارات، إرسال تفاصيل وصور المشكلة، وتنسيق موعد الدعم.
-            </p>
-          </details>
-
-          <details class="glass">
-            <summary>هل الخدمة داخل الجزائر العاصمة فقط؟</summary>
-            <p>
-              نطاق عملنا الأساسي هو الجزائر العاصمة، وتُحدد إمكانية الخدمة بحسب المنطقة.
-            </p>
+          <details>
+            <summary data-i18n="faq.q6">ما نطاق الخدمة؟</summary>
+            <p data-i18n="faq.a6">نطاق العمل الأساسي هو الجزائر العاصمة. تُحدد إمكانية الخدمة حسب المنطقة والتوفر قبل تثبيت الموعد.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Final CTA Section (Prompt Point 16) -->
-    <section class="final-cta-section">
+    <!-- Contact -->
+    <section id="contact" class="contact-hub">
       <div class="container">
-        <div class="final-cta-banner">
-          <h2>هل يحتاج مكتبك إلى دعم تقني؟</h2>
-          <p>
-            تواصل معنا عبر WhatsApp أو أرسل تفاصيل المشكلة وسننسق معك مباشرة دون تعقيد.
-          </p>
-          <div class="final-cta-actions">
-            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-whatsapp" data-whatsapp-link>
-              <span class="btn-icon">💬</span>
-              <span>اطلب الدعم عبر WhatsApp</span>
-            </a>
-            <a href="booking.html" class="btn btn-ghost">
-              إرسال طلب خدمة
-            </a>
+        <div class="contact-panel">
+          <div class="contact-panel__main">
+            <span class="eyebrow" data-i18n="contact.eyebrow">التواصل</span>
+            <h2 class="section-title" data-i18n="contact.title">تحدث معنا عن مشكلة مكتبك</h2>
+            <p data-i18n="contact.desc">
+              أرسل وصفاً قصيراً أو صورة لرسالة الخطأ عبر WhatsApp. سنوضح الخطوة التالية قبل أي التزام.
+            </p>
+
+            <div class="contact-channels">
+              <a class="contact-channel" href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener"
+                data-whatsapp-link>
+                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg></span>
+                <div>
+                  <strong data-i18n="contact.whatsapp.title">WhatsApp</strong>
+                  <span data-i18n="contact.whatsapp.text">أسرع طريقة لإرسال صورة أو وصف المشكلة</span>
+                </div>
+              </a>
+
+              <a class="contact-channel" href="booking.html">
+                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-file-text"></use></svg></span>
+                <div>
+                  <strong data-i18n="contact.request.title">طلب خدمة</strong>
+                  <span data-i18n="contact.request.text">نموذج منظم لتفاصيل المكتب والجهاز</span>
+                </div>
+              </a>
+
+              <a class="contact-channel" href="https://maps.app.goo.gl/o3BeYZaTyHqvPLf27" target="_blank" rel="noopener">
+                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg></span>
+                <div>
+                  <strong data-i18n="contact.area.title">نطاق الخدمة</strong>
+                  <span data-i18n="contact.area.text">الجزائر العاصمة — حسب المنطقة والتوفر</span>
+                </div>
+              </a>
+
+              <div class="contact-channel">
+                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span>
+                <div>
+                  <strong data-i18n="contact.hours.title">أوقات التنسيق</strong>
+                  <span data-i18n="contact.hours.text">السبت–الخميس · 9:00–18:00</span>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <aside class="contact-panel__aside">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-message"></use></svg></span>
+            <h3 data-i18n="contact.aside.title">جاهز لمراجعة وضع مكتبك؟</h3>
+            <p data-i18n="contact.aside.text">أرسل تفاصيل الأجهزة أو الشبكة، وسنقترح خطوات عملية واضحة.</p>
+            <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="btn btn-whatsapp"
+              data-whatsapp-link>
+              <span class="btn-icon" aria-hidden="true"><svg class="icon"><use href="#i-whatsapp"></use></svg></span>
+              <span data-i18n="contact.aside.cta">اطلب دعماً عبر WhatsApp</span>
+            </a>
+            <a href="booking.html" class="btn btn-ghost" data-i18n="contact.aside.secondary">أو أرسل طلب خدمة</a>
+            <p class="contact-note">
+              <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+              <span data-i18n="contact.note">لا نطلب أي معلومات حساسة قبل الاتفاق على الخدمة.</span>
+            </p>
+          </aside>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Extended B2B Footer (Prompt Point 26) -->
+  <!-- Footer -->
   <footer class="footer-extended">
     <div class="container footer-extended-grid">
       <div class="footer-col">
-        <div class="brand" style="margin-bottom: 12px;">
-          <span class="brand-mark">iC</span>
-          <span class="brand-text">iComputer <em>Urban Tech DZ</em></span>
-        </div>
-        <p class="footer-brand-bio">
-          الدعم التقني للمكاتب والمؤسسات الصغيرة في الجزائر العاصمة. حلول عملية لأجهزة الكمبيوتر، الشبكات، الطابعات والنسخ الاحتياطي بدون تعقيد.
+        <a href="index.html" class="brand" aria-label="iComputer Urban Tech DZ">
+          <img src="images/logo1.png" alt="" class="brand-logo" width="34" height="34" />
+          <span class="brand-text" dir="ltr">iComputer <em>Urban Tech DZ</em></span>
+        </a>
+        <p class="footer-brand-bio" data-i18n="footer.bio">
+          دعم تقني للمكاتب والمؤسسات الصغيرة في الجزائر العاصمة: أجهزة، شبكات، طابعات، نسخ احتياطي وتنسيق مستندات.
         </p>
         <div class="footer-social-links">
-          <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="footer-social-link" title="WhatsApp" data-whatsapp-link>💬</a>
-          <a href="https://www.facebook.com/iComputer.MH" target="_blank" rel="noopener" class="footer-social-link" title="Facebook">📘</a>
-          <a href="https://www.instagram.com/icomputer.urban_tech_dz/" target="_blank" rel="noopener" class="footer-social-link" title="Instagram">📷</a>
-          <a href="https://www.tiktok.com/@icomputer_dz" target="_blank" rel="noopener" class="footer-social-link" title="TikTok">🎵</a>
-          <a href="https://maps.app.goo.gl/o3BeYZaTyHqvPLf27" target="_blank" rel="noopener" class="footer-social-link" title="Google Maps">📍</a>
+          <a href="https://wa.me/rai.med.elamine" target="_blank" rel="noopener" class="footer-social-link"
+            aria-label="WhatsApp" data-whatsapp-link>
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+          </a>
+          <a href="https://www.facebook.com/iComputer.MH" target="_blank" rel="noopener" class="footer-social-link"
+            aria-label="Facebook">
+            <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
+          </a>
+          <a href="https://www.instagram.com/icomputer.urban_tech_dz/" target="_blank" rel="noopener"
+            class="footer-social-link" aria-label="Instagram">
+            <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
+          </a>
+          <a href="https://www.tiktok.com/@icomputer_dz" target="_blank" rel="noopener" class="footer-social-link"
+            aria-label="TikTok">
+            <svg class="icon" aria-hidden="true"><use href="#i-tiktok"></use></svg>
+          </a>
+          <a href="https://maps.app.goo.gl/o3BeYZaTyHqvPLf27" target="_blank" rel="noopener" class="footer-social-link"
+            aria-label="Google Maps">
+            <svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>
+          </a>
         </div>
       </div>
 
       <div class="footer-col">
-        <h4>الخدمات</h4>
+        <h4 data-i18n="footer.services">الخدمات</h4>
         <ul>
-          <li><a href="services/office-support.html">دعم المكاتب والمؤسسات</a></li>
-          <li><a href="services/computer-maintenance.html">صيانة أجهزة الشركات</a></li>
-          <li><a href="services/office-network.html">إعداد شبكة المكتب</a></li>
-          <li><a href="services/printer-setup.html">إعداد الطابعات</a></li>
-          <li><a href="services/new-computer-setup.html">تجهيز حاسوب جديد</a></li>
-          <li><a href="services/backup-files.html">النسخ الاحتياطي وتنظيم الملفات</a></li>
+          <li><a href="services/office-support.html" data-i18n="svc.support.title">دعم المكاتب والمؤسسات</a></li>
+          <li><a href="services/computer-maintenance.html" data-i18n="svc.maintenance.title">صيانة وإصلاح الحواسيب</a></li>
+          <li><a href="services/office-network.html" data-i18n="svc.network.title">الشبكة وWi-Fi</a></li>
+          <li><a href="services/printer-setup.html" data-i18n="svc.printer.title">الطابعات والماسحات</a></li>
+          <li><a href="services/new-computer-setup.html" data-i18n="svc.setup.title">تجهيز حاسوب جديد</a></li>
+          <li><a href="services/backup-files.html" data-i18n="svc.backup.title">النسخ الاحتياطي والملفات</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>القطاعات</h4>
+        <h4 data-i18n="footer.sectors">القطاعات</h4>
         <ul>
-          <li><a href="services/accounting-offices.html">مكاتب المحاسبة</a></li>
-          <li><a href="services/law-offices.html">مكاتب المحامين</a></li>
-          <li><a href="services/notary-offices.html">الموثقون</a></li>
-          <li><a href="services/design-offices.html">مكاتب الدراسات</a></li>
-          <li><a href="services/office-support.html">دعم الشركات الصغيرة والوكالات</a></li>
+          <li><a href="services/accounting-offices.html" data-i18n="sector.accounting.title">مكاتب المحاسبة</a></li>
+          <li><a href="services/law-offices.html" data-i18n="sector.law.title">مكاتب المحاماة</a></li>
+          <li><a href="services/notary-offices.html" data-i18n="sector.notary.title">الموثقون</a></li>
+          <li><a href="services/design-offices.html" data-i18n="sector.design.title">مكاتب الدراسات</a></li>
+          <li><a href="services/memoires-etudiants.html" data-i18n="studentService.title">تنسيق مذكرات الطلبة</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>روابط سريعة</h4>
+        <h4 data-i18n="footer.quick">روابط سريعة</h4>
         <ul>
-          <li><a href="#home">الرئيسية</a></li>
-          <li><a href="services.html">دليل الخدمات</a></li>
-          <li><a href="services/office-support.html">حلول المكاتب</a></li>
-          <li><a href="booking.html">طلب خدمة</a></li>
-          <li><a href="knowledge.html">المعرفة والشرح</a></li>
+          <li><a href="index.html#home" data-i18n="nav.home">الرئيسية</a></li>
+          <li><a href="services.html" data-i18n="nav.services">الخدمات</a></li>
+          <li><a href="booking.html" data-i18n="nav.booking">طلب خدمة</a></li>
+          <li><a href="knowledge.html" data-i18n="nav.knowledge">المعرفة</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
           <li><a href="quran.html">القرآن الكريم</a></li>
-          <li><a href="#faq">الأسئلة الشائعة</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="footer-bottom-bar">
+    <div class="container footer-bottom-bar">
       <p>© <span id="year"></span> iComputer Urban Tech DZ — <span data-i18n="footer.rights">جميع الحقوق محفوظة</span></p>
+      <div class="footer-legal-links">
+        <span data-i18n="footer.location">الجزائر العاصمة</span>
+        <a href="booking.html" data-i18n="nav.booking">طلب خدمة</a>
+        <a href="knowledge.html" data-i18n="nav.knowledge">المعرفة</a>
+      </div>
     </div>
   </footer>
 
   <a class="floating-whatsapp"
-    href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20دعم%20تقني%20لمكتبي." target="_blank"
-    rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
-    <span aria-hidden="true">💬</span>
+    href="https://wa.me/rai.med.elamine?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20دعم%20تقني%20لمكتبي."
+    target="_blank" rel="noopener" aria-label="WhatsApp" data-whatsapp-link>
+    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
   </a>
 
   <script src="js/script.js"></script>
-  <script src="js/scroll3d.js" data-auto="main img, section img"></script>
 </body>
 </html>

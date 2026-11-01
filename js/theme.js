@@ -12,20 +12,25 @@
 
   document.documentElement.dataset.theme = theme;
 
+  const updateButton = button => {
+    const isDark = document.documentElement.dataset.theme === "dark";
+    button.setAttribute("aria-pressed", String(isDark));
+    button.dataset.state = isDark ? "dark" : "light";
+  };
+
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-theme-toggle]").forEach(button => {
-      const updateButton = () => {
-        const isDark = document.documentElement.dataset.theme === "dark";
-        button.textContent = isDark ? "☼" : "☾";
-        button.setAttribute("aria-pressed", String(isDark));
-        button.title = isDark ? "التبديل إلى الوضع الفاتح" : "التبديل إلى الوضع الداكن";
-      };
+      updateButton(button);
 
-      updateButton();
       button.addEventListener("click", () => {
-        const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        const nextTheme =
+          document.documentElement.dataset.theme === "dark" ? "light" : "dark";
         document.documentElement.dataset.theme = nextTheme;
-        updateButton();
+        updateButton(button);
+
+        document.dispatchEvent(
+          new CustomEvent("themechange", { detail: { theme: nextTheme } })
+        );
 
         try {
           localStorage.setItem(storageKey, nextTheme);

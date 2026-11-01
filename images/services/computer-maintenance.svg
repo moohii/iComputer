@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Computer maintenance and diagnostics">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1520"/>
+      <stop offset="1" stop-color="#080B10"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A2A3E"/>
+      <stop offset="1" stop-color="#101B2A"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13263C"/>
+      <stop offset="1" stop-color="#0B1420"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#F0B45A" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#F0B45A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#263A52" stroke-opacity=".28"/>
+    </pattern>
+    <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
+  </defs>
+
+  <rect width="800" height="560" fill="url(#bg)"/>
+  <rect width="800" height="560" fill="url(#grid)"/>
+  <ellipse cx="400" cy="300" rx="310" ry="210" fill="url(#glow)"/>
+
+  <!-- laptop lid -->
+  <rect x="214" y="124" width="372" height="248" rx="18" fill="url(#body)" stroke="#35506F" stroke-width="2"/>
+  <rect x="230" y="140" width="340" height="216" rx="10" fill="url(#screen)"/>
+
+  <!-- gauge -->
+  <path d="M300 296a100 100 0 0 1 200 0" fill="none" stroke="#21364E" stroke-width="16" stroke-linecap="round"/>
+  <path d="M300 296a100 100 0 0 1 132-94" fill="none" stroke="#F0B45A" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="400" cy="296" r="10" fill="#F0B45A"/>
+  <path d="M400 296l58-52" stroke="#F2F6FB" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="400" cy="296" r="4" fill="#0B1420"/>
+
+  <!-- readouts -->
+  <rect x="266" y="322" width="94" height="9" rx="4.5" fill="#3D5878"/>
+  <rect x="266" y="338" width="60" height="7" rx="3.5" fill="#27405E"/>
+  <rect x="440" y="322" width="94" height="9" rx="4.5" fill="#3D5878"/>
+  <rect x="474" y="338" width="60" height="7" rx="3.5" fill="#27405E"/>
+
+  <!-- laptop base -->
+  <path d="M178 372h444l38 38c4 4 1 10-5 10H145c-6 0-9-6-5-10z" fill="#172538" stroke="#35506F" stroke-width="2"/>
+  <rect x="352" y="380" width="96" height="8" rx="4" fill="#0B1420"/>
+
+  <!-- gear floating left -->
+  <g transform="translate(116 288)">
+    <path d="M0-28 8-24l10-6 6 10 12 2-2 12 8 8-8 8 2 12-12 2-6 10-10-6-10 6-6-10-12-2 2-12-8-8 8-8-2-12 12-2 6-10z" fill="#101B2A" stroke="#4D9EFF" stroke-opacity=".55" stroke-width="2"/>
+    <circle r="13" fill="none" stroke="#4D9EFF" stroke-width="2.5" stroke-opacity=".8"/>
+  </g>
+
+  <!-- wrench floating right -->
+  <g transform="translate(672 214) rotate(24)">
+    <path d="M0 0c-14-6-22-22-16-37 5-13 18-21 32-19l-16 14 8 20 20 8L42 1C31 6 13 5 0 0Z" fill="#101B2A" stroke="#F0B45A" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M-2 2-22 26a8 8 0 0 0 11 11L12 13" fill="none" stroke="#F0B45A" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- diagnostic pill -->
+  <g>
+    <rect x="82" y="116" width="150" height="50" rx="25" fill="#101B2A" stroke="#35506F"/>
+    <circle cx="110" cy="141" r="8" fill="#123526" stroke="#2E8C63"/>
+    <circle cx="110" cy="141" r="3" fill="#3DDC97"/>
+    <rect x="128" y="132" width="76" height="8" rx="4" fill="#7994B3"/>
+    <rect x="128" y="146" width="50" height="6" rx="3" fill="#334A66"/>
+  </g>
+
+  <!-- temp pill -->
+  <g>
+    <rect x="590" y="368" width="136" height="50" rx="25" fill="#101B2A" stroke="#35506F"/>
+    <rect x="610" y="381" width="10" height="24" rx="5" fill="#17304C" stroke="#4D9EFF" stroke-opacity=".6"/>
+    <rect x="612.5" y="393" width="5" height="10" rx="2.5" fill="#4D9EFF"/>
+    <rect x="632" y="386" width="72" height="8" rx="4" fill="#7994B3"/>
+    <rect x="632" y="400" width="44" height="6" rx="3" fill="#334A66"/>
+  </g>
+
+  <ellipse cx="400" cy="450" rx="240" ry="20" fill="#000" opacity=".45" filter="url(#blur)"/>
+</svg>

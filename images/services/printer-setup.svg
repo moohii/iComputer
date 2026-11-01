@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Printer setup and sharing">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D1520"/>
+      <stop offset="1" stop-color="#080B10"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22374F"/>
+      <stop offset="1" stop-color="#111D2B"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EAF1FA"/>
+      <stop offset="1" stop-color="#B9CADD"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#4D9EFF" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#4D9EFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#27405E" stroke-opacity=".26"/>
+    </pattern>
+    <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
+  </defs>
+
+  <rect width="800" height="560" fill="url(#bg)"/>
+  <rect width="800" height="560" fill="url(#grid)"/>
+  <ellipse cx="400" cy="280" rx="320" ry="220" fill="url(#glow)"/>
+
+  <!-- output sheets -->
+  <g transform="rotate(-4 400 220)">
+    <rect x="300" y="118" width="200" height="150" rx="8" fill="url(#paper)" opacity=".28"/>
+  </g>
+  <g transform="rotate(2 400 230)">
+    <rect x="304" y="132" width="194" height="146" rx="8" fill="url(#paper)" opacity=".55"/>
+    <rect x="328" y="158" width="112" height="8" rx="4" fill="#6A87A6"/>
+    <rect x="328" y="178" width="146" height="6" rx="3" fill="#9DB2C9"/>
+    <rect x="328" y="194" width="132" height="6" rx="3" fill="#9DB2C9"/>
+    <rect x="328" y="210" width="140" height="6" rx="3" fill="#9DB2C9"/>
+    <rect x="328" y="238" width="72" height="12" rx="6" fill="#4D9EFF" opacity=".7"/>
+  </g>
+
+  <!-- printer body -->
+  <rect x="234" y="266" width="332" height="132" rx="20" fill="url(#body)" stroke="#3A587A" stroke-width="2"/>
+  <rect x="268" y="292" width="264" height="18" rx="9" fill="#0A121C"/>
+  <rect x="398" y="292" width="76" height="18" rx="9" fill="#4D9EFF" opacity=".5"/>
+
+  <!-- output tray -->
+  <path d="M290 356h220l26 34H264z" fill="#0D1724" stroke="#35506F" stroke-width="1.5"/>
+  <rect x="286" y="366" width="228" height="6" rx="3" fill="#22354C"/>
+
+  <!-- control panel -->
+  <rect x="512" y="318" width="34" height="20" rx="6" fill="#0A121C" stroke="#35506F"/>
+  <circle cx="522" cy="328" r="3.5" fill="#3DDC97"/>
+  <circle cx="536" cy="328" r="3.5" fill="#4D9EFF" opacity=".7"/>
+
+  <!-- paper feed top -->
+  <path d="M308 266v-26h184v26" fill="#0D1724" stroke="#35506F" stroke-width="1.5"/>
+  <rect x="336" y="240" width="128" height="10" rx="5" fill="#22354C"/>
+
+  <!-- wifi floating -->
+  <g>
+    <rect x="612" y="140" width="118" height="92" rx="18" fill="#0F1B29" stroke="#35506F" stroke-width="1.5"/>
+    <path d="M640 186a38 38 0 0 1 62 0M652 198a22 22 0 0 1 38 0M668 210h2" fill="none" stroke="#4D9EFF" stroke-width="3" stroke-linecap="round"/>
+    <rect x="644" y="216" width="54" height="6" rx="3" fill="#334A66"/>
+  </g>
+
+  <!-- check floating -->
+  <g>
+    <rect x="86" y="300" width="116" height="80" rx="18" fill="#0F1B29" stroke="#35506F" stroke-width="1.5"/>
+    <circle cx="144" cy="330" r="16" fill="#123526" stroke="#2E8C63"/>
+    <path d="m137 330 5 5 9-10" fill="none" stroke="#3DDC97" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="116" y="356" width="56" height="7" rx="3.5" fill="#3D5878"/>
+  </g>
+
+  <!-- scan line -->
+  <rect x="268" y="289" width="264" height="2" fill="#4D9EFF" opacity=".55"/>
+
+  <ellipse cx="400" cy="454" rx="240" ry="20" fill="#000" opacity=".45" filter="url(#blur)"/>
+</svg>

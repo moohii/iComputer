@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Windows and software installation">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C1522"/>
+      <stop offset="1" stop-color="#070B11"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#152740"/>
+      <stop offset="1" stop-color="#0B1420"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4D9EFF"/>
+      <stop offset="1" stop-color="#63D6FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#4D9EFF" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#4D9EFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#27405E" stroke-opacity=".26"/>
+    </pattern>
+    <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
+  </defs>
+
+  <rect width="800" height="560" fill="url(#bg)"/>
+  <rect width="800" height="560" fill="url(#grid)"/>
+  <ellipse cx="400" cy="280" rx="320" ry="220" fill="url(#glow)"/>
+
+  <!-- back window -->
+  <rect x="250" y="104" width="360" height="250" rx="20" fill="#0A121C" stroke="#22354C" transform="translate(26 -18)"/>
+  <!-- mid window -->
+  <rect x="230" y="128" width="380" height="270" rx="20" fill="#0B1521" stroke="#2A4059" transform="translate(16 -8)"/>
+
+  <!-- main window -->
+  <rect x="196" y="152" width="408" height="292" rx="20" fill="url(#win)" stroke="#35506F" stroke-width="1.5"/>
+  <path d="M196 198h408" stroke="#22354C"/>
+  <circle cx="222" cy="176" r="4.5" fill="#F07A7A" opacity=".8"/>
+  <circle cx="238" cy="176" r="4.5" fill="#F0B45A" opacity=".85"/>
+  <circle cx="254" cy="176" r="4.5" fill="#3DDC97" opacity=".85"/>
+  <rect x="286" y="169" width="120" height="14" rx="7" fill="#1B2B40"/>
+
+  <!-- window tiles -->
+  <g fill="url(#accent)">
+    <rect x="232" y="230" width="62" height="62" rx="12" opacity=".95"/>
+    <rect x="306" y="230" width="62" height="62" rx="12" opacity=".7"/>
+    <rect x="232" y="304" width="62" height="62" rx="12" opacity=".7"/>
+    <rect x="306" y="304" width="62" height="62" rx="12" opacity=".45"/>
+  </g>
+
+  <!-- install list -->
+  <rect x="396" y="234" width="168" height="11" rx="5.5" fill="#7994B3"/>
+  <rect x="396" y="258" width="120" height="8" rx="4" fill="#334A66"/>
+  <rect x="396" y="284" width="176" height="10" rx="5" fill="#1B2B40"/>
+  <rect x="396" y="284" width="126" height="10" rx="5" fill="url(#accent)" opacity=".9"/>
+  <rect x="396" y="310" width="150" height="8" rx="4" fill="#334A66"/>
+  <rect x="396" y="334" width="100" height="8" rx="4" fill="#334A66"/>
+
+  <!-- progress card -->
+  <g>
+    <rect x="548" y="332" width="180" height="112" rx="18" fill="#0F1B29" stroke="#35506F" stroke-width="1.5"/>
+    <rect x="570" y="354" width="86" height="9" rx="4.5" fill="#7994B3"/>
+    <rect x="570" y="374" width="136" height="9" rx="4.5" fill="#1B2B40"/>
+    <rect x="570" y="374" width="98" height="9" rx="4.5" fill="#3DDC97"/>
+    <rect x="570" y="402" width="60" height="7" rx="3.5" fill="#334A66"/>
+    <circle cx="692" cy="404" r="13" fill="#123526" stroke="#2E8C63"/>
+    <path d="m686 404 4 4 8-9" fill="none" stroke="#3DDC97" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- terminal card -->
+  <g>
+    <rect x="74" y="320" width="196" height="120" rx="18" fill="#0A121C" stroke="#2A4059" stroke-width="1.5"/>
+    <path d="M96 350l16 12-16 12" fill="none" stroke="#3DDC97" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="122" y="360" width="76" height="7" rx="3.5" fill="#3D5878"/>
+    <rect x="96" y="390" width="110" height="7" rx="3.5" fill="#27405E"/>
+    <rect x="96" y="408" width="72" height="7" rx="3.5" fill="#27405E"/>
+  </g>
+
+  <!-- cursor -->
+  <path d="M610 132v54l14-13 9 21 12-6-9-20 19-2z" fill="#F2F6FB" opacity=".9"/>
+
+  <ellipse cx="400" cy="482" rx="240" ry="20" fill="#000" opacity=".45" filter="url(#blur)"/>
+</svg>
