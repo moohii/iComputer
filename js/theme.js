@@ -10,6 +10,14 @@
     console.warn("Unable to read the saved color theme.", error);
   }
 
+  /* Optional preview override, e.g. /index.html?theme=light (not persisted). */
+  try {
+    const previewTheme = new URLSearchParams(window.location.search).get("theme");
+    if (validThemes.includes(previewTheme)) theme = previewTheme;
+  } catch (error) {
+    console.warn("Unable to read the preview theme.", error);
+  }
+
   document.documentElement.dataset.theme = theme;
 
   const updateButton = button => {

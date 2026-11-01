@@ -389,6 +389,15 @@ html[lang="ar"] .section-title {
   height: 28px;
 }
 
+/* Inline icon used inside running text (replaces legacy emoji glyphs) */
+.icon--inline {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.14em;
+  stroke-width: 1.8;
+}
+
 .icon-tile {
   display: inline-grid;
   width: 44px;
