@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>منشئ غلاف المذكرات والتربصات | iComputer Urban Tech DZ</title>
-  <meta name="description" content="أنشئ غلافاً أكاديمياً لمذكرة أو تقرير تربص في الجزائر، واطبعه أو احفظه بصيغة PDF." />
+  <meta name="description" content="أنشئ غلافاً أكاديمياً لمذكرة أو تقرير تربص، واطبعه أو نزّله بصيغتي PDF وDOCX." />
   <link rel="canonical" href="https://icomputer.netlify.app/tools/cover-generator.html" />
   <meta property="og:title" content="منشئ غلاف المذكرات والتربصات | iComputer Urban Tech DZ" />
-  <meta property="og:description" content="أداة مجانية لإنشاء وطباعة أغلفة المذكرات وتقارير التربص." />
+  <meta property="og:description" content="أداة مجانية لإنشاء أغلفة أكاديمية وطباعتها أو تنزيلها بصيغتي PDF وDOCX." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://icomputer.netlify.app/tools/cover-generator.html" />
   <meta name="theme-color" content="#0B0F14" />
@@ -26,7 +26,7 @@
       <span>iComputer <em>Urban Tech DZ</em></span>
     </a>
     <div class="cover-site-actions">
-      <div class="cover-language-switch" role="group" aria-label="لغة الواجهة">
+      <div class="cover-language-switch" role="group" aria-label="لغة الواجهة" data-cover-language-label>
         <button type="button" data-cover-language="ar" aria-pressed="true" lang="ar">عربي</button>
         <button type="button" data-cover-language="fr" aria-pressed="false" lang="fr">FR</button>
         <button type="button" data-cover-language="en" aria-pressed="false" lang="en">EN</button>
@@ -44,7 +44,7 @@
     <div class="cover-workspace">
       <form class="cover-editor" id="cover-form">
         <h2 data-copy="formTitle">بيانات الغلاف</h2>
-        <p class="cover-editor__note" data-copy="privacyNote">تظل البيانات في متصفحك ولا يتم رفعها إلى الموقع.</p>
+        <p class="cover-editor__note" data-copy="privacyNote">تظل البيانات والصور في متصفحك ولا يتم رفعها إلى الموقع.</p>
 
         <div class="cover-form-grid">
           <label class="cover-field" for="cover-language">
@@ -83,6 +83,14 @@
             <span data-copy="program">التخصص أو التكوين</span>
             <input id="program" name="program" type="text" maxlength="120" dir="auto"
               data-placeholder="programPlaceholder" />
+          </label>
+
+          <label class="cover-field" for="institution-logo">
+            <span data-copy="institutionLogo">شعار المؤسسة (اختياري)</span>
+            <input id="institution-logo" name="institutionLogo" type="file" accept="image/png,image/jpeg"
+              aria-describedby="logo-help logo-error" />
+            <span class="cover-field__help" id="logo-help" data-copy="logoHelp">اختر صورة PNG أو JPEG، بحد أقصى 2 ميغابايت.</span>
+            <span class="cover-field__error" id="logo-error" role="alert" hidden></span>
           </label>
 
           <label class="cover-field" for="document-type">
@@ -124,10 +132,17 @@
           </label>
         </div>
 
-        <button class="btn btn-primary cover-print-button" type="submit" data-copy="printButton">
-          طباعة الغلاف أو حفظه PDF
-        </button>
+        <div class="cover-download-actions">
+          <button class="btn btn-primary cover-print-button" type="submit" data-copy="printButton">
+            طباعة الغلاف أو حفظه PDF
+          </button>
+          <button class="btn btn-ghost cover-docx-button" id="download-docx" type="button" data-copy="docxButton">
+            تنزيل بصيغة DOCX
+          </button>
+        </div>
         <p class="cover-print-help" data-copy="printHelp">في نافذة الطباعة، اختر «حفظ بتنسيق PDF» لتنزيل الملف.</p>
+        <p class="cover-docx-help" data-copy="docxHelp">ينشئ ملف Word بالتفاصيل الحالية، ويمكنك تعديله بعد التنزيل.</p>
+        <p class="cover-action-error" id="docx-error" role="alert" hidden></p>
       </form>
 
       <section class="cover-preview-area" aria-labelledby="preview-heading">
@@ -146,7 +161,7 @@
             <p class="cover-page__program" data-preview="program"></p>
           </header>
 
-          <img class="cover-page__logo" src="../images/logo-mark.svg" width="54" height="54" alt="" />
+          <img class="cover-page__logo" data-preview="institutionLogo" alt="" hidden />
 
           <div class="cover-page__work">
             <p class="cover-page__type" data-preview="documentType"></p>
@@ -154,8 +169,8 @@
           </div>
 
           <div class="cover-page__people">
-            <p><span data-copy="preparedBy">إعداد الطالب</span><strong data-preview="studentName"></strong></p>
-            <p><span data-copy="supervisedBy">إشراف الأستاذ</span><strong data-preview="supervisorName"></strong></p>
+            <p><span data-cover-copy="preparedBy"></span><strong data-preview="studentName"></strong></p>
+            <p><span data-cover-copy="supervisedBy"></span><strong data-preview="supervisorName"></strong></p>
           </div>
 
           <footer class="cover-page__footer">
@@ -167,6 +182,6 @@
       </section>
     </div>
   </main>
-  <script src="../js/cover-generator.js"></script>
+  <script type="module" src="../js/cover-generator.js"></script>
 </body>
 </html>

@@ -105,6 +105,7 @@
 
 .cover-editor {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 14px;
   padding: 24px;
   border: 1px solid var(--line);
@@ -121,6 +122,7 @@
 
 .cover-editor__note,
 .cover-print-help,
+.cover-docx-help,
 .cover-preview-heading p {
   color: var(--muted);
   font-size: 0.82rem;
@@ -167,6 +169,42 @@
   resize: vertical;
 }
 
+.cover-field input[type="file"] {
+  padding: 6px;
+  font-size: 0.78rem;
+}
+
+.cover-field input[type="file"]::file-selector-button {
+  min-height: 30px;
+  margin-inline-end: 8px;
+  padding: 4px 9px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-xs);
+  background: var(--surface-2);
+  color: var(--text-soft);
+  font: inherit;
+  cursor: pointer;
+}
+
+.cover-field__help,
+.cover-field__error {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.cover-field__error {
+  color: var(--danger);
+}
+
+.cover-download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
 .cover-field input::placeholder,
 .cover-field textarea::placeholder {
   color: var(--faint);
@@ -178,14 +216,20 @@
 .cover-field textarea:focus-visible,
 .cover-language-switch button:focus-visible,
 .cover-back-link:focus-visible,
-.cover-print-button:focus-visible {
+.cover-print-button:focus-visible,
+.cover-docx-button:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
 
 .cover-print-button {
   justify-self: start;
-  margin-top: 4px;
+}
+
+.cover-action-error {
+  color: var(--danger);
+  font-size: 0.82rem;
+  line-height: 1.5;
 }
 
 .cover-preview-area {
@@ -259,7 +303,10 @@
 
 .cover-page__logo {
   flex: none;
+  width: 54px;
+  height: 54px;
   margin-block: 3% 5%;
+  object-fit: contain;
 }
 
 .cover-page__work {
@@ -419,7 +466,12 @@
     gap: 10px;
   }
 
-  .cover-print-button {
+  .cover-download-actions {
+    flex-direction: column;
+  }
+
+  .cover-print-button,
+  .cover-docx-button {
     width: 100%;
   }
 }

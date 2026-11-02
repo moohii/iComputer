@@ -1,17 +1,24 @@
+import { buildCoverDocx } from "./docx-export.js";
+
 (() => {
   const copy = {
     ar: {
       pageTitle: "منشئ غلاف المذكرات والتربصات",
-      pageDescription: "أدخل بيانات مؤسستك ودراستك لمعاينة غلاف أكاديمي جاهز للطباعة.",
+      pageDescription: "أدخل بيانات مؤسستك ودراستك لإنشاء غلاف أكاديمي وطباعته أو تنزيله بصيغتي PDF وDOCX.",
       backHome: "العودة إلى الرئيسية",
+      interfaceLanguage: "لغة الواجهة",
       formTitle: "بيانات الغلاف",
-      privacyNote: "تظل البيانات في متصفحك ولا يتم رفعها إلى الموقع.",
+      privacyNote: "تظل البيانات والصور في متصفحك ولا يتم رفعها إلى الموقع.",
       coverLanguageLabel: "لغة الغلاف",
       institution: "المؤسسة",
       university: "الجامعة",
       faculty: "الكلية أو المعهد",
       department: "القسم",
       program: "التخصص أو التكوين",
+      institutionLogo: "شعار المؤسسة (اختياري)",
+      logoHelp: "اختر صورة PNG أو JPEG، بحد أقصى 2 ميغابايت.",
+      logoTooLarge: "حجم الصورة يتجاوز 2 ميغابايت.",
+      logoInvalid: "اختر صورة بصيغة PNG أو JPEG.",
       documentType: "نوع العمل",
       thesis: "مذكرة تخرج",
       internship: "تقرير تربص",
@@ -30,8 +37,11 @@
       supervisorPlaceholder: "اسم الأستاذ المشرف",
       academicYearPlaceholder: "مثال: 2025-2026",
       cityPlaceholder: "المدينة",
-      printButton: "طباعة الغلاف أو حفظه PDF",
+      printButton: "طباعة أو حفظ بصيغة PDF",
       printHelp: "في نافذة الطباعة، اختر «حفظ بتنسيق PDF» لتنزيل الملف.",
+      docxButton: "تنزيل بصيغة DOCX",
+      docxHelp: "ينشئ ملف Word بالتفاصيل الحالية، ويمكنك تعديله بعد التنزيل.",
+      docxError: "تعذر إنشاء ملف DOCX. تحقق من الشعار وحاول مرة أخرى.",
       previewTitle: "معاينة الغلاف",
       previewHint: "تتحدث المعاينة عند تعديل البيانات.",
       previewLabel: "معاينة الغلاف",
@@ -51,16 +61,21 @@
     },
     fr: {
       pageTitle: "Générateur de page de garde",
-      pageDescription: "Renseignez votre établissement et votre travail pour créer une page de garde prête à imprimer.",
+      pageDescription: "Créez une page de garde académique, à imprimer ou à télécharger aux formats PDF et DOCX.",
       backHome: "Retour à l'accueil",
+      interfaceLanguage: "Langue de l'interface",
       formTitle: "Informations de la page",
-      privacyNote: "Vos données restent dans votre navigateur et ne sont pas envoyées au site.",
+      privacyNote: "Vos données et vos images restent dans votre navigateur.",
       coverLanguageLabel: "Langue de la page",
       institution: "Établissement",
       university: "Université",
       faculty: "Faculté ou institut",
       department: "Département",
       program: "Spécialité ou formation",
+      institutionLogo: "Logo de l'établissement (facultatif)",
+      logoHelp: "Choisissez une image PNG ou JPEG de 2 Mo maximum.",
+      logoTooLarge: "L'image dépasse la limite de 2 Mo.",
+      logoInvalid: "Choisissez une image au format PNG ou JPEG.",
       documentType: "Type de travail",
       thesis: "Mémoire de fin d'études",
       internship: "Rapport de stage",
@@ -81,6 +96,9 @@
       cityPlaceholder: "Ville",
       printButton: "Imprimer ou enregistrer en PDF",
       printHelp: "Dans la fenêtre d'impression, choisissez « Enregistrer au format PDF ».",
+      docxButton: "Télécharger au format DOCX",
+      docxHelp: "Crée un document Word avec les informations saisies, modifiable après le téléchargement.",
+      docxError: "Impossible de créer le fichier DOCX. Vérifiez le logo et réessayez.",
       previewTitle: "Aperçu de la page",
       previewHint: "L'aperçu se met à jour pendant la saisie.",
       previewLabel: "Aperçu de la page de garde",
@@ -100,16 +118,21 @@
     },
     en: {
       pageTitle: "Thesis and internship cover generator",
-      pageDescription: "Enter your institution and project details to preview a cover page ready to print.",
+      pageDescription: "Create an academic cover page to print or download in PDF and editable DOCX formats.",
       backHome: "Back to home",
+      interfaceLanguage: "Interface language",
       formTitle: "Cover details",
-      privacyNote: "Your details stay in this browser and are not uploaded to the site.",
+      privacyNote: "Your details and images stay in this browser and are not uploaded.",
       coverLanguageLabel: "Cover language",
       institution: "Institution",
       university: "University",
       faculty: "Faculty or institute",
       department: "Department",
       program: "Program or field",
+      institutionLogo: "Institution logo (optional)",
+      logoHelp: "Choose a PNG or JPEG image up to 2 MB.",
+      logoTooLarge: "The image exceeds the 2 MB limit.",
+      logoInvalid: "Choose a PNG or JPEG image.",
       documentType: "Work type",
       thesis: "Graduation thesis",
       internship: "Internship report",
@@ -130,6 +153,9 @@
       cityPlaceholder: "City",
       printButton: "Print or save as PDF",
       printHelp: "In the print dialog, choose “Save as PDF” to download the file.",
+      docxButton: "Download as DOCX",
+      docxHelp: "Creates an editable Word document with the details you entered.",
+      docxError: "The DOCX file could not be created. Check the logo and try again.",
       previewTitle: "Cover preview",
       previewHint: "The preview updates as you enter details.",
       previewLabel: "Cover page preview",
@@ -153,8 +179,14 @@
   const preview = document.getElementById("cover-preview");
   const coverLanguage = document.getElementById("cover-language");
   const documentType = document.getElementById("document-type");
+  const logoInput = document.getElementById("institution-logo");
+  const logoPreview = document.querySelector('[data-preview="institutionLogo"]');
+  const logoError = document.getElementById("logo-error");
+  const downloadDocxButton = document.getElementById("download-docx");
+  const docxError = document.getElementById("docx-error");
   const languageButtons = document.querySelectorAll("[data-cover-language]");
-  if (!form || !preview || !coverLanguage || !documentType) return;
+  if (!form || !preview || !coverLanguage || !documentType || !logoInput || !logoPreview || !logoError ||
+    !downloadDocxButton || !docxError) return;
 
   const fields = {
     institution: document.getElementById("institution"),
@@ -168,6 +200,9 @@
     academicYear: document.getElementById("academic-year"),
     city: document.getElementById("city")
   };
+  let logoObjectUrl = "";
+  let logoErrorKey = "";
+  let docxErrorKey = false;
 
   const translate = (language) => {
     const messages = copy[language] || copy.ar;
@@ -183,6 +218,15 @@
       const key = element.dataset.placeholder;
       if (messages[key] !== undefined) element.placeholder = messages[key];
     });
+
+    document.querySelector("[data-cover-language-label]").setAttribute(
+      "aria-label",
+      messages.interfaceLanguage
+    );
+    logoError.textContent = logoErrorKey ? messages[logoErrorKey] : "";
+    logoError.hidden = !logoErrorKey;
+    docxError.textContent = docxErrorKey ? messages.docxError : "";
+    docxError.hidden = !docxErrorKey;
 
     languageButtons.forEach(button => {
       const active = button.dataset.coverLanguage === language;
@@ -201,6 +245,11 @@
     preview.dir = language === "ar" ? "rtl" : "ltr";
 
     preview.querySelector('[data-preview="country"]').textContent = messages.country;
+    logoPreview.alt = fields.university.value.trim() || fields.institution.value.trim() || messages.university;
+    logoPreview.hidden = !logoObjectUrl;
+    preview.querySelectorAll("[data-cover-copy]").forEach(element => {
+      element.textContent = messages[element.dataset.coverCopy];
+    });
     Object.entries(fields).forEach(([name, field]) => {
       const output = preview.querySelector(`[data-preview="${name}"]`);
       if (!output) return;
@@ -220,10 +269,98 @@
 
   form.addEventListener("input", updatePreview);
   form.addEventListener("change", updatePreview);
+  logoInput.addEventListener("change", () => {
+    const file = logoInput.files && logoInput.files[0];
+    logoErrorKey = "";
+
+    if (!file) {
+      if (logoObjectUrl) URL.revokeObjectURL(logoObjectUrl);
+      logoObjectUrl = "";
+      logoPreview.removeAttribute("src");
+      updatePreview();
+      translate(document.documentElement.lang);
+      return;
+    }
+
+    if (file.size > 2 * 1024 * 1024 || !["image/png", "image/jpeg"].includes(file.type)) {
+      logoErrorKey = file.size > 2 * 1024 * 1024 ? "logoTooLarge" : "logoInvalid";
+      logoInput.value = "";
+      if (logoObjectUrl) URL.revokeObjectURL(logoObjectUrl);
+      logoObjectUrl = "";
+      logoPreview.removeAttribute("src");
+      updatePreview();
+      translate(document.documentElement.lang);
+      return;
+    }
+
+    if (logoObjectUrl) URL.revokeObjectURL(logoObjectUrl);
+    logoObjectUrl = URL.createObjectURL(file);
+    logoPreview.src = logoObjectUrl;
+    logoError.hidden = true;
+    updatePreview();
+  });
+
+  window.addEventListener("beforeunload", () => {
+    if (logoObjectUrl) URL.revokeObjectURL(logoObjectUrl);
+  });
   form.addEventListener("submit", event => {
     event.preventDefault();
     if (!form.reportValidity()) return;
     window.print();
+  });
+
+  downloadDocxButton.addEventListener("click", async () => {
+    docxErrorKey = false;
+    docxError.hidden = true;
+    if (!form.reportValidity()) return;
+
+    try {
+      const language = coverLanguage.value;
+      const messages = copy[language] || copy.ar;
+      const parts = [
+        { text: messages.country, size: 22, bold: true, after: 120 },
+        { text: fields.institution.value.trim(), size: 28, bold: true, after: 100 },
+        { text: fields.university.value.trim(), size: 26, after: 80 },
+        { text: fields.faculty.value.trim(), size: 24, after: 80 },
+        { text: fields.department.value.trim(), size: 24 }
+      ];
+
+      if (fields.program.value.trim()) {
+        parts.push({ text: fields.program.value.trim(), size: 22 });
+      }
+
+      const logoAfter = parts.length;
+      parts.push(
+        { text: messages[documentType.value === "internship" ? "internship" : "thesis"], size: 28, bold: true, before: 1500, after: 160 },
+        { text: fields.projectTitle.value.trim(), size: 40, bold: true, after: 1400 },
+        { text: messages.preparedBy, size: 22, after: 80 },
+        { text: fields.studentName.value.trim(), size: 26, bold: true, after: 550 },
+        { text: messages.supervisedBy, size: 22, after: 80 },
+        { text: fields.supervisorName.value.trim(), size: 26, bold: true, after: 1700 },
+        { text: `${fields.city.value.trim()}  |  ${fields.academicYear.value.trim()}`, size: 22, bold: true }
+      );
+
+      const blob = await buildCoverDocx({
+        parts,
+        language,
+        logoFile: logoInput.files && logoInput.files[0],
+        logoAfter
+      });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "icomputer-cover-page.docx";
+      document.body.append(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+    } catch (error) {
+      console.error("Unable to create the DOCX cover.", error);
+      docxErrorKey = true;
+      const messages = copy[document.documentElement.lang] || copy.ar;
+      docxError.textContent = messages.docxError;
+      docxError.hidden = false;
+    }
   });
 
   let initialLanguage = "ar";
