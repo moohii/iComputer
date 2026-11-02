@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منشئ غلاف المذكرات والتربصات | iComputer Urban Tech DZ</title>
+  <meta name="description" content="أنشئ غلافاً أكاديمياً لمذكرة أو تقرير تربص في الجزائر، واطبعه أو احفظه بصيغة PDF." />
+  <link rel="canonical" href="https://icomputer.netlify.app/tools/cover-generator.html" />
+  <meta property="og:title" content="منشئ غلاف المذكرات والتربصات | iComputer Urban Tech DZ" />
+  <meta property="og:description" content="أداة مجانية لإنشاء وطباعة أغلفة المذكرات وتقارير التربص." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://icomputer.netlify.app/tools/cover-generator.html" />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="icon" href="../images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/tools.css" />
+  <script src="../js/theme.js"></script>
+</head>
+<body class="cover-generator-body">
+  <header class="cover-site-header">
+    <a class="cover-site-brand" href="../index.html">
+      <img src="../images/logo-mark.svg" width="38" height="38" alt="" />
+      <span>iComputer <em>Urban Tech DZ</em></span>
+    </a>
+    <div class="cover-site-actions">
+      <div class="cover-language-switch" role="group" aria-label="لغة الواجهة">
+        <button type="button" data-cover-language="ar" aria-pressed="true" lang="ar">عربي</button>
+        <button type="button" data-cover-language="fr" aria-pressed="false" lang="fr">FR</button>
+        <button type="button" data-cover-language="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <a class="cover-back-link" href="../index.html" data-copy="backHome">العودة إلى الرئيسية</a>
+    </div>
+  </header>
+
+  <main class="cover-tool">
+    <header class="cover-tool__intro">
+      <h1 data-copy="pageTitle">منشئ غلاف المذكرات والتربصات</h1>
+      <p data-copy="pageDescription">أدخل بيانات مؤسستك ودراستك لمعاينة غلاف أكاديمي جاهز للطباعة.</p>
+    </header>
+
+    <div class="cover-workspace">
+      <form class="cover-editor" id="cover-form">
+        <h2 data-copy="formTitle">بيانات الغلاف</h2>
+        <p class="cover-editor__note" data-copy="privacyNote">تظل البيانات في متصفحك ولا يتم رفعها إلى الموقع.</p>
+
+        <div class="cover-form-grid">
+          <label class="cover-field" for="cover-language">
+            <span data-copy="coverLanguageLabel">لغة الغلاف</span>
+            <select id="cover-language" name="coverLanguage">
+              <option value="ar">العربية</option>
+              <option value="fr">Français</option>
+            </select>
+          </label>
+
+          <label class="cover-field" for="institution">
+            <span data-copy="institution">المؤسسة</span>
+            <input id="institution" name="institution" type="text" maxlength="140" autocomplete="organization"
+              data-placeholder="institutionPlaceholder" required />
+          </label>
+
+          <label class="cover-field" for="university">
+            <span data-copy="university">الجامعة</span>
+            <input id="university" name="university" type="text" maxlength="140" autocomplete="organization" dir="auto"
+              data-placeholder="universityPlaceholder" required />
+          </label>
+
+          <label class="cover-field" for="faculty">
+            <span data-copy="faculty">الكلية أو المعهد</span>
+            <input id="faculty" name="faculty" type="text" maxlength="120" dir="auto"
+              data-placeholder="facultyPlaceholder" required />
+          </label>
+
+          <label class="cover-field" for="department">
+            <span data-copy="department">القسم</span>
+            <input id="department" name="department" type="text" maxlength="120" dir="auto"
+              data-placeholder="departmentPlaceholder" required />
+          </label>
+
+          <label class="cover-field" for="program">
+            <span data-copy="program">التخصص أو التكوين</span>
+            <input id="program" name="program" type="text" maxlength="120" dir="auto"
+              data-placeholder="programPlaceholder" />
+          </label>
+
+          <label class="cover-field" for="document-type">
+            <span data-copy="documentType">نوع العمل</span>
+            <select id="document-type" name="documentType">
+              <option value="thesis" data-copy="thesis">مذكرة تخرج</option>
+              <option value="internship" data-copy="internship">تقرير تربص</option>
+            </select>
+          </label>
+
+          <label class="cover-field cover-field--wide" for="project-title">
+            <span data-copy="projectTitle">عنوان المذكرة أو التقرير</span>
+            <textarea id="project-title" name="projectTitle" rows="3" maxlength="240" dir="auto"
+              data-placeholder="projectTitlePlaceholder" required></textarea>
+          </label>
+
+          <label class="cover-field" for="student-name">
+            <span data-copy="studentName">إعداد الطالب</span>
+            <input id="student-name" name="studentName" type="text" maxlength="140" autocomplete="name" dir="auto"
+              data-placeholder="studentPlaceholder" required />
+          </label>
+
+          <label class="cover-field" for="supervisor-name">
+            <span data-copy="supervisorName">إشراف الأستاذ</span>
+            <input id="supervisor-name" name="supervisorName" type="text" maxlength="140" dir="auto"
+              data-placeholder="supervisorPlaceholder" required />
+          </label>
+
+          <label class="cover-field" for="academic-year">
+            <span data-copy="academicYear">السنة الجامعية</span>
+            <input id="academic-year" name="academicYear" type="text" maxlength="30" inputmode="text"
+              data-placeholder="academicYearPlaceholder" required />
+          </label>
+
+          <label class="cover-field" for="city">
+            <span data-copy="city">المدينة</span>
+            <input id="city" name="city" type="text" maxlength="80" autocomplete="address-level2" dir="auto"
+              data-placeholder="cityPlaceholder" required />
+          </label>
+        </div>
+
+        <button class="btn btn-primary cover-print-button" type="submit" data-copy="printButton">
+          طباعة الغلاف أو حفظه PDF
+        </button>
+        <p class="cover-print-help" data-copy="printHelp">في نافذة الطباعة، اختر «حفظ بتنسيق PDF» لتنزيل الملف.</p>
+      </form>
+
+      <section class="cover-preview-area" aria-labelledby="preview-heading">
+        <div class="cover-preview-heading">
+          <h2 id="preview-heading" data-copy="previewTitle">معاينة الغلاف</h2>
+          <p data-copy="previewHint">تتحدث المعاينة عند تعديل البيانات.</p>
+        </div>
+        <article class="cover-page" id="cover-preview" aria-label="معاينة الغلاف">
+          <div class="cover-page__rule"></div>
+          <header class="cover-page__institution">
+            <p data-preview="country"></p>
+            <p data-preview="institution"></p>
+            <p data-preview="university"></p>
+            <p data-preview="faculty"></p>
+            <p data-preview="department"></p>
+            <p class="cover-page__program" data-preview="program"></p>
+          </header>
+
+          <img class="cover-page__logo" src="../images/logo-mark.svg" width="54" height="54" alt="" />
+
+          <div class="cover-page__work">
+            <p class="cover-page__type" data-preview="documentType"></p>
+            <h2 data-preview="projectTitle"></h2>
+          </div>
+
+          <div class="cover-page__people">
+            <p><span data-copy="preparedBy">إعداد الطالب</span><strong data-preview="studentName"></strong></p>
+            <p><span data-copy="supervisedBy">إشراف الأستاذ</span><strong data-preview="supervisorName"></strong></p>
+          </div>
+
+          <footer class="cover-page__footer">
+            <span data-preview="city"></span>
+            <span data-preview="academicYear"></span>
+          </footer>
+          <div class="cover-page__rule cover-page__rule--bottom"></div>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../js/cover-generator.js"></script>
+</body>
+</html>

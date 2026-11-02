@@ -139,71 +139,46 @@
         </div>
 
         <div class="hero-visual">
-          <div class="hero-frame">
-            <div class="hero-frame__bar">
-              <span class="dot" aria-hidden="true"></span>
-              <span class="dot" aria-hidden="true"></span>
-              <span class="dot" aria-hidden="true"></span>
-              <span class="hero-frame__label">iComputer / support</span>
-              <span class="hero-frame__status">
-                <span class="status-dot" aria-hidden="true"></span>
-                <span data-i18n="hero.frame.status">حسب التوفر</span>
+          <div class="tools-launcher" data-tools-launcher>
+            <div class="tools-launcher__intro" data-tools-intro>
+              <span class="tools-launcher__icon icon-tile" aria-hidden="true">
+                <svg class="icon"><use href="#i-laptop"></use></svg>
               </span>
+              <h2 class="tools-launcher__title" id="tools-title" data-i18n="hero.tools.title">أدوات مجانية لإنجاز أعمالك</h2>
+              <p class="tools-launcher__description" data-i18n="hero.tools.description">
+                أدوات رقمية مجانية تساعد الطلبة والمستخدمين في الجزائر على إنجاز أعمالهم بسهولة.
+              </p>
+              <button class="btn btn-primary tools-launcher__open" type="button" aria-expanded="false"
+                aria-controls="free-tools-panel" data-tools-open>
+                <span data-i18n="hero.tools.open">اكتشف الأدوات المجانية</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </button>
             </div>
 
-            <div class="hero-panel">
-              <div class="hero-panel__head">
-                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-monitor"></use></svg></span>
-                <div class="hero-panel__title">
-                  <strong data-i18n="hero.dash.title">حالة مكتبك</strong>
-                  <small data-i18n="hero.dash.sub">فحص سريع · الجزائر العاصمة</small>
-                </div>
-                <span class="hero-panel__badge">
-                  <span class="status-dot" aria-hidden="true"></span>
-                  <span data-i18n="hero.dash.online">متصل</span>
-                </span>
+            <section class="tools-launcher__panel" id="free-tools-panel" aria-labelledby="tools-panel-title"
+              data-tools-panel hidden>
+              <div class="tools-launcher__panel-head">
+                <h2 id="tools-panel-title" data-i18n="hero.tools.panelTitle">الأدوات المتاحة</h2>
+                <button class="tools-launcher__close" type="button" data-tools-close>
+                  <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+                  <span data-i18n="hero.tools.close">إغلاق</span>
+                </button>
               </div>
-
-              <ul class="hero-status">
+              <ul class="tools-grid">
                 <li>
-                  <span data-i18n="hero.dash.row1">أجهزة المكتب</span>
-                  <b>6 / 6</b>
-                  <span class="hero-status__bar" aria-hidden="true"><i style="--v: 100%"></i></span>
-                </li>
-                <li>
-                  <span data-i18n="hero.dash.row2">الشبكة</span>
-                  <b>Wi-Fi</b>
-                  <span class="hero-status__bar" aria-hidden="true"><i style="--v: 86%"></i></span>
-                </li>
-                <li>
-                  <span data-i18n="hero.dash.row3">النسخ الاحتياطي</span>
-                  <b data-i18n="hero.dash.ok">سليم</b>
-                  <span class="hero-status__bar" aria-hidden="true"><i style="--v: 72%"></i></span>
+                  <a class="tool-card" href="tools/cover-generator.html">
+                    <span class="tool-card__icon icon-tile" aria-hidden="true">
+                      <svg class="icon"><use href="#i-file-text"></use></svg>
+                    </span>
+                    <span class="tool-card__content">
+                      <strong data-i18n="hero.tools.cover.title">منشئ غلاف المذكرات وتقارير التربص</strong>
+                      <span data-i18n="hero.tools.cover.description">أنشئ صفحة غلاف أكاديمية واطبعها أو احفظها PDF.</span>
+                    </span>
+                    <svg class="icon tool-card__arrow" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
+                  </a>
                 </li>
               </ul>
-
-              <div class="hero-ticket">
-                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-wrench"></use></svg></span>
-                <div>
-                  <strong data-i18n="hero.dash.ticket">تم حل مشكلة الطابعة</strong>
-                  <small data-i18n="hero.dash.ticketmeta">آخر تدخل · 18 دقيقة</small>
-                </div>
-                <span class="hero-ticket__check" aria-hidden="true">
-                  <svg class="icon"><use href="#i-check"></use></svg>
-                </span>
-              </div>
-
-              <div class="hero-frame__foot hero-frame__foot--panel">
-                <span><svg class="icon" aria-hidden="true"><use href="#i-windows"></use></svg><b data-i18n="hero.chip1">Windows</b></span>
-                <span><svg class="icon" aria-hidden="true"><use href="#i-network"></use></svg><b data-i18n="hero.chip2">الشبكة</b></span>
-                <span><svg class="icon" aria-hidden="true"><use href="#i-database"></use></svg><b data-i18n="hero.chip4">النسخ الاحتياطي</b></span>
-              </div>
-            </div>
-
-            <p class="hero-frame__caption">
-              <svg class="icon" aria-hidden="true"><use href="#i-message"></use></svg>
-              <span data-i18n="hero.overlay.text">تشخيص، إصلاح، وضبط للأجهزة والشبكات والطابعات.</span>
-            </p>
+            </section>
           </div>
         </div>
       </div>

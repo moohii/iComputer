@@ -202,22 +202,14 @@ const translations = {
     "hero.meta1": "بدون عقد إلزامي",
     "hero.meta2": "ميداني أو عن بُعد",
     "hero.meta3": "تنسيق مباشر عبر WhatsApp",
-    "hero.frame.status": "حسب التوفر",
-    "hero.overlay.title": "مكتبك جاهز للعمل",
-    "hero.overlay.text": "تشخيص، إصلاح، وضبط للأجهزة والشبكات والطابعات.",
-    "hero.chip1": "Windows",
-    "hero.chip2": "الشبكة",
-    "hero.chip3": "الطابعات",
-    "hero.chip4": "النسخ الاحتياطي",
-    "hero.dash.title": "حالة مكتبك",
-    "hero.dash.sub": "فحص سريع · الجزائر العاصمة",
-    "hero.dash.online": "متصل",
-    "hero.dash.row1": "أجهزة المكتب",
-    "hero.dash.row2": "الشبكة",
-    "hero.dash.row3": "النسخ الاحتياطي",
-    "hero.dash.ok": "سليم",
-    "hero.dash.ticket": "تم حل مشكلة الطابعة",
-    "hero.dash.ticketmeta": "آخر تدخل · 18 دقيقة",
+    "hero.tools.title": "أدوات مجانية لإنجاز أعمالك",
+    "hero.tools.description":
+      "أدوات رقمية مجانية تساعد الطلبة والمستخدمين في الجزائر على إنجاز أعمالهم بسهولة.",
+    "hero.tools.open": "اكتشف الأدوات المجانية",
+    "hero.tools.panelTitle": "الأدوات المتاحة",
+    "hero.tools.close": "إغلاق",
+    "hero.tools.cover.title": "منشئ غلاف المذكرات وتقارير التربص",
+    "hero.tools.cover.description": "أنشئ صفحة غلاف أكاديمية واطبعها أو احفظها PDF.",
 
     "trust.1": "مكاتب ومؤسسات صغيرة",
     "trust.2": "حلول عملية بدون تعقيد",
@@ -453,22 +445,14 @@ const translations = {
     "hero.meta1": "Sans contrat obligatoire",
     "hero.meta2": "Sur place ou à distance",
     "hero.meta3": "Coordination directe sur WhatsApp",
-    "hero.frame.status": "Selon disponibilité",
-    "hero.overlay.title": "Votre bureau, prêt à travailler",
-    "hero.overlay.text": "Diagnostic, réparation et configuration des postes, réseaux et imprimantes.",
-    "hero.chip1": "Windows",
-    "hero.chip2": "Réseau",
-    "hero.chip3": "Imprimantes",
-    "hero.chip4": "Sauvegardes",
-    "hero.dash.title": "État du bureau",
-    "hero.dash.sub": "Diagnostic rapide · Alger",
-    "hero.dash.online": "En ligne",
-    "hero.dash.row1": "Postes de travail",
-    "hero.dash.row2": "Réseau",
-    "hero.dash.row3": "Sauvegarde",
-    "hero.dash.ok": "OK",
-    "hero.dash.ticket": "File d'impression résolue",
-    "hero.dash.ticketmeta": "Dernière intervention · 18 min",
+    "hero.tools.title": "Outils gratuits",
+    "hero.tools.description":
+      "Des outils numériques gratuits pour aider les étudiants et les utilisateurs en Algérie à réaliser leurs projets facilement.",
+    "hero.tools.open": "Découvrir les outils gratuits",
+    "hero.tools.panelTitle": "Outils disponibles",
+    "hero.tools.close": "Fermer",
+    "hero.tools.cover.title": "Générateur de page de garde algérienne",
+    "hero.tools.cover.description": "Créez une page de garde académique, puis imprimez-la ou enregistrez-la en PDF.",
 
     "trust.1": "Bureaux et petites structures",
     "trust.2": "Des solutions concrètes, sans complexité",
@@ -704,22 +688,14 @@ const translations = {
     "hero.meta1": "No mandatory contract",
     "hero.meta2": "On-site or remote",
     "hero.meta3": "Direct coordination on WhatsApp",
-    "hero.frame.status": "Available",
-    "hero.overlay.title": "Your office, ready to work",
-    "hero.overlay.text": "Diagnose, repair and configure computers, networks and printers.",
-    "hero.chip1": "Windows",
-    "hero.chip2": "Network",
-    "hero.chip3": "Printers",
-    "hero.chip4": "Backups",
-    "hero.dash.title": "Office status",
-    "hero.dash.sub": "Quick check · Algiers",
-    "hero.dash.online": "Online",
-    "hero.dash.row1": "Workstations",
-    "hero.dash.row2": "Network",
-    "hero.dash.row3": "Backup",
-    "hero.dash.ok": "Healthy",
-    "hero.dash.ticket": "Printer queue cleared",
-    "hero.dash.ticketmeta": "Last fix · 18 min",
+    "hero.tools.title": "Free Digital Tools",
+    "hero.tools.description":
+      "Free digital tools to help students and users in Algeria get their work done more easily.",
+    "hero.tools.open": "Explore free tools",
+    "hero.tools.panelTitle": "Available tools",
+    "hero.tools.close": "Close",
+    "hero.tools.cover.title": "Algerian thesis & internship cover generator",
+    "hero.tools.cover.description": "Create an academic cover page, then print it or save it as a PDF.",
 
     "trust.1": "Offices and small teams",
     "trust.2": "Practical solutions, no complexity",
@@ -975,6 +951,38 @@ function setLanguage(lang) {
   }
 }
 
+function initToolsLauncher() {
+  const launcher = document.querySelector("[data-tools-launcher]");
+  if (!launcher) return;
+
+  const intro = launcher.querySelector("[data-tools-intro]");
+  const panel = launcher.querySelector("[data-tools-panel]");
+  const openButton = launcher.querySelector("[data-tools-open]");
+  const closeButton = launcher.querySelector("[data-tools-close]");
+  if (!intro || !panel || !openButton || !closeButton) return;
+
+  const setOpen = (open, restoreFocus = false) => {
+    openButton.setAttribute("aria-expanded", String(open));
+    intro.hidden = open;
+    panel.hidden = !open;
+
+    if (open) {
+      closeButton.focus();
+    } else if (restoreFocus) {
+      openButton.focus();
+    }
+  };
+
+  openButton.addEventListener("click", () => setOpen(true));
+  closeButton.addEventListener("click", () => setOpen(false, true));
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !panel.hidden) {
+      setOpen(false, true);
+    }
+  });
+}
+
 /* --------------------------------------------------------------------------
    Navigation
    -------------------------------------------------------------------------- */
@@ -1143,6 +1151,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   initNavigation();
+  initToolsLauncher();
   markActiveNavigation();
   initReveal();
 
