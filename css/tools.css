@@ -372,6 +372,114 @@
   background: #d5dce5;
 }
 
+.dzd-tool {
+  max-width: 980px;
+}
+
+.dzd-tool__intro {
+  max-width: 760px;
+}
+
+.dzd-converter {
+  display: grid;
+  gap: 24px;
+  padding: clamp(18px, 4vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.dzd-form {
+  display: grid;
+  gap: 18px;
+}
+
+.dzd-form .cover-field {
+  gap: 8px;
+}
+
+.dzd-form .cover-field input {
+  min-height: 52px;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.dzd-form .cover-field input:focus-visible,
+.dzd-actions button:focus-visible,
+.dzd-copy:focus-visible,
+.cover-language-switch button:focus-visible,
+.cover-back-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.dzd-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dzd-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.dzd-results__heading {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.dzd-results__heading h2 {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 1.15rem;
+}
+
+.dzd-result {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+}
+
+.dzd-result h3 {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.dzd-result__amount {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.dzd-result__words {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.dzd-copy-error,
+.dzd-copy-status {
+  margin: -10px 0 0;
+}
+
+.dzd-copy-status {
+  min-height: 1.4em;
+  color: var(--success);
+  font-size: 0.82rem;
+}
+
 @media (max-width: 900px) {
   .cover-workspace {
     grid-template-columns: minmax(0, 1fr);
@@ -474,6 +582,36 @@
   .cover-docx-button {
     width: 100%;
   }
+
+  .dzd-converter {
+    gap: 20px;
+    padding: 18px 16px;
+  }
+
+  .dzd-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dzd-actions button:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .dzd-results {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dzd-results__heading {
+    align-items: flex-start;
+  }
+
+  .dzd-copy {
+    flex: none;
+  }
+
+  .dzd-result {
+    padding: 16px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -493,7 +631,6 @@
 }
 
 @media print {
-  html,
   body.cover-generator-body {
     width: 210mm;
     min-height: 297mm;
@@ -504,16 +641,16 @@
     -webkit-print-color-adjust: exact;
   }
 
-  .cover-site-header,
-  .cover-tool__intro,
-  .cover-editor,
-  .cover-preview-heading {
+  body.cover-generator-body .cover-site-header,
+  body.cover-generator-body .cover-tool__intro,
+  body.cover-generator-body .cover-editor,
+  body.cover-generator-body .cover-preview-heading {
     display: none !important;
   }
 
-  .cover-tool,
-  .cover-workspace,
-  .cover-preview-area {
+  body.cover-generator-body .cover-tool,
+  body.cover-generator-body .cover-workspace,
+  body.cover-generator-body .cover-preview-area {
     display: block;
     width: 210mm;
     max-width: none;
@@ -521,7 +658,7 @@
     padding: 0;
   }
 
-  .cover-page {
+  body.cover-generator-body .cover-page {
     width: 210mm;
     height: 297mm;
     min-height: 297mm;
@@ -533,29 +670,29 @@
     break-after: avoid;
   }
 
-  .cover-page__institution {
+  body.cover-generator-body .cover-page__institution {
     font-size: 11pt;
   }
 
-  .cover-page__institution [data-preview="institution"],
-  .cover-page__institution [data-preview="university"] {
+  body.cover-generator-body .cover-page__institution [data-preview="institution"],
+  body.cover-generator-body .cover-page__institution [data-preview="university"] {
     font-size: 14pt;
   }
 
-  .cover-page__type {
+  body.cover-generator-body .cover-page__type {
     font-size: 16pt;
   }
 
-  .cover-page__work h2 {
+  body.cover-generator-body .cover-page__work h2 {
     font-size: 22pt;
   }
 
-  .cover-page__people p,
-  .cover-page__footer {
+  body.cover-generator-body .cover-page__people p,
+  body.cover-generator-body .cover-page__footer {
     font-size: 11pt;
   }
 
-  .cover-page__people strong {
+  body.cover-generator-body .cover-page__people strong {
     font-size: 12pt;
   }
 }

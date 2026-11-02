@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تحويل المبالغ بالدينار الجزائري إلى كلمات | iComputer</title>
+  <meta name="description" content="حوّل المبالغ بالدينار الجزائري إلى كلمات بالعربية والفرنسية، مع حساب السنتيمات بدقة." />
+  <link rel="canonical" href="https://icomputer.netlify.app/tools/dzd-to-words.html" />
+  <meta property="og:title" content="تحويل المبالغ بالدينار الجزائري إلى كلمات | iComputer" />
+  <meta property="og:description" content="أداة مجانية لكتابة المبالغ بالدينار الجزائري بالعربية والفرنسية دون تقريب." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://icomputer.netlify.app/tools/dzd-to-words.html" />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="icon" href="../images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/tools.css" />
+  <script src="../js/theme.js"></script>
+</head>
+<body class="dzd-tool-body">
+  <header class="cover-site-header">
+    <a class="cover-site-brand" href="../index.html">
+      <img src="../images/logo-mark.svg" width="38" height="38" alt="" />
+      <span>iComputer <em>Urban Tech DZ</em></span>
+    </a>
+    <div class="cover-site-actions">
+      <div class="cover-language-switch" role="group" aria-label="لغة الواجهة" data-language-label>
+        <button type="button" data-language="ar" aria-pressed="true" lang="ar">عربي</button>
+        <button type="button" data-language="fr" aria-pressed="false" lang="fr">FR</button>
+        <button type="button" data-language="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <a class="cover-back-link" href="../index.html" data-copy="backHome">العودة إلى الرئيسية</a>
+    </div>
+  </header>
+
+  <main class="cover-tool dzd-tool">
+    <header class="cover-tool__intro dzd-tool__intro">
+      <h1 data-copy="pageTitle">تحويل المبالغ بالدينار الجزائري إلى كلمات</h1>
+      <p data-copy="pageDescription">اكتب المبلغ بالدينار الجزائري لعرضه بالكلمات بالعربية والفرنسية، مع السنتيمات.</p>
+    </header>
+
+    <section class="dzd-converter" aria-labelledby="amount-heading">
+      <form class="dzd-form" id="dzd-form" novalidate>
+        <label class="cover-field" for="amount-input">
+          <span id="amount-heading" data-copy="amountLabel">المبلغ بالدينار الجزائري</span>
+          <input id="amount-input" name="amount" type="text" inputmode="decimal" autocomplete="off"
+            maxlength="24" dir="ltr" aria-describedby="amount-help amount-error"
+            placeholder="مثال: 1250,50" />
+          <span class="cover-field__help" id="amount-help" data-copy="amountHelp">
+            استخدم الأرقام العادية أو العربية. اكتب حتى منزلتين عشريتين للسنتيمات.
+          </span>
+          <span class="cover-field__error" id="amount-error" role="alert" hidden></span>
+        </label>
+
+        <div class="dzd-actions">
+          <button class="btn btn-primary" type="submit" data-copy="convertButton">تحويل المبلغ</button>
+          <button class="btn btn-ghost" type="button" id="clear-amount" data-copy="clearButton">مسح</button>
+          <button class="btn btn-ghost" type="button" id="reset-tool" data-copy="resetButton">إعادة ضبط الأداة</button>
+        </div>
+      </form>
+
+      <section class="dzd-results" id="dzd-results" aria-labelledby="result-heading" aria-live="polite" hidden>
+        <div class="dzd-results__heading">
+          <h2 id="result-heading" data-copy="resultHeading">المبلغ كتابةً</h2>
+          <button class="btn btn-ghost dzd-copy" type="button" id="copy-result" data-copy="copyButton">نسخ النتيجة</button>
+        </div>
+        <article class="dzd-result" dir="rtl" lang="ar">
+          <h3 data-copy="arabicLabel">العربية</h3>
+          <p class="dzd-result__amount" id="arabic-amount"></p>
+          <p class="dzd-result__words" id="arabic-words"></p>
+        </article>
+        <article class="dzd-result" dir="ltr" lang="fr">
+          <h3 data-copy="frenchLabel">Français</h3>
+          <p class="dzd-result__amount" id="french-amount"></p>
+          <p class="dzd-result__words" id="french-words"></p>
+        </article>
+      </section>
+      <p class="cover-action-error dzd-copy-error" id="copy-error" role="alert" hidden></p>
+      <p class="dzd-copy-status" id="copy-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <script type="module" src="../js/dzd-to-words-page.js"></script>
+</body>
+</html>

@@ -210,6 +210,8 @@ const translations = {
     "hero.tools.close": "إغلاق",
     "hero.tools.cover.title": "منشئ غلاف المذكرات وتقارير التربص",
     "hero.tools.cover.description": "أنشئ صفحة غلاف أكاديمية واطبعها أو احفظها PDF.",
+    "hero.tools.dzd.title": "تحويل المبالغ بالدينار الجزائري إلى كلمات",
+    "hero.tools.dzd.description": "اكتب المبلغ بالدينار لتحويله إلى كلمات بالعربية والفرنسية.",
 
     "trust.1": "مكاتب ومؤسسات صغيرة",
     "trust.2": "حلول عملية بدون تعقيد",
@@ -453,6 +455,8 @@ const translations = {
     "hero.tools.close": "Fermer",
     "hero.tools.cover.title": "Générateur de page de garde algérienne",
     "hero.tools.cover.description": "Créez une page de garde académique, puis imprimez-la ou enregistrez-la en PDF.",
+    "hero.tools.dzd.title": "Écrire un montant en dinars algériens en toutes lettres",
+    "hero.tools.dzd.description": "Convertissez un montant en DZD en arabe et en français.",
 
     "trust.1": "Bureaux et petites structures",
     "trust.2": "Des solutions concrètes, sans complexité",
@@ -696,6 +700,8 @@ const translations = {
     "hero.tools.close": "Close",
     "hero.tools.cover.title": "Algerian thesis & internship cover generator",
     "hero.tools.cover.description": "Create an academic cover page, then print it or save it as a PDF.",
+    "hero.tools.dzd.title": "Algerian DZD amount-to-words converter",
+    "hero.tools.dzd.description": "Convert a DZD amount to words in Arabic and French.",
 
     "trust.1": "Offices and small teams",
     "trust.2": "Practical solutions, no complexity",

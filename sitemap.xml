@@ -61,6 +61,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://icomputer.netlify.app/tools/dzd-to-words.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://icomputer.netlify.app/knowledge.html</loc>
     <priority>0.7</priority>
   </url>
