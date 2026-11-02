@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/logo-mark.svg" width="72" height="72" alt="iComputer logo mark">
+<img src="images/logo1.png" width="72" height="72" alt="iComputer logo mark">
 
 # iComputer Urban Tech DZ
 
