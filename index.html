@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -26,6 +26,8 @@
   <link rel="stylesheet" href="css/b2b.css" />
   <link rel="stylesheet" href="css/homepage.css" />
   <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/dynamic-layouts.css" />
+  <script src="js/layout-engine.js"></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -380,7 +382,44 @@
             <img src="images/services/student-documents.svg" alt="" loading="lazy" width="800" height="560" />
           </div>
         </div>
-      </div>
+
+                <!-- Smart TV Clean feature card -->
+        <div class="student-feature" style="margin-top: 24px; border-color: rgba(77, 158, 255, 0.35); box-shadow: 0 10px 30px -10px rgba(77, 158, 255, 0.12);">
+          <div class="student-feature__content">
+            <span class="eyebrow" data-i18n="smartTv.eyebrow">خدمة CleanYourTV في الجزائر العاصمة</span>
+            <h3 data-i18n="smartTv.title" style="margin-bottom: 4px;">📺 تلفازك Smart TV عامر بالإعلانات والاقتراحات؟</h3>
+            <p style="font-weight: 600; color: var(--accent); margin-top: 0; margin-bottom: 8px;" data-i18n="smartTv.sub">
+              تحب شاشة منظمة وبسيطة تعرض تطبيقاتك المفضلة؟
+            </p>
+            <p data-i18n="smartTv.description" style="margin-bottom: 12px;">
+              مع خدمة CleanYourTV نقدم لك تنظيف وتحسين واجهة Android TV وGoogle TV.
+            </p>
+            <ul class="student-benefits" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); width: 100%; gap: 10px;">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="smartTv.b1">تقليل الإعلانات النظامية المدعومة.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="smartTv.b2">تنظيم الشاشة الرئيسية.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="smartTv.b3">تعطيل بعض التطبيقات غير الضرورية.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span data-i18n="smartTv.b4">خدمة ميدانية بعد التحقق من توافق التلفاز.</span></li>
+            </ul>
+            <p class="student-note" style="font-size: 0.88rem; color: var(--text-soft); line-height: 1.6; margin-top: 8px;" data-i18n="smartTv.note">
+              📍 الجزائر والمناطق التي تشملها الخدمة.<br>
+              📩 ابعث لنا ماركة وموديل التلفاز تاعك، ونشوفولك إذا كان متوافقًا.
+            </p>
+            <div class="student-feature__actions" style="margin-top: 8px;">
+              <a href="services/nettoyage-smart-tv-alger.html" class="btn btn-primary">
+                <span data-i18n="smartTv.cta">تحقق من توافق تلفازك</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a href="https://wa.me/213550000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%AD%D9%82%D9%82%20%D9%85%D9%86%20%D8%AA%D9%88%D8%A7%D9%81%D9%82%20%D8%AA%D9%84%D9%81%D8%A7%D8%B2%D9%8A%20%D9%85%D8%B9%20%D8%AE%D8%AF%D9%85%D8%A9%20CleanYourTV%3A%0A1.%20%D8%A7%D9%84%D9%85%D8%A7%D8%B1%D9%83%D8%A9%3A%20%0A2.%20%D8%A7%D9%84%D9%85%D9%88%D8%AF%D9%8A%D9%84%3A%20%0A3.%20%D8%A7%D9%84%D9%86%D8%B8%D8%A7%D9%85%3A%20%0A4.%20%D8%A7%D9%84%D9%85%D9%86%D8%B7%D9%82%D8%A9%3A%20" target="_blank" rel="noopener" class="btn btn-ghost" style="color: var(--success); border-color: rgba(61, 220, 151, 0.35);">
+                <svg class="icon" aria-hidden="true" style="color: var(--success);"><use href="#i-whatsapp"></use></svg>
+                <span>واتساب مباشر</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="student-art">
+            <img src="images/smart-tv-clean.jpg" alt="تنظيف وتحسين واجهة Android TV وGoogle TV" loading="lazy" width="800" height="560" style="object-fit: cover; object-position: center;" />
+          </div>
+        </div>
     </section>
 
     <!-- B2B band -->
@@ -904,6 +943,7 @@
           <li><a href="services/printer-setup.html" data-i18n="svc.printer.title">الطابعات والماسحات</a></li>
           <li><a href="services/new-computer-setup.html" data-i18n="svc.setup.title">تجهيز حاسوب جديد</a></li>
           <li><a href="services/backup-files.html" data-i18n="svc.backup.title">النسخ الاحتياطي والملفات</a></li>
+          <li><a href="services/nettoyage-smart-tv-alger.html" data-i18n="smartTv.title">تنظيف وتسريع Smart TV</a></li>
         </ul>
       </div>
 

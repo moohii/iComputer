@@ -1,0 +1,531 @@
+/* ==========================================================================
+   iComputer Urban Tech DZ — Dynamic Homepage Design Engine (12 Layouts)
+   1. split-hero
+   2. minimal-centered
+   3. bento-grid
+   4. editorial-layout
+   5. asymmetric-layout
+   6. full-width-sections
+   7. sidebar-layout
+   8. layered-cards
+   9. typography-first
+   10. horizontal-flow
+   11. modular-layout
+   12. premium-immersive
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Switcher UI & Controls
+   -------------------------------------------------------------------------- */
+.layout-switcher-pill {
+  position: fixed;
+  bottom: 24px;
+  inset-inline-start: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--accent);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--line-strong);
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: var(--text-strong);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.layout-switcher-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 42px rgba(77, 158, 255, 0.25);
+}
+
+.layout-switcher-pill button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  padding: 0;
+}
+
+.layout-switcher-pill .layout-badge {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.layout-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.layout-modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.layout-modal {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  max-width: 680px;
+  width: 100%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+}
+
+.layout-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.layout-modal-head h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-strong);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.layout-modal-close {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--text-soft);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout-modal-close:hover {
+  color: var(--text-strong);
+  border-color: var(--accent);
+}
+
+.layout-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.layout-option-btn {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  text-align: start;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.layout-option-btn:hover {
+  border-color: var(--accent);
+  background: var(--surface-3);
+  transform: translateY(-2px);
+}
+
+.layout-option-btn.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.layout-option-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.layout-option-desc {
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Base flex container for rearrangeable main */
+#main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   1. SPLIT HERO (Default classic high-tech split)
+   ========================================================================== */
+html[data-layout="split-hero"] .hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 56px;
+  align-items: center;
+}
+
+/* ==========================================================================
+   2. MINIMAL CENTERED
+   Clean, symmetric, museum-grade center focus.
+   ========================================================================== */
+html[data-layout="minimal-centered"] .hero {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+html[data-layout="minimal-centered"] .hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+html[data-layout="minimal-centered"] .hero-content {
+  align-items: center;
+  text-align: center;
+}
+html[data-layout="minimal-centered"] .hero-sub {
+  max-width: 680px;
+  margin-inline: auto;
+}
+html[data-layout="minimal-centered"] .hero-actions {
+  justify-content: center;
+}
+html[data-layout="minimal-centered"] .hero-meta {
+  justify-content: center;
+}
+html[data-layout="minimal-centered"] .hero-visual {
+  width: 100%;
+  max-width: 640px;
+  margin: 40px auto 0;
+}
+html[data-layout="minimal-centered"] .section-head {
+  text-align: center;
+  margin-inline: auto;
+}
+html[data-layout="minimal-centered"] .section-head--split {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+html[data-layout="minimal-centered"] .section-sub {
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   3. BENTO GRID
+   Tight, modular grid system with diverse tile spans.
+   ========================================================================== */
+html[data-layout="bento-grid"] .services-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+}
+html[data-layout="bento-grid"] .services-grid > .service-tile:nth-child(1) {
+  grid-column: span 7;
+}
+html[data-layout="bento-grid"] .services-grid > .service-tile:nth-child(2) {
+  grid-column: span 5;
+}
+html[data-layout="bento-grid"] .services-grid > .service-tile:nth-child(3) {
+  grid-column: span 4;
+}
+html[data-layout="bento-grid"] .services-grid > .service-tile:nth-child(4) {
+  grid-column: span 4;
+}
+html[data-layout="bento-grid"] .services-grid > .service-tile:nth-child(5) {
+  grid-column: span 4;
+}
+html[data-layout="bento-grid"] .services-grid > .service-tile:nth-child(6) {
+  grid-column: span 6;
+}
+html[data-layout="bento-grid"] .services-grid > .service-tile:nth-child(7) {
+  grid-column: span 6;
+}
+@media (max-width: 900px) {
+  html[data-layout="bento-grid"] .services-grid > .service-tile {
+    grid-column: span 12 !important;
+  }
+}
+html[data-layout="bento-grid"] .trust-strip-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+html[data-layout="bento-grid"] .trust-item {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  justify-content: center;
+}
+
+/* ==========================================================================
+   4. EDITORIAL LAYOUT
+   Magazine & publication style with wide narrative lead-ins.
+   ========================================================================== */
+html[data-layout="editorial-layout"] .hero-title {
+  font-size: clamp(2.6rem, 5.2vw, 4.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  font-family: serif, "Cairo", system-ui;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+html[data-layout="editorial-layout"] .hero-sub {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: var(--text-strong);
+  max-width: 760px;
+}
+html[data-layout="editorial-layout"] .service-tile {
+  border-radius: 0;
+  border-width: 0 0 1px 0;
+  background: transparent;
+  padding: 24px 0;
+}
+html[data-layout="editorial-layout"] .service-tile:hover {
+  background: var(--surface-soft);
+  transform: none;
+  padding-inline: 16px;
+}
+
+/* ==========================================================================
+   5. ASYMMETRIC LAYOUT
+   Dynamic diagonal flow, staggered offsets, and intentional tension.
+   ========================================================================== */
+html[data-layout="asymmetric-layout"] .services-grid > .service-tile:nth-child(even) {
+  transform: translateY(32px);
+}
+@media (max-width: 768px) {
+  html[data-layout="asymmetric-layout"] .services-grid > .service-tile:nth-child(even) {
+    transform: none;
+  }
+}
+html[data-layout="asymmetric-layout"] .hero-content {
+  padding-inline-start: 40px;
+  border-inline-start: 3px solid var(--accent);
+}
+html[data-layout="asymmetric-layout"] .student-feature {
+  transform: rotate(-0.5deg);
+  border-color: var(--accent);
+}
+
+/* ==========================================================================
+   6. FULL WIDTH SECTIONS
+   Immersive band sections edge-to-edge with alternating depths.
+   ========================================================================== */
+html[data-layout="full-width-sections"] .section {
+  padding: 96px 0;
+}
+html[data-layout="full-width-sections"] .section:nth-of-type(even) {
+  background: var(--surface-2);
+  border-block: 1px solid var(--line-strong);
+}
+html[data-layout="full-width-sections"] .services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+html[data-layout="full-width-sections"] .hero {
+  padding: 120px 0 90px;
+  background: radial-gradient(circle at 80% 20%, rgba(77, 158, 255, 0.15), transparent 70%);
+}
+
+/* ==========================================================================
+   7. SIDEBAR LAYOUT
+   Modern web application style: Sticky left summary & continuous right feed.
+   ========================================================================== */
+@media (min-width: 1080px) {
+  html[data-layout="sidebar-layout"] #main {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  html[data-layout="sidebar-layout"] .hero {
+    grid-column: 1;
+    position: sticky;
+    top: 90px;
+    padding: 0;
+    overflow: visible;
+  }
+  html[data-layout="sidebar-layout"] .hero::after {
+    display: none;
+  }
+  html[data-layout="sidebar-layout"] .hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  html[data-layout="sidebar-layout"] .trust-strip,
+  html[data-layout="sidebar-layout"] #services,
+  html[data-layout="sidebar-layout"] #b2b,
+  html[data-layout="sidebar-layout"] #sectors,
+  html[data-layout="sidebar-layout"] .section--soft,
+  html[data-layout="sidebar-layout"] #about,
+  html[data-layout="sidebar-layout"] #faq,
+  html[data-layout="sidebar-layout"] #contact {
+    grid-column: 2;
+  }
+}
+
+/* ==========================================================================
+   8. LAYERED CARDS
+   Elevated sheets, pronounced depth and tactile stacked aesthetic.
+   ========================================================================== */
+html[data-layout="layered-cards"] .service-tile {
+  background: var(--surface-2);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 14px 34px -8px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+html[data-layout="layered-cards"] .service-tile:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 24px 48px -12px rgba(77, 158, 255, 0.35);
+  border-color: var(--accent);
+}
+html[data-layout="layered-cards"] .student-feature,
+html[data-layout="layered-cards"] .b2b-panel {
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.6);
+  border-radius: 24px;
+}
+
+/* ==========================================================================
+   9. TYPOGRAPHY FIRST
+   Bold editorial scale headlines, streamlined visuals, high contrast.
+   ========================================================================== */
+html[data-layout="typography-first"] .hero-title {
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+}
+html[data-layout="typography-first"] .service-tile__media {
+  display: none;
+}
+html[data-layout="typography-first"] .service-tile {
+  padding: 32px;
+}
+html[data-layout="typography-first"] .service-tile h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+html[data-layout="typography-first"] .section-title {
+  font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   10. HORIZONTAL FLOW
+   Horizontal carousel cards and side-scrolling service stream.
+   ========================================================================== */
+html[data-layout="horizontal-flow"] .services-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 24px;
+  padding-bottom: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--surface-2);
+}
+html[data-layout="horizontal-flow"] .service-tile {
+  flex: 0 0 min(360px, 85vw);
+  scroll-snap-align: start;
+}
+
+/* ==========================================================================
+   11. MODULAR LAYOUT
+   Reordered priority: Free tools launcher & Smart TV upfront.
+   ========================================================================== */
+html[data-layout="modular-layout"] #main {
+  display: flex;
+  flex-direction: column;
+}
+html[data-layout="modular-layout"] .hero {
+  order: 1;
+}
+html[data-layout="modular-layout"] .trust-strip {
+  order: 2;
+}
+html[data-layout="modular-layout"] #contact {
+  order: 3;
+  margin-bottom: 48px;
+}
+html[data-layout="modular-layout"] #services {
+  order: 4;
+}
+html[data-layout="modular-layout"] #b2b {
+  order: 5;
+}
+html[data-layout="modular-layout"] #sectors {
+  order: 6;
+}
+html[data-layout="modular-layout"] #about {
+  order: 7;
+}
+html[data-layout="modular-layout"] #faq {
+  order: 8;
+}
+
+/* ==========================================================================
+   12. PREMIUM IMMERSIVE
+   Dark luxury obsidian canvas with cyan/sapphire glow accents.
+   ========================================================================== */
+html[data-layout="premium-immersive"] {
+  --bg: #06090e;
+  --surface: #0a0f18;
+  --surface-2: #0f1624;
+  --accent: #00d2ff;
+  --accent-soft: rgba(0, 210, 255, 0.12);
+  --line: rgba(0, 210, 255, 0.12);
+  --line-strong: rgba(0, 210, 255, 0.28);
+}
+html[data-layout="premium-immersive"] .hero::after {
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.18), transparent 70%);
+}
+html[data-layout="premium-immersive"] .service-tile {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 210, 255, 0.15);
+}
+html[data-layout="premium-immersive"] .service-tile:hover {
+  border-color: #00d2ff;
+  box-shadow: 0 16px 40px rgba(0, 210, 255, 0.2);
+}
+

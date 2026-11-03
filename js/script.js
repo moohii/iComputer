@@ -275,6 +275,19 @@ const translations = {
     "student.note": "حسب تعليمات المؤسسة، ودون كتابة المحتوى الأكاديمي.",
     "student.cta": "خدمات الطلبة",
 
+    "smartTv.eyebrow": "خدمة CleanYourTV في الجزائر العاصمة",
+    "smartTv.title": "تلفازك Smart TV عامر بالإعلانات والاقتراحات؟",
+    "smartTv.sub": "تحب شاشة منظمة وبسيطة تعرض تطبيقاتك المفضلة فقط؟",
+    "smartTv.description":
+      "مع خدمة CleanYourTV نقدم لك تنظيف وتحسين واجهة Android TV وGoogle TV لإزالة الإعلانات وتسريع التلفاز.",
+    "smartTv.b1": "تقليل الإعلانات النظامية المدعومة",
+    "smartTv.b2": "تنظيم الشاشة الرئيسية",
+    "smartTv.b3": "تعطيل التطبيقات غير الضرورية",
+    "smartTv.b4": "خدمة ميدانية بعد التحقق من التوافق",
+    "smartTv.note": "📍 الجزائر والمناطق التي تشملها الخدمة · ابعث لنا ماركة وموديل التلفاز تاعك ونشوفولك إذا كان متوافقًا.",
+    "smartTv.cta": "تحقق من توافق تلفازك",
+    "smartTv.imageAlt": "تنظيف وتحسين واجهة Android TV وGoogle TV",
+
     "b2b.eyebrow": "حلول B2B",
     "b2b.title": "مكتب صغير، دون قسم تقني؟",
     "b2b.text":
@@ -520,6 +533,19 @@ const translations = {
     "student.note": "Selon les consignes de l'établissement, sans rédaction du contenu académique.",
     "student.cta": "Services étudiants",
 
+    "smartTv.eyebrow": "Service CleanYourTV à Alger",
+    "smartTv.title": "Votre Smart TV est saturée de pubs et suggestions ?",
+    "smartTv.sub": "Envie d'un écran d'accueil épuré, fluide et dédié à vos seules applis ?",
+    "smartTv.description":
+      "Avec le service CleanYourTV, nous nettoyons et optimisons votre interface Android TV et Google TV à domicile à Alger.",
+    "smartTv.b1": "Réduction des publicités système sponsorisées",
+    "smartTv.b2": "Organisation de l'écran d'accueil",
+    "smartTv.b3": "Désactivation des applications inutiles",
+    "smartTv.b4": "Intervention sur site après vérification",
+    "smartTv.note": "📍 Alger et communes couvertes · Envoyez-nous la marque et le modèle de votre TV pour vérifier la compatibilité.",
+    "smartTv.cta": "Vérifier la compatibilité",
+    "smartTv.imageAlt": "Interface Android TV et Google TV nettoyée et optimisée",
+
     "b2b.eyebrow": "Solutions B2B",
     "b2b.title": "Un petit bureau, sans service informatique ?",
     "b2b.text":
@@ -764,6 +790,19 @@ const translations = {
     "student.b3": "PDF export",
     "student.note": "Following your institution's rules, without writing the academic content.",
     "student.cta": "Student services",
+
+    "smartTv.eyebrow": "CleanYourTV service in Algiers",
+    "smartTv.title": "Smart TV cluttered with sponsored ads & suggestions?",
+    "smartTv.sub": "Want a clean, minimal home screen showing only your favorite apps?",
+    "smartTv.description":
+      "With CleanYourTV, we clean, debloat and optimize your Android TV and Google TV home screen in Algiers.",
+    "smartTv.b1": "Reduce sponsored system ads",
+    "smartTv.b2": "Organize your home screen",
+    "smartTv.b3": "Disable unnecessary background bloatware",
+    "smartTv.b4": "On-site service after TV compatibility check",
+    "smartTv.note": "📍 Algiers and covered areas · Send us your TV brand and model to verify compatibility.",
+    "smartTv.cta": "Check TV Compatibility",
+    "smartTv.imageAlt": "Clean and optimized Android TV and Google TV interface",
 
     "b2b.eyebrow": "B2B solutions",
     "b2b.title": "A small office with no IT department?",
